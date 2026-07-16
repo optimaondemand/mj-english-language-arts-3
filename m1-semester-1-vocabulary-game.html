@@ -1,0 +1,263 @@
+<!--
+    Optima Academy Online — OPTIONAL PRACTICE GAME. M/J Language Arts 3 · Semester 1 (Modules 1-3).
+    "Word Match": memory/concentration game reviewing all 18 Semester 1 Word Study vocabulary words.
+    Standalone, ungraded, no Canvas grade or Tier, semester-spanning (not tied to one week).
+    Click-based only. Plain inline script, no external libraries or server calls.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Word Match (Optional Practice Game)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1200px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .opt-banner { background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 14px 20px; margin-bottom: 20px; text-align: center; }
+    .opt-banner .kicker { font-size: 12px; color: #C7922C; letter-spacing: 1px; margin-bottom: 4px; }
+    .opt-banner .msg { font-size: 16px; color: #0E1C42; line-height: 1.5; }
+
+    .how-to { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+    .how-to p { font-size: 16px; color: #1a2340; line-height: 1.65; margin: 6px 0 0 0; }
+
+    .game-status { display: flex; justify-content: space-between; align-items: center; background: #0E1C42; color: #fff; border-radius: 8px; padding: 12px 20px; margin-bottom: 18px; font-size: 16px; flex-wrap: wrap; gap: 12px; }
+    .game-status .accent { color: #55C8E8; }
+    .new-game-btn { background: transparent; border: 2px solid #C7922C; color: #C7922C; border-radius: 8px; padding: 8px 18px; font-size: 14px; cursor: pointer; font-family: inherit; }
+    .new-game-btn:hover { background: #FDF3E3; }
+
+    .win-banner { display: none; background: #D8F0DD; border-left: 5px solid #2A9D5C; border-radius: 8px; padding: 14px 20px; margin-bottom: 18px; font-size: 17px; color: #1A6B3D; text-align: center; }
+    .win-banner.show { display: block; }
+
+    .mem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 12px; margin-bottom: 10px; }
+
+    .mem-card { min-height: 118px; border: 1.5px solid #D0D9E8; border-radius: 10px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 12px 10px; text-align: center; transition: border-color 0.15s, background 0.15s; }
+    .mem-card:hover { border-color: #55C8E8; }
+    .mem-card .mem-front { font-size: 30px; color: #C7922C; }
+    .mem-card .mem-back { display: none; }
+    .mem-card.revealed .mem-front { display: none; }
+    .mem-card.revealed .mem-back { display: block; }
+    .mem-card.revealed.word .mem-back { font-size: 19px; color: #0E1C42; font-weight: 600; }
+    .mem-card.revealed.def .mem-back { font-size: 13.5px; color: #1a2340; line-height: 1.4; }
+    .mem-card.matched { background: #D8F0DD; border-color: #2A9D5C; cursor: default; }
+    .mem-card.matched.word .mem-back { color: #1A6B3D; }
+    .mem-card.matched.def .mem-back { color: #1A6B3D; }
+    .mem-card.mismatch { background: #FDECEC; border-color: #C0392B; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Coverage</div><div style="font-size: 17px; color: #0e1c42;">Semester 1</div><div style="font-size: 12px; color: #666;">Modules 1&ndash;3 &middot; Weeks 1&ndash;17</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Bonus &middot; Optional</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Word Study Vocabulary</div><div style="font-size: 12px; color: #666; margin-top: 2px;">18 words, all semester</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Texts Covered</div><div style="font-size: 15px; color: #0e1c42;">Emma &middot; Out of the Silent Planet &middot; &ldquo;The Learn&rsquo;d Astronomer&rdquo;</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div class="opt-banner">
+        <div class="kicker">&#127918; OPTIONAL PRACTICE</div>
+        <div class="msg">This game is not graded and does not appear in your gradebook. It is a fun bonus round for every Word Study word from Semester 1, all in one place.</div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Bonus Game</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Word Match</div>
+        <div style="font-size: 16px; color: #666;">Find every word and its meaning.</div>
+    </div>
+
+    <div class="how-to">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#128218; HOW TO PLAY</div>
+        <p>Click any card to flip it face up, then click a second card. If the two cards are a matching word and meaning, they stay face up and turn green. If they do not match, both flip back down after a moment. Find all 18 matches in as few moves as possible.</p>
+    </div>
+
+    <div class="game-status">
+        <div><span id="matches-display">Matches: 0 / 18</span></div>
+        <div><span class="accent" id="moves-display">Moves: 0</span></div>
+        <button id="new-game-btn" class="new-game-btn">New Game</button>
+    </div>
+
+    <div class="win-banner" id="win-banner">&#127881; All 18 matched! Nice work. Click &ldquo;New Game&rdquo; to shuffle and play again.</div>
+
+    <div class="mem-grid" id="mem-grid"></div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Optional Practice Game</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Word Match &middot; Semester 1 Vocabulary, Not Graded</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var MISMATCH_DELAY = 900;
+
+  var WORDS = [
+    { word: 'disposition', def: 'A person\'s usual temper or mood; the way they tend to feel and behave.' },
+    { word: 'vex', def: 'To trouble, annoy, or irritate someone.' },
+    { word: 'artless', def: 'Without cunning or guile; simple, sincere, and easily read.' },
+    { word: 'ardent', def: 'Burning with feeling; passionate and eager.' },
+    { word: 'officious', def: 'Too eager to offer help or advice that no one asked for, in a way that feels like meddling.' },
+    { word: 'genteel', def: 'Polished and well-bred, with the manners of the upper class.' },
+    { word: 'arch', def: 'Playfully teasing or sly, with a knowing little smile behind the words.' },
+    { word: 'candour', def: 'Honesty and fairness in speaking, especially the willingness to say a hard truth kindly.' },
+    { word: 'concede', def: 'To admit that part of the other side is true.' },
+    { word: 'sedentary', def: 'Spending much time seated; not active or moving about.' },
+    { word: 'foreboding', def: 'A heavy sense that something bad is coming, a dread you feel before you have any proof.' },
+    { word: 'bent', def: 'Curved or pulled out of a straight, proper shape; twisted away from what something was meant to be.' },
+    { word: 'distinct', def: 'Clearly different and separate; easy to tell apart.' },
+    { word: 'vivid', def: 'So bright, clear, and detailed that it seems to come alive in your mind.' },
+    { word: 'alliteration', def: 'The repeating of the same beginning consonant sound in two or more nearby words.' },
+    { word: 'impression', def: 'The effect something has on your mind or senses at first, before you fully understand it.' },
+    { word: 'mystical', def: 'Having a meaning beyond what reason alone can explain; touched with mystery or wonder.' },
+    { word: 'unaccountable', def: 'Impossible to explain or account for.' }
+  ];
+
+  var TOTAL_PAIRS = WORDS.length;
+
+  var cards = [];
+  var firstIndex = null;
+  var secondIndex = null;
+  var locked = false;
+  var matches = 0;
+  var moves = 0;
+  var mismatchTimer = null;
+
+  var gridEl = document.getElementById('mem-grid');
+  var matchesEl = document.getElementById('matches-display');
+  var movesEl = document.getElementById('moves-display');
+  var winBanner = document.getElementById('win-banner');
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function buildDeck() {
+    var deck = [];
+    for (var i = 0; i < WORDS.length; i++) {
+      deck.push({ pairId: i, type: 'word', text: WORDS[i].word });
+      deck.push({ pairId: i, type: 'def', text: WORDS[i].def });
+    }
+    return shuffle(deck);
+  }
+
+  function updateStatus() {
+    matchesEl.textContent = 'Matches: ' + matches + ' / ' + TOTAL_PAIRS;
+    movesEl.textContent = 'Moves: ' + moves;
+  }
+
+  function render() {
+    gridEl.innerHTML = '';
+    cards.forEach(function (card, i) {
+      var el = document.createElement('div');
+      el.className = 'mem-card ' + card.type;
+      el.setAttribute('data-idx', i);
+      if (card.revealed || card.matched) el.classList.add('revealed');
+      if (card.matched) el.classList.add('matched');
+      var front = document.createElement('div');
+      front.className = 'mem-front';
+      front.textContent = '?';
+      var back = document.createElement('div');
+      back.className = 'mem-back';
+      back.textContent = card.text;
+      el.appendChild(front);
+      el.appendChild(back);
+      gridEl.appendChild(el);
+    });
+  }
+
+  function newGame() {
+    if (mismatchTimer) { clearTimeout(mismatchTimer); mismatchTimer = null; }
+    cards = buildDeck();
+    firstIndex = null;
+    secondIndex = null;
+    locked = false;
+    matches = 0;
+    moves = 0;
+    winBanner.classList.remove('show');
+    updateStatus();
+    render();
+  }
+
+  function onCardClick(i) {
+    if (locked) return;
+    var card = cards[i];
+    if (card.matched) return;
+    if (i === firstIndex) return;
+
+    card.revealed = true;
+    render();
+
+    if (firstIndex === null) {
+      firstIndex = i;
+      return;
+    }
+
+    secondIndex = i;
+    moves++;
+    updateStatus();
+    locked = true;
+
+    var a = cards[firstIndex];
+    var b = cards[secondIndex];
+
+    if (a.pairId === b.pairId) {
+      a.matched = true;
+      b.matched = true;
+      matches++;
+      updateStatus();
+      render();
+      firstIndex = null;
+      secondIndex = null;
+      locked = false;
+      if (matches === TOTAL_PAIRS) {
+        winBanner.classList.add('show');
+      }
+    } else {
+      mismatchTimer = setTimeout(function () {
+        mismatchTimer = null;
+        a.revealed = false;
+        b.revealed = false;
+        firstIndex = null;
+        secondIndex = null;
+        locked = false;
+        render();
+      }, MISMATCH_DELAY);
+    }
+  }
+
+  gridEl.addEventListener('click', function (e) {
+    var cardEl = e.target.closest('.mem-card');
+    if (!cardEl) return;
+    var idx = parseInt(cardEl.getAttribute('data-idx'), 10);
+    onCardClick(idx);
+  });
+
+  document.getElementById('new-game-btn').addEventListener('click', newGame);
+
+  newGame();
+})();
+</script>
+</body>
+</html>

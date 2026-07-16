@@ -1,0 +1,291 @@
+<!--
+    Optima Academy Online — INTERACTIVE lesson (GitHub-deployed, embedded in Canvas).
+    M/J Language Arts 3 (1001070) · Module 1 Emma · Week 1 · Literature 1.
+    Delete the .preview-banner before deploying. Emma is public domain → chapter text may be linked.
+    Engines rotated from Mon's lesson: reflective check-in → single-select (cast) → flip-card vocab.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Lesson 1.2 (Literature)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="preview-banner"><strong>Local preview only.</strong> Delete this banner before deploying. Widgets run on the GitHub-hosted page, not in a Canvas RCE paste.</div>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">Emma &middot; Week 1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">1.2 &middot; Literature</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Anchor Text</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Emma, Vol. I, Ch. 1&ndash;3</div>
+        <div style="font-size: 12px; color: #666;">Jane Austen</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div>
+    </div>
+</div>
+
+<!-- ===== BODY ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Who Is Emma Woodhouse?</div>
+        <div style="font-size: 16px; color: #666;">Literature Lesson &middot; Logic Stage</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What do we learn about a person from the very first thing we are told about her?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In the opening chapters of <em>Emma</em>, Jane Austen introduces a heroine she calls &ldquo;handsome, clever, and rich,&rdquo; and then spends an entire novel showing us the difference between what Emma believes about herself and what is true. Today you meet the people of Highbury and start watching how Austen reveals character not by <em>telling</em> us a person&rsquo;s flaws, but by <em>showing</em> what they do and how others respond.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the main characters of Highbury and the household each belongs to.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> retell the events of Chapter 1 accurately, in my own words.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your copy of <em>Emma</em> (or the linked PDF below), Volume I, Chapters 1&ndash;3</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your writing notebook (for the retell) and your typed Module 1 Organizer (for vocabulary and your evolving ideas)</div>
+        </div>
+    </div>
+
+    <!-- PART 1 — meet Highbury + check-in -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PEOPLE OF HIGHBURY</div>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of someone who is generous and well-liked but almost always certain they are right. What tends to happen when a person like that decides to &ldquo;help&rdquo;? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="Hold onto that. Emma means well every single time, and still causes trouble. Watch for it.">It usually goes wrong</button>
+                <button data-response="Sometimes, yes. Austen lets Emma succeed just often enough to keep her confident. Watch when it works and when it doesn't.">Sometimes it helps</button>
+                <button data-response="That's the generous reading. Keep it; the novel will test whether good intentions are enough.">It depends on the person</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Four people, three houses</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><span style="color:#843fa1;font-weight:700;">Emma Woodhouse</span> lives at <strong>Hartfield</strong> with her gentle, anxious father, <span style="color:#e67e23;font-weight:700;">Mr. Woodhouse</span>, who is frightened of any change at all. As the novel opens, Emma&rsquo;s former governess and dear friend, <span style="color:#ee58c1;font-weight:700;">Miss Taylor</span>, has just married Mr. Weston and moved to <strong>Randalls</strong>, leaving Emma without her closest companion and a little too pleased with herself for having &ldquo;made&rdquo; the match. Nearby at <strong>Donwell Abbey</strong> lives <span style="color:#3598db;font-weight:700;">Mr. Knightley</span>, an old family friend who is, as Austen says, &ldquo;one of the few people who could see faults in Emma Woodhouse, and the only one who ever told her of them.&rdquo; Notice that Austen never simply announces that Emma is vain; she lets it surface in what Emma does and in how Mr. Knightley answers her.</p>
+    </div>
+
+    <!-- PART 2 — read, then place the cast -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 2 &middot; READ, THEN RETELL</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Read <strong>Volume I, Chapters 1&ndash;3</strong> in one sitting if you can: one reading, straight through, with no stopping to look things up. Then, in your <strong>writing notebook</strong>, write a short paragraph retelling what happens in Chapter 1 in your own words and in the order it occurs. This is <em>narration</em>: not a summary you copy, but the events as your own mind has received them. Your notebook work is collected at the end of the week in <strong>Week 1 Daily Practice</strong>.</p>
+        <div style="background:#FDF3E3;border-left:5px solid #C7922C;border-radius:6px;padding:14px 20px;margin:8px 0;">
+            <div style="font-size:11px;color:#c7922c;margin-bottom:8px;">&#128214; YOUR READING</div>
+            <div style="font-size:17px;color:#0e1c42;line-height:1.6;"><a href="../../../Emma full text.pdf" style="color:#0e1c42;font-weight:700;">Emma: full text (PDF), Vol. I, Ch. 1&ndash;3</a> &nbsp;<span style="font-size:13px;color:#999;font-style:italic;">[Teacher: confirm the Canvas file link on deploy.]</span></div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 6px 0;">Once you have read, check that you have the cast straight:</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; HIGHBURY HOUSEHOLDS</div>
+            <div class="widget-question">Place each character where the text puts them.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. Mr. Knightley lives at Donwell Abbey, the neighboring estate." data-hint="He is the neighbor with the large nearby estate, not a member of the Woodhouse house.">
+                <div class="widget-row-prompt">1. Where does Mr. Knightley live?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Hartfield</button>
+                    <button data-choice="1">Randalls</button>
+                    <button data-choice="2">Donwell Abbey</button>
+                    <button data-choice="3">Mrs. Goddard's school</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Her marriage to Mr. Weston moves her to Randalls, and that departure opens the novel." data-hint="She has just married Mr. Weston. Where does that take her?">
+                <div class="widget-row-prompt">2. Where does Miss Taylor (now Mrs. Weston) go?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Hartfield</button>
+                    <button data-choice="1">Randalls</button>
+                    <button data-choice="2">Donwell Abbey</button>
+                    <button data-choice="3">London</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="3" data-fb="Right. Emma and her father share Hartfield." data-hint="She lives with her anxious father. What is the name of their house?">
+                <div class="widget-row-prompt">3. Where do Emma and Mr. Woodhouse live?</div>
+                <div class="widget-options">
+                    <button data-choice="0">Donwell Abbey</button>
+                    <button data-choice="1">Randalls</button>
+                    <button data-choice="2">The vicarage</button>
+                    <button data-choice="3">Hartfield</button>
+                </div>
+            </div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Austen shows this through Knightley's willingness to correct her, not by stating &ldquo;Emma was vain.&rdquo; That is indirect characterization." data-hint="Which option is something Austen SHOWS through action, rather than a flaw she states outright?">
+                <div class="widget-row-prompt">4. How does Austen reveal that Emma thinks well of her own judgment?</div>
+                <div class="widget-options">
+                    <button data-choice="0">By showing her pride in &ldquo;making&rdquo; the Weston match</button>
+                    <button data-choice="1">By stating plainly that Emma is vain</button>
+                    <button data-choice="2">By having Emma confess it in a letter</button>
+                    <button data-choice="3">By describing Hartfield in detail</button>
+                </div>
+            </div>
+
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 3 — vocabulary (copia) -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128221; PART 3 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Austen writes that Emma has a &ldquo;happy <strong>disposition</strong>.&rdquo; Tap the card to check the meaning, then practice the word several ways in your Organizer.</p>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">disposition</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A person&rsquo;s usual temper or mood; the way they tend to feel and behave. Austen&rsquo;s &ldquo;happy disposition&rdquo; tells us Emma is naturally cheerful.</div>
+            </div>
+        </div>
+        <div style="background:#FDF3E3;border-left:5px solid #C7922C;border-radius:6px;padding:14px 20px;margin:14px 0;">
+            <div style="font-size:11px;color:#c7922c;margin-bottom:8px;">&#127793; WORD ROOTS</div>
+            <div style="font-size:16px;color:#0e1c42;line-height:1.6;"><strong>Disposition</strong> comes from Latin <em>dis-</em> (&ldquo;apart&rdquo;) and <em>ponere</em> (&ldquo;to place, to put&rdquo;): literally how something is put together. The same root <em>ponere</em> turns up in <strong>expose</strong>, <strong>component</strong>, and <strong>position</strong>.</div>
+        </div>
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128221; WORD STUDY &middot; IN YOUR ORGANIZER</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Copy Austen&rsquo;s phrase, then rewrite it twice about someone you know: once swapping in a synonym for <em>disposition</em>, once expanding the phrase (&ldquo;a happy disposition that&hellip;&rdquo;). Notice how the meaning shifts each time.</div>
+        </div>
+    </div>
+
+    <!-- What you'll do next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Week 1 Quick Write</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">What does Emma know, and not know, about herself? Point to two places in Chapters 1&ndash;3. This is the first step toward your Module essay. (Submit as a Word document. See the assignment page.)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You have met Highbury and watched Austen reveal character by showing rather than telling. Keep asking the module&rsquo;s question as you read: how well does Emma really know herself? <strong>Memory work:</strong> say Austen&rsquo;s opening sentence aloud once today.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.2 &middot; Who Is Emma Woodhouse?</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (references/widgets.md) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>

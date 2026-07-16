@@ -1,0 +1,274 @@
+<!--
+    Optima Academy Online — OPTIONAL BONUS GAME. M/J Language Arts 3 · Module 1 Emma · Week 8.
+    Standalone, ungraded arcade practice for Lesson 1.38 (its/it's, their/they're/there). Not a Canvas Assignment,
+    not tied to any Tier. Click-based only (no native drag-and-drop). Plain inline script, no external libraries.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Bonus Game: Bucket Race</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .game-panel { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 20px 24px; margin: 18px 0; }
+    .game-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+
+    .stat-row { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 16px; }
+    .stat-box { flex: 1; min-width: 130px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 10px 14px; text-align: center; }
+    .stat-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; }
+    .stat-value { font-size: 26px; color: #0E1C42; }
+
+    .bar-track { width: 100%; height: 14px; background: #E1E8F2; border-radius: 7px; overflow: hidden; margin-bottom: 6px; }
+    .bar-fill { height: 100%; border-radius: 7px; transition: width 0.25s ease; }
+    .bar-fill.time { background: #55C8E8; }
+    .bar-fill.score { background: #C7922C; }
+    .bar-caption { font-size: 12px; color: #6b7a99; margin-bottom: 16px; }
+
+    .sentence-card { background: #0E1C42; border-radius: 8px; padding: 22px 26px; margin: 10px 0 18px 0; color: #E8F6FB; font-size: 19px; line-height: 1.7; text-align: center; min-height: 56px; }
+    .sentence-card .gap { color: #55C8E8; font-weight: bold; letter-spacing: 1px; }
+
+    .choice-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 16px; }
+    .choice-btn { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 12px 24px; font-size: 17px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; min-width: 110px; }
+    .choice-btn:hover:not(:disabled) { background: #F4F6FA; border-color: #55C8E8; }
+    .choice-btn:disabled { cursor: default; }
+    .choice-btn.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .choice-btn.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+
+    .round-feedback { min-height: 24px; text-align: center; font-size: 15px; line-height: 1.55; padding: 10px 16px; border-radius: 6px; margin: 0 0 8px 0; }
+    .round-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .round-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+
+    .end-screen { display: none; text-align: center; padding: 30px 20px; }
+    .end-screen.show { display: block; }
+    .end-score { font-size: 44px; color: #0E1C42; margin: 6px 0 4px 0; }
+    .end-label { font-size: 15px; color: #6b7a99; margin-bottom: 18px; }
+
+    .btn-playagain { background: #0E1C42; color: #FFFFFF; border: none; border-radius: 8px; padding: 12px 28px; font-size: 16px; cursor: pointer; font-family: inherit; }
+    .btn-playagain:hover { opacity: 0.88; }
+    .btn-restart-small { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 14px; font-size: 12px; cursor: pointer; font-family: inherit; float: right; }
+    .btn-restart-small:hover { background: #FDF3E3; }
+
+    .game-play { display: block; }
+    .game-play.hide { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 8</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Type</div><div style="font-size: 17px; color: #0e1c42;">Bonus Game</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Its/It&rsquo;s, Their/They&rsquo;re/There</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #C7922C; border-radius: 7px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px; letter-spacing: 0.5px;">&#127918; OPTIONAL PRACTICE &middot; NOT GRADED</div>
+        <div style="font-size: 19px; color: #0e1c42; margin-bottom: 4px;">Bucket Race</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">This is a just-for-fun arcade round to sharpen the its/it&rsquo;s and their/they&rsquo;re/there test from Lesson 1.38. It does not count toward any grade and does not need to be turned in. Play as many rounds as you like.</div>
+    </div>
+
+    <div class="game-panel">
+        <div class="game-kicker">&#9889; HOW TO PLAY</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 4px;">A sentence with a blank appears. Click the word that belongs in the blank before the clock runs out. Fill the bucket with correct answers before time is up.</div>
+    </div>
+
+    <div id="playArea" class="game-play">
+        <div class="stat-row">
+            <div class="stat-box"><div class="stat-label">Time Left</div><div class="stat-value" id="timeValue">75</div></div>
+            <div class="stat-box"><div class="stat-label">Score</div><div class="stat-value" id="scoreValue">0</div></div>
+        </div>
+
+        <div class="bar-track"><div class="bar-fill time" id="timeBar" style="width:100%;"></div></div>
+        <div class="bar-caption">Time remaining</div>
+
+        <div class="bar-track"><div class="bar-fill score" id="scoreBar" style="width:0%;"></div></div>
+        <div class="bar-caption">Bucket fill (fill it with 20 correct answers)</div>
+
+        <div class="sentence-card" id="sentenceCard"></div>
+        <div class="round-feedback" id="roundFeedback" style="visibility:hidden;"></div>
+        <div class="choice-row" id="choiceRow"></div>
+
+        <button class="btn-restart-small" id="restartSmallBtn">Restart</button>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="end-screen" id="endScreen">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px; letter-spacing: 0.5px;">&#8987; TIME&rsquo;S UP</div>
+        <div class="end-score" id="finalScore">0</div>
+        <div class="end-label">correct answers this round</div>
+        <button class="btn-playagain" id="playAgainBtn">Play Again</button>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Optional Practice</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Bucket Race &middot; Week 8 Bonus Game</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+    var BANK = [
+        { blank: "The carriage lost <span class=\"gap\">___</span> wheel on the road to Highbury.", choices: ["it's", "its"], correct: 1, why: "Its shows the wheel belongs to the carriage. Read it as \"it is wheel\": that fails, so no apostrophe." },
+        { blank: "<span class=\"gap\">___</span> going to rain before the picnic ends.", choices: ["It's", "Its"], correct: 0, why: "\"It is going to rain\" makes sense, so the contraction it's is correct." },
+        { blank: "The old house had lost <span class=\"gap\">___</span> charm over the years.", choices: ["it's", "its"], correct: 1, why: "The charm belongs to the house. \"It is charm\" is nonsense, so use the possessive its." },
+        { blank: "<span class=\"gap\">___</span> clear that Harriet admires him greatly.", choices: ["It's", "Its"], correct: 0, why: "\"It is clear\" fits, so the contraction it's belongs here." },
+        { blank: "The dog wagged <span class=\"gap\">___</span> tail eagerly at the door.", choices: ["it's", "its"], correct: 1, why: "The tail belongs to the dog. \"It is tail\" fails the test, so use its." },
+        { blank: "<span class=\"gap\">___</span> been a long morning at Hartfield.", choices: ["It's", "Its"], correct: 0, why: "\"It has been a long morning\" fits, so it's is correct here." },
+        { blank: "The garden showed <span class=\"gap\">___</span> best colors in June.", choices: ["it's", "its"], correct: 1, why: "The colors belong to the garden. \"It is best colors\" makes no sense, so use its." },
+        { blank: "<span class=\"gap\">___</span> no wonder she felt embarrassed at the party.", choices: ["It's", "Its"], correct: 0, why: "\"It is no wonder\" works, so the apostrophe form it's is correct." },
+        { blank: "<span class=\"gap\">___</span> going to the ball at Hartfield tonight.", choices: ["Their", "They're", "There"], correct: 1, why: "\"They are going\" fits, so the contraction they're is correct." },
+        { blank: "The Westons brought <span class=\"gap\">___</span> own carriage to the dinner.", choices: ["their", "they're", "there"], correct: 0, why: "The carriage belongs to the Westons, so the possessive their is correct." },
+        { blank: "Put the basket over <span class=\"gap\">___</span>, by the door.", choices: ["their", "they're", "there"], correct: 2, why: "This there points to a place, so it is correct here." },
+        { blank: "<span class=\"gap\">___</span> is no reason to worry about the weather.", choices: ["Their", "They're", "There"], correct: 2, why: "\"There is no reason\" simply points out that something exists, so there is correct." },
+        { blank: "The guests left <span class=\"gap\">___</span> coats in the front hall.", choices: ["their", "they're", "there"], correct: 0, why: "The coats belong to the guests, so the possessive their is correct." },
+        { blank: "<span class=\"gap\">___</span> certain to arrive before dinner is served.", choices: ["Their", "They're", "There"], correct: 1, why: "\"They are certain to arrive\" fits, so they're is correct." },
+        { blank: "<span class=\"gap\">___</span> was a strange silence in the drawing room.", choices: ["Their", "They're", "There"], correct: 2, why: "This there simply announces that a silence existed, so there is correct." },
+        { blank: "The sisters shared <span class=\"gap\">___</span> secrets freely with each other.", choices: ["their", "they're", "there"], correct: 0, why: "The secrets belong to the sisters, so the possessive their is correct." }
+    ];
+
+    var ROUND_LENGTH = 75;
+    var BUCKET_TARGET = 20;
+
+    var order = [];
+    var pointer = 0;
+    var score = 0;
+    var timeLeft = ROUND_LENGTH;
+    var timerId = null;
+    var gameOver = false;
+    var awaitingNext = false;
+    var roundToken = 0;
+
+    var timeValueEl = document.getElementById('timeValue');
+    var scoreValueEl = document.getElementById('scoreValue');
+    var timeBarEl = document.getElementById('timeBar');
+    var scoreBarEl = document.getElementById('scoreBar');
+    var sentenceCardEl = document.getElementById('sentenceCard');
+    var choiceRowEl = document.getElementById('choiceRow');
+    var roundFeedbackEl = document.getElementById('roundFeedback');
+    var playAreaEl = document.getElementById('playArea');
+    var endScreenEl = document.getElementById('endScreen');
+    var finalScoreEl = document.getElementById('finalScore');
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+        }
+        return a;
+    }
+
+    function newOrder() {
+        order = shuffle(BANK.map(function (_, idx) { return idx; }));
+        pointer = 0;
+    }
+
+    function nextQuestion() {
+        if (gameOver) return;
+        if (pointer >= order.length) { newOrder(); }
+        var item = BANK[order[pointer]];
+        pointer++;
+        awaitingNext = false;
+        roundFeedbackEl.style.visibility = 'hidden';
+        roundFeedbackEl.textContent = '';
+        roundFeedbackEl.className = 'round-feedback';
+        sentenceCardEl.innerHTML = item.blank;
+        choiceRowEl.innerHTML = '';
+        item.choices.forEach(function (choiceText, idx) {
+            var btn = document.createElement('button');
+            btn.className = 'choice-btn';
+            btn.textContent = choiceText;
+            btn.dataset.idx = idx;
+            btn.addEventListener('click', function () { handleAnswer(item, idx, btn); });
+            choiceRowEl.appendChild(btn);
+        });
+    }
+
+    function handleAnswer(item, idx, btn) {
+        if (gameOver || awaitingNext) return;
+        awaitingNext = true;
+        var tokenAtAnswer = roundToken;
+        var right = idx === item.correct;
+        Array.prototype.forEach.call(choiceRowEl.children, function (b) { b.disabled = true; });
+        btn.classList.add(right ? 'correct' : 'incorrect');
+        if (!right) {
+            var correctBtn = choiceRowEl.children[item.correct];
+            if (correctBtn) correctBtn.classList.add('correct');
+        }
+        roundFeedbackEl.style.visibility = 'visible';
+        roundFeedbackEl.textContent = (right ? 'Correct. ' : 'Not quite. ') + item.why;
+        roundFeedbackEl.className = 'round-feedback ' + (right ? 'correct' : 'incorrect');
+        if (right) {
+            score++;
+            scoreValueEl.textContent = String(score);
+            var pct = Math.min(score, BUCKET_TARGET) / BUCKET_TARGET * 100;
+            scoreBarEl.style.width = pct + '%';
+        }
+        var delay = right ? 900 : 2200;
+        setTimeout(function () { if (!gameOver && tokenAtAnswer === roundToken) nextQuestion(); }, delay);
+    }
+
+    function tick() {
+        if (gameOver) return;
+        timeLeft--;
+        if (timeLeft < 0) timeLeft = 0;
+        timeValueEl.textContent = String(timeLeft);
+        timeBarEl.style.width = (timeLeft / ROUND_LENGTH * 100) + '%';
+        if (timeLeft <= 0) { endGame(); }
+    }
+
+    function endGame() {
+        gameOver = true;
+        if (timerId) { clearInterval(timerId); timerId = null; }
+        playAreaEl.classList.add('hide');
+        finalScoreEl.textContent = String(score);
+        endScreenEl.classList.add('show');
+    }
+
+    function startGame() {
+        roundToken++;
+        gameOver = false;
+        awaitingNext = false;
+        score = 0;
+        timeLeft = ROUND_LENGTH;
+        scoreValueEl.textContent = '0';
+        timeValueEl.textContent = String(ROUND_LENGTH);
+        timeBarEl.style.width = '100%';
+        scoreBarEl.style.width = '0%';
+        endScreenEl.classList.remove('show');
+        playAreaEl.classList.remove('hide');
+        newOrder();
+        nextQuestion();
+        if (timerId) clearInterval(timerId);
+        timerId = setInterval(tick, 1000);
+    }
+
+    document.getElementById('playAgainBtn').addEventListener('click', startGame);
+    document.getElementById('restartSmallBtn').addEventListener('click', startGame);
+
+    startGame();
+})();
+</script>
+</body>
+</html>

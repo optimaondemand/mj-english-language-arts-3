@@ -1,0 +1,269 @@
+<!--
+    Optima Academy Online — OPTIONAL PRACTICE GAME (ungraded, not a Canvas Assignment). M/J Language Arts 3 · Module 1 Emma · Week 5.
+    Companion to Lessons 1.21 (conjunctions) and 1.23 (interjections and the eight parts of speech). Timed sprint, click-based answers only.
+    No native drag-and-drop. Plain inline script, no external libraries. This comment is not student-facing.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Speed Round (Optional Practice)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .status-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; background: #0E1C42; color: #ffffff; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px; }
+    .timer-display { font-size: 22px; color: #55C8E8; }
+    .timer-display.low { color: #FF8A80; }
+    .score-display { font-size: 16px; color: rgba(255,255,255,0.85); }
+    .question-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 22px; margin-bottom: 16px; min-height: 60px; }
+    .question-text { font-size: 19px; color: #0e1c42; line-height: 1.55; }
+    .answer-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; }
+    .answer-btn { flex: 1 1 160px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 14px 12px; font-size: 16px; color: #0E1C42; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    .answer-btn:hover { border-color: #55C8E8; background: #F4F6FA; }
+    .answer-btn.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .answer-btn.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .final-screen { text-align: center; padding: 26px 10px; }
+    .final-screen .final-score { font-size: 30px; color: #0E1C42; margin-bottom: 10px; }
+    .final-screen .final-note { font-size: 16px; color: #1a2340; margin-bottom: 16px; }
+    .play-again-big { background: #0E1C42; color: #ffffff; border: none; border-radius: 6px; padding: 12px 26px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .play-again-big:hover { background: #16295c; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 5</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Companion Lessons</div><div style="font-size: 17px; color: #0e1c42;">1.21 &amp; 1.23</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Optional Practice Game</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 16px 22px; margin-bottom: 20px; text-align: center;">
+        <div style="font-size: 12px; color: #8a6d1f; letter-spacing: 0.5px;">&#127918; OPTIONAL PRACTICE. NOT GRADED.</div>
+        <div style="font-size: 16px; color: #0e1c42; margin-top: 6px;">This is a bonus timed game for extra practice with this week's grammar. It does not count toward any grade and is not a Canvas assignment.</div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Speed Round</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Conjunctions and All Eight Parts of Speech</div>
+        <div style="font-size: 16px; color: #666;">Timed practice game</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; HOW TO PLAY</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">You have 75 seconds. A question appears: sometimes about whether a joining word is coordinating or subordinating, sometimes about which part of speech an italicized word is. Click your answer. You will see right away if you were right, and the next question loads automatically. Answer as many as you can before time runs out. Your score updates after every question.</div>
+    </div>
+
+    <div class="optima-widget" id="gameCard">
+        <div class="widget-kicker">&#9889; PLAY: SPEED ROUND</div>
+
+        <div class="status-bar">
+            <span class="timer-display" id="timerDisplay">Time: 75s</span>
+            <span class="score-display" id="scoreDisplay">Score: 0 correct (0 answered)</span>
+        </div>
+
+        <div id="gameArea">
+            <div class="question-card">
+                <div class="question-text" id="questionPrompt"></div>
+            </div>
+            <div class="answer-grid" id="answerArea"></div>
+        </div>
+
+        <div class="final-screen" id="finalScreen" style="display: none;">
+            <div class="final-score" id="finalScoreText">Final Score: 0</div>
+            <div class="final-note">Time's up. Nice sprint.</div>
+        </div>
+
+        <button type="button" class="widget-reset" id="playAgainBtn">Play Again</button>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; WHY THIS HELPS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Speed builds instinct. The faster you can tell a coordinating conjunction from a subordinating one, and name any word's job among the eight parts of speech, the more automatic that skill becomes in your own reading and writing.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Optional Practice</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Speed Round &middot; Companion to Lessons 1.21 &amp; 1.23</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+    var ROUND_SECONDS = 75;
+
+    var CONJ_ITEMS = [
+        { word: "and", correct: "Coordinating" },
+        { word: "but", correct: "Coordinating" },
+        { word: "or", correct: "Coordinating" },
+        { word: "so", correct: "Coordinating" },
+        { word: "yet", correct: "Coordinating" },
+        { word: "nor", correct: "Coordinating" },
+        { word: "because", correct: "Subordinating" },
+        { word: "although", correct: "Subordinating" },
+        { word: "when", correct: "Subordinating" },
+        { word: "since", correct: "Subordinating" },
+        { word: "while", correct: "Subordinating" },
+        { word: "if", correct: "Subordinating" }
+    ].map(function (item) {
+        return {
+            prompt: "Is <em>" + item.word + "</em> a coordinating or subordinating conjunction?",
+            options: ["Coordinating", "Subordinating"],
+            correct: item.correct
+        };
+    });
+
+    var POS_ITEMS = [
+        { html: "Emma <em>quickly</em> left the room.", options: ["Adjective", "Adverb", "Verb", "Noun"], correct: "Adverb" },
+        { html: "The <em>clever</em> girl smiled.", options: ["Verb", "Noun", "Adjective", "Adverb"], correct: "Adjective" },
+        { html: "<em>She</em> walked home alone.", options: ["Noun", "Pronoun", "Verb", "Adjective"], correct: "Pronoun" },
+        { html: "Frank <em>arrived</em> at noon.", options: ["Noun", "Adjective", "Verb", "Adverb"], correct: "Verb" },
+        { html: "<em>Alas</em>, the plan failed.", options: ["Interjection", "Conjunction", "Adverb", "Noun"], correct: "Interjection" },
+        { html: "They walked <em>through</em> the garden.", options: ["Adverb", "Preposition", "Conjunction", "Verb"], correct: "Preposition" },
+        { html: "Emma <em>and</em> Harriet spoke quietly.", options: ["Pronoun", "Verb", "Conjunction", "Preposition"], correct: "Conjunction" },
+        { html: "The <em>old</em> house stood empty.", options: ["Adjective", "Noun", "Verb", "Adverb"], correct: "Adjective" },
+        { html: "Mr. Weston smiled <em>warmly</em>.", options: ["Noun", "Verb", "Adjective", "Adverb"], correct: "Adverb" },
+        { html: "<em>Harriet</em> trusted her friend.", options: ["Verb", "Noun", "Adverb", "Pronoun"], correct: "Noun" }
+    ].map(function (item) {
+        return {
+            prompt: "What part of speech is the italicized word? " + item.html,
+            options: item.options,
+            correct: item.correct
+        };
+    });
+
+    var ALL_QUESTIONS = CONJ_ITEMS.concat(POS_ITEMS);
+
+    var state = { pool: [], idx: 0, score: 0, answered: 0, timeLeft: ROUND_SECONDS, timerId: null, ended: false, locked: false };
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+        }
+        return a;
+    }
+
+    function el(id) { return document.getElementById(id); }
+
+    function renderTime() {
+        var t = el("timerDisplay");
+        t.textContent = "Time: " + state.timeLeft + "s";
+        if (state.timeLeft <= 10) { t.classList.add("low"); } else { t.classList.remove("low"); }
+    }
+
+    function renderScore() {
+        el("scoreDisplay").textContent = "Score: " + state.score + " correct (" + state.answered + " answered)";
+    }
+
+    function renderQuestion() {
+        if (state.idx >= state.pool.length) {
+            state.pool = shuffle(ALL_QUESTIONS);
+            state.idx = 0;
+        }
+        var q = state.pool[state.idx];
+        el("questionPrompt").innerHTML = q.prompt;
+        var wrap = el("answerArea");
+        wrap.innerHTML = "";
+        shuffle(q.options).forEach(function (label) {
+            var b = document.createElement("button");
+            b.type = "button";
+            b.className = "answer-btn";
+            b.textContent = label;
+            wrap.appendChild(b);
+        });
+        state.locked = false;
+    }
+
+    function tick() {
+        state.timeLeft--;
+        renderTime();
+        if (state.timeLeft <= 0) {
+            endRound();
+        }
+    }
+
+    function endRound() {
+        if (state.ended) return;
+        state.ended = true;
+        clearInterval(state.timerId);
+        el("gameArea").style.display = "none";
+        el("finalScreen").style.display = "block";
+        el("finalScoreText").textContent = "Final Score: " + state.score + " correct (" + state.answered + " answered)";
+    }
+
+    function startGame() {
+        clearInterval(state.timerId);
+        state.pool = shuffle(ALL_QUESTIONS);
+        state.idx = 0;
+        state.score = 0;
+        state.answered = 0;
+        state.timeLeft = ROUND_SECONDS;
+        state.ended = false;
+        state.locked = false;
+        el("finalScreen").style.display = "none";
+        el("gameArea").style.display = "block";
+        renderTime();
+        renderScore();
+        renderQuestion();
+        state.timerId = setInterval(tick, 1000);
+    }
+
+    document.addEventListener("click", function (e) {
+        var playAgain = e.target.closest("#playAgainBtn");
+        if (playAgain) { startGame(); return; }
+
+        var btn = e.target.closest(".answer-btn");
+        if (btn && !state.ended && !state.locked) {
+            state.locked = true;
+            var q = state.pool[state.idx];
+            var right = btn.textContent === q.correct;
+            state.answered++;
+            if (right) {
+                state.score++;
+                btn.classList.add("correct");
+            } else {
+                btn.classList.add("incorrect");
+                Array.prototype.forEach.call(el("answerArea").children, function (opt) {
+                    if (opt.textContent === q.correct) { opt.classList.add("correct"); }
+                });
+            }
+            renderScore();
+            setTimeout(function () {
+                if (state.ended) return;
+                state.idx++;
+                renderQuestion();
+            }, 650);
+            return;
+        }
+    });
+
+    startGame();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!--
+    Optima Academy Online — INTERACTIVE lesson. M/J Language Arts 3 · Module 3 Whitman · Literature 1 (3.2).
+    Hear & read the poem aloud; full PD poem printed on the page; mark where it turns. Engines: reflect -> flip (Word Study) -> select. Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Lesson 3.2 (Literature)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="preview-banner"><strong>Local preview only.</strong> Delete this banner before deploying. Widgets run on the GitHub-hosted page, not in a Canvas RCE paste.</div>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 3</div><div style="font-size: 12px; color: #666;">Whitman &middot; One Week</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">3.2 &middot; Literature</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Anchor Text</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">When I Heard the Learn&rsquo;d Astronomer</div><div style="font-size: 12px; color: #666;">Walt Whitman</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Knowledge and Wonder</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 3.2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Hear It, Read It, Find the Turn</div>
+        <div style="font-size: 16px; color: #666;">Literature Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A poem is meant to be heard, not just seen.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Walt Whitman published &ldquo;When I Heard the Learn&rsquo;d Astronomer&rdquo; in 1865. It is one short sentence, eight lines long. A speaker sits in a lecture hall while an expert explains the stars with proofs, figures, charts, and diagrams. Halfway through, the speaker grows tired and sick of it all, rises, and walks out into the night, where he simply looks up at the stars in silence. The poem holds two ways of meeting the same sky: measuring it, and wondering at it. Today you will hear it read aloud, read it yourself, and find the exact place where it turns from one way to the other.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> read the whole poem aloud and follow its single long sentence.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> point to the line where the poem turns from the lecture hall to the night.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The poem (printed below), your writing notebook, and a quiet place to read aloud.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; LISTEN, THEN READ ALOUD</div>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think of a time someone explained something to you in great detail. How did it leave you feeling? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That happens. Sometimes a careful explanation leaves us a little flat, even when the facts are correct. Watch for that feeling in the poem.">A bit tired or restless</button>
+                <button data-response="Good. Sometimes details satisfy us, and sometimes they crowd out the thing itself. The poem weighs both.">Informed, but not moved</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <div style="background:#FDF3E3;border-left:5px solid #C7922C;border-radius:6px;padding:14px 20px;margin:8px 0 14px 0;">
+            <div style="font-size:11px;color:#c7922c;margin-bottom:8px;">&#128266; LISTEN FIRST</div>
+            <div style="font-size:17px;color:#0e1c42;line-height:1.6;">Listen to the poem read aloud once before you read it yourself. <span style="font-size:13px;color:#999;font-style:italic;">[Teacher: embed an approved read-aloud recording here.]</span></div>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Now read the whole poem aloud, slowly. It is one long sentence, so let your voice carry through the line breaks and only fully stop at the end.</p>
+
+        <div style="background:#0E1C42;border-radius:8px;padding:24px 28px;margin:8px 0;color:#E8F6FB;">
+            <div style="font-size:13px;color:#55c8e8;margin-bottom:14px;letter-spacing:0.4px;">WHEN I HEARD THE LEARN&rsquo;D ASTRONOMER &middot; WALT WHITMAN (1865)</div>
+            <div style="font-size:18px;line-height:2.0;font-style:italic;color:#FFFFFF;">
+                When I heard the learn&rsquo;d astronomer,<br>
+                When the proofs, the figures, were ranged in columns before me,<br>
+                When I was shown the charts and diagrams, to add, divide, and measure them,<br>
+                When I sitting heard the astronomer where he lectured with much applause in the lecture-room,<br>
+                How soon unaccountable I became tired and sick,<br>
+                Till rising and gliding out I wander&rsquo;d off by myself,<br>
+                In the mystical moist night-air, and from time to time,<br>
+                Look&rsquo;d up in perfect silence at the stars.
+            </div>
+        </div>
+        <div style="font-size:13px;color:#666;font-style:italic;margin-top:8px;">This poem is in the public domain.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128221; PART 2 &middot; WORD STUDY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">Whitman calls the night-air &ldquo;mystical.&rdquo; Tap to check the meaning, then practice the word several ways in your Organizer.</p>
+        <div class="optima-widget">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">mystical</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><strong>Mystical</strong> means having a meaning beyond what reason alone can explain; touched with mystery or wonder. By calling the night-air mystical, Whitman sets the wonder of the stars against the measuring done inside the lecture hall.</div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+        <div style="background:#FDF3E3;border-left:5px solid #C7922C;border-radius:6px;padding:14px 20px;margin:14px 0;">
+            <div style="font-size:11px;color:#c7922c;margin-bottom:8px;">&#127793; WORD ROOTS</div>
+            <div style="font-size:16px;color:#0e1c42;line-height:1.6;"><strong>Mystical</strong> comes from Greek <em>myein</em>, &ldquo;to close the eyes or lips,&rdquo; the verb behind the secret rites of the ancient mystery religions. The same root gives us <strong>mystery</strong> and <strong>mysterious</strong>, both carrying that old sense of something deliberately hidden from ordinary sight.</div>
+        </div>
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128221; WORD STUDY &middot; IN YOUR ORGANIZER</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Write a sentence using <em>mystical</em>. Then rewrite it twice: once with a synonym, once expanding it (&ldquo;mystical in the sense that&hellip;&rdquo;).</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; PART 3 &middot; FIND THE TURN</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 6px 0;">The poem starts in the lecture hall and ends under the stars. Answer each about where and how it turns.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; WHERE DOES IT TURN?</div>
+            <div class="widget-question">Use the printed poem above to answer.</div>
+
+            <div class="widget-row" data-correct="2" data-fb="Right. The turn comes at line five, &ldquo;How soon unaccountable I became tired and sick.&rdquo; That is where the speaker stops listening and the feeling shifts." data-hint="Find the first line where the speaker stops describing the lecture and starts describing how he feels.">
+                <div class="widget-row-prompt">1. At which line does the poem turn away from the lecture?</div>
+                <div class="widget-options"><button data-choice="0">Line 2</button><button data-choice="1">Line 3</button><button data-choice="2">Line 5</button><button data-choice="3">Line 8</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. The first four lines pile up proofs, figures, charts, and diagrams: the work of measuring." data-hint="What fills the first half: numbers and instruments, or quiet and sky?">
+                <div class="widget-row-prompt">2. What fills the first four lines?</div>
+                <div class="widget-options"><button data-choice="0">Proofs, figures, charts, diagrams</button><button data-choice="1">Stars and silence</button><button data-choice="2">A storm</button><button data-choice="3">A conversation between friends</button></div>
+            </div>
+            <div class="widget-row" data-correct="3" data-fb="Right. The last line, &ldquo;Look&rsquo;d up in perfect silence at the stars,&rdquo; ends the poem in wordless wonder." data-hint="How does the speaker meet the stars at the very end: by counting them, or by simply looking?">
+                <div class="widget-row-prompt">3. How does the speaker meet the stars at the end?</div>
+                <div class="widget-options"><button data-choice="0">By taking more notes</button><button data-choice="1">By arguing with the astronomer</button><button data-choice="2">By leaving the building angrily</button><button data-choice="3">In silence, simply looking up</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; In your notebook, copy the one line where you feel the poem turn, and write one sentence on why it feels like the turn. Click to compare.</summary>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Many readers mark line five, &ldquo;How soon unaccountable I became tired and sick.&rdquo; It is the first line about the speaker&rsquo;s own feeling rather than the lecture, and everything after it moves outdoors and quiets down. Your reasoning may differ; what matters is that you can point to a line and say why.</div>
+        </details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Quick Write</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Brainstorm two contrasting moments of your own, then draft 4 to 6 lines of juxtaposition in Whitman&rsquo;s pattern. (See the assignment page.)</div></div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The poem turns once, from measuring to wondering, and that turn is its whole argument. Tomorrow you will look at the punctuation that controls its pace. <strong>Memory work:</strong> keep learning the poem; aim to hold the first four lines by tomorrow.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 3.2 &middot; Hear It, Read It, Find the Turn</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!--
+    Optima Academy Online — INTERACTIVE lesson. M/J Language Arts 3 · Module 1 Emma · Week 9 · Research Skills Mini-Unit (1 of 2).
+    Standalone two-lesson unit addressing FL ELA.8.C.4.1 (locating and evaluating research sources). Not part of the Mon-Fri
+    weekly rotation grid; supplements Week 9. Only Semester 1 module getting this treatment this session. Emma is PD.
+    Engines: reflect -> select. Delete .preview-banner before deploy (there is none in this build; page is deploy-ready).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Research Skills 1: Finding Good Sources</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 9</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Research Skills 1</div><div style="font-size: 12px; color: #666;">Standalone mini-unit</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Focus Skill</div><div style="font-size: 17px; color: #0e1c42;">Finding Good Sources</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Research Skills 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Finding Good Sources</div>
+        <div style="font-size: 16px; color: #666;">Research Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Not every source that turns up in a search is equally trustworthy, and knowing the difference is a skill you can learn.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Your Week 10 essay on <em>Emma</em> will ask you to bring in an outside source. Before you can use one well, you need to know where to look, what kind of source you are holding, and how to tell whether it deserves your trust. That is today's work.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what a research database is and why a writer might use one instead of a general web search.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell a primary source from a secondary source, and judge whether a given source is credible.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A device with internet access, if you have one (optional for this lesson), your Reading Journal and Essay Organizer, and your writing notebook.</div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128214; PART 1 &middot; WHAT A RESEARCH DATABASE IS</div>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Think about the last time you looked something up for a school project. Where did you search first? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="That is where most people start. A general search engine is fast, but it does not check whether what you find is accurate, so the rest of this lesson gives you some ways to judge what turns up there.">A general search engine</button>
+                <button data-response="Good instinct. A library website or database has already done some of the sorting work for you, though you still have to judge each source on its own once you find it.">A library website or database</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 8px 0 12px 0;">When you search for information online, a general search engine hands you everything at once: news, opinions, encyclopedia pages, advertising, and real scholarship, all mixed together with no promise that any of it has been checked. A research database works differently. It collects material that has already been selected, often reviewed by other experts in the field, and organized so you can search by subject, author, or date. <strong>JSTOR</strong> is one real example: it is an academic database that many school and public libraries provide access to, though it is not something everyone can reach for free on their own, so check with your school or public librarian about what your library card unlocks. If your library does not offer JSTOR specifically, its own catalog is still a strong place to start, since a librarian has already sorted much of that collection by subject and reliability for you.</p>
+
+        <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 6px; padding: 16px 22px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128161; WHY IT MATTERS</div>
+            <div style="font-size: 17px; color: #0e1c42; line-height: 1.6;">A database will not do your thinking for you, but it narrows the field to material that has already passed some basic tests of quality. That saves you from having to make every judgment about every source from scratch.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; PART 2 &middot; PRIMARY OR SECONDARY?</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Sources come in two basic kinds. A <strong>primary source</strong> is firsthand: a document, object, or account produced at the time and place you are studying, by someone who was actually there. A <strong>secondary source</strong> stands at one remove: it is someone later analyzing, explaining, or arguing about the primary material. <em>Emma</em> itself is a primary source for early nineteenth-century English social life: Jane Austen wrote it in 1815, drawing on the manners, conversation, and courtship customs of her own world, so the novel is direct evidence of how people of that time and place talked and behaved. A scholarly article written by a literary critic decades later, analyzing how Austen uses irony to expose Emma&rsquo;s blind spots, is a secondary source: its subject is the novel, not the century itself.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; PRIMARY OR SECONDARY?</div>
+            <div class="widget-question">Sort each source below by what kind of evidence it is.</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. A private letter written at the time, by someone who was actually there, is about as primary as evidence gets." data-hint="Ask who produced this and when. Is it a firsthand account from the period, or someone examining that period later?">
+                <div class="widget-row-prompt">1. A letter Jane Austen wrote to her sister Cassandra in 1814, describing a dance she attended.</div>
+                <div class="widget-options"><button data-choice="0">Primary source</button><button data-choice="1">Secondary source</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. This is scholarship written long after Austen&rsquo;s time, analyzing her novels rather than reporting on the world she lived in." data-hint="Does this text report directly on early nineteenth-century life, or does it study something already written about that life?">
+                <div class="widget-row-prompt">2. A peer-reviewed journal article comparing courtship customs across Austen&rsquo;s six novels.</div>
+                <div class="widget-options"><button data-choice="0">Primary source</button><button data-choice="1">Secondary source</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. The novel itself is direct evidence of its own time and place, which makes it a primary source, even though it is fiction." data-hint="A novel written during the period it depicts, by someone living then, counts as firsthand evidence of that world.">
+                <div class="widget-row-prompt">3. <em>Emma</em>, the 1815 novel itself.</div>
+                <div class="widget-options"><button data-choice="0">Primary source</button><button data-choice="1">Secondary source</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. An encyclopedia entry written two centuries later, summarizing the novel, is one step removed from the original source." data-hint="When was this written, and is its subject the 1800s themselves, or a later writer's summary of a novel about the 1800s?">
+                <div class="widget-row-prompt">4. An encyclopedia entry, written recently, summarizing the plot and major themes of <em>Emma</em>.</div>
+                <div class="widget-options"><button data-choice="0">Primary source</button><button data-choice="1">Secondary source</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. An advertisement printed at the time is firsthand evidence of what was actually happening in that town." data-hint="Was this produced at the time it describes, or does it come from someone studying that time much later?">
+                <div class="widget-row-prompt">5. A newspaper advertisement from 1816 for a dance held in an English country town.</div>
+                <div class="widget-options"><button data-choice="0">Primary source</button><button data-choice="1">Secondary source</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128221; PART 3 &middot; IS THIS SOURCE CREDIBLE?</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 12px 0;">Not everything that looks official is trustworthy, and not everything that looks casual is worthless, so you need a few real questions to ask of any source. First, who wrote it, and do they have real expertise on this subject? Second, who published it: a respected journal or press, a museum, a university, or an anonymous website with no editor? Third, when was it written or last updated, since some subjects change fast and a source can go out of date? Fourth, and most important, is the source reporting a fact you could check elsewhere, or is it mostly one person&rsquo;s opinion dressed up as fact? A source can fail on one of these points and still be worth using carefully, but a source that fails on all four is not one to build an argument on.</p>
+
+        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Before you look, decide for yourself: would you trust a blog post with no named author, last updated years ago, that mixes the writer's opinions in with historical claims about Austen's England? Write yes or no with your reasoning in your notebook. Then click to check.</summary>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Probably not, at least not on its own. No named author means you cannot check anyone&rsquo;s expertise; an old update date is a problem for some subjects and not others; and mixing opinion with fact, without marking the difference, makes it hard to know which claims to trust. That does not mean the post is worthless; it can still be a good place to find a lead. But you would want to verify any specific claim against a more credible source before you used it in your own writing.</div>
+        </details>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Research Skills 2: Quoting, Paraphrasing, and Weaving Sources</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">You will learn how to bring the sentence you find below into a paragraph of your own, cited correctly.</div></div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Before your next lesson, find, or invent, one sentence that could come from a secondary source about Jane Austen or <em>Emma</em>: a critic&rsquo;s claim, an encyclopedia fact, anything that sounds like something a scholar might write. Jot it in your notebook. In Research Skills 2, you will learn how to quote it, paraphrase it, or summarize it, and weave it into a paragraph of your own.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Research Skills 1 &middot; Finding Good Sources</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!--
+    Optima Academy Online — INTERACTIVE lesson (BONUS, ungraded). M/J Language Arts 3 · Module 1 Emma · Week 2 · supplement alongside Lessons 1.6-1.10.
+    Standard: ELA.8.R.2.4 (reasoning/argumentation). Two fallacies from Vol. I, Ch. 4-9: hasty generalization, circular reasoning. Emma is PD. Engine: select (x2). Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Bonus Skill: Spotting the Reasoning (Week 2)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="preview-banner"><strong>Local preview only.</strong> Delete this banner before deploying. Widgets run on the GitHub-hosted page, not in a Canvas RCE paste.</div>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 2</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Bonus Skill</div><div style="font-size: 12px; color: #666;">Ungraded, pairs with 1.6&ndash;1.10</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Anchor Text</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Emma, Vol. I, Ch. 4&ndash;9</div><div style="font-size: 12px; color: #666;">Jane Austen</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Bonus Skill &middot; Week 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Spotting the Reasoning: Two Ways an Argument Goes Wrong</div>
+        <div style="font-size: 16px; color: #666;">A short, ungraded page. It sits alongside this week&rsquo;s grammar and Word Study, not in place of them.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHY THIS MATTERS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Emma Woodhouse is confident. She is also, this week, wrong about several things, and it is worth asking exactly <em>how</em> her thinking goes wrong. Two of her habits of mind have names, and once you know the names, you will start noticing the same two moves everywhere: in ads, in arguments with friends, in your own snap judgments. Below, each one gets a plain definition, then a chance to spot it in this week&rsquo;s reading.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; ONE &middot; HASTY GENERALIZATION</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;"><strong>A hasty generalization</strong> is a big conclusion built on too little evidence, often just a first impression. You meet someone for five minutes and decide you know exactly what kind of person they are for good. It feels like a discovery. It is really a guess wearing a fact&rsquo;s clothing.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Emma meets Harriet Smith, likes her pretty face and her agreeable, easily-led manner, and within a few pages has decided Harriet must be &ldquo;the natural daughter of a gentleman,&rdquo; with birth and prospects to match. Emma has no actual information about Harriet&rsquo;s parents. She has a smile and a manner, and from that alone she builds a whole family history.</div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; HASTY GENERALIZATION, OR A FAIR CONCLUSION?</div>
+            <div class="widget-question">For each moment from this week&rsquo;s chapters, decide: is the thinking a hasty generalization, or a fair conclusion built on real evidence?</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. A pretty face and a pleasing manner are not evidence about anyone's parents. Emma turns a small first impression into a sweeping claim about a fact she cannot see. That gap between the tiny evidence and the huge conclusion is what makes it hasty." data-hint="How much did Emma actually know about Harriet's parents before deciding this?">
+                <div class="widget-row-prompt">1. Emma meets Harriet only a few times, notices her pretty face and pleasing manner, and decides she must be the well-born daughter of a gentleman.</div>
+                <div class="widget-options"><button data-choice="0">Fair conclusion from real evidence</button><button data-choice="1">Hasty generalization</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. Mr. Knightley has years of observation behind this judgment, not a first glance. Plenty of evidence, gathered over time, is exactly what a hasty generalization skips." data-hint="Is this based on one quick impression, or on something Mr. Knightley has watched for years?">
+                <div class="widget-row-prompt">2. Mr. Knightley has watched Robert Martin manage his farm carefully for several years, and on that record judges him a sensible, respectable man.</div>
+                <div class="widget-options"><button data-choice="0">Fair conclusion from real evidence</button><button data-choice="1">Hasty generalization</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. One shy answer is not enough evidence to size up someone's whole mind. This is the same move as the birth assumption: a small sample stretched into a big claim." data-hint="How many data points does Emma actually have here: a lot, or one?">
+                <div class="widget-row-prompt">3. After Harriet answers one question timidly, Emma privately decides Harriet has nothing worth saying on any subject.</div>
+                <div class="widget-options"><button data-choice="0">Hasty generalization</button><button data-choice="1">Fair conclusion from real evidence</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; TWO &middot; CIRCULAR REASONING</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;"><strong>Circular reasoning</strong> happens when someone tries to prove a claim by using that very same claim as the proof. The argument does not go anywhere; it just walks in a circle back to where it started. It can sound confident and even sound like an answer, but repeating a claim is not the same as backing it up.</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;">Watch Emma&rsquo;s logic about matching Harriet with Mr. Elton. The match is good, she tells herself, because she is the one who thought of it, and she only ever thinks of good matches. Ask where the outside evidence is, evidence that does not just come back to Emma&rsquo;s own opinion of herself, and there is none. The claim is proving itself.</div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; CIRCULAR, OR A REAL REASON?</div>
+            <div class="widget-question">For each moment, decide: does the reasoning circle back on itself, or does it point to something outside the claim?</div>
+
+            <div class="widget-row" data-correct="0" data-fb="Right. Trace it: the match is good because Emma made it, and Emma only makes good matches, which is the very point still needing proof. It never leaves the circle to point at anything outside Emma's own say-so." data-hint="Does this reasoning ever point to evidence outside Emma's opinion of herself?">
+                <div class="widget-row-prompt">1. Emma is sure the match between Harriet and Mr. Elton is a good idea, because she is the one who thought of it, and she only ever comes up with good ideas.</div>
+                <div class="widget-options"><button data-choice="0">Circular reasoning</button><button data-choice="1">A real reason</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. Visits, compliments, and questions are events out in the world that someone else could also observe. That is real evidence for a conclusion, even though the conclusion Emma draws from it turns out to be mistaken." data-hint="Are these separate, observable events, or is the proof just Emma's own opinion repeated?">
+                <div class="widget-row-prompt">2. Emma notices that Mr. Elton visits Hartfield often, praises Harriet&rsquo;s drawings, and asks after her health nearly every time he calls.</div>
+                <div class="widget-options"><button data-choice="0">Circular reasoning</button><button data-choice="1">A real reason</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. Follow the loop again: Harriet is too good for Martin because Emma encouraged the idea, and Emma would only have encouraged it if it were true, which is exactly the claim in question." data-hint="Trace the claim back. Does it eventually rest on something other than Emma having said so?">
+                <div class="widget-row-prompt">3. When Harriet wonders whether she is really too good for Robert Martin, Emma answers that of course she is, since Emma would never have encouraged the idea unless it were true.</div>
+                <div class="widget-options"><button data-choice="0">Circular reasoning</button><button data-choice="1">A real reason</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Naming a habit of thought is the first step toward catching it in your own reasoning, not just Emma&rsquo;s. As you keep reading this module, watch for other moments where a character is sure of something, and ask what is actually holding that certainty up.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Bonus Skill &middot; Spotting the Reasoning: Two Ways an Argument Goes Wrong</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

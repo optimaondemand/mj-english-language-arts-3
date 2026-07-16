@@ -1,0 +1,273 @@
+<!--
+    Optima Academy Online — OPTIONAL BONUS GAME. M/J Language Arts 3 · Module 1 Emma · Week 9.
+    Standalone, ungraded arcade practice for Lessons 1.41 and 1.43 (the six comma rules). Not a Canvas Assignment,
+    not tied to any Tier. Click-based only (no native drag-and-drop). Plain inline script, no external libraries.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Bonus Game: Rule Sort</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .game-panel { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 20px 24px; margin: 18px 0; }
+    .game-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+
+    .stat-row { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 16px; }
+    .stat-box { flex: 1; min-width: 130px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 10px 14px; text-align: center; }
+    .stat-label { font-size: 11px; color: #6b7a99; margin-bottom: 4px; }
+    .stat-value { font-size: 26px; color: #0E1C42; }
+
+    .bar-track { width: 100%; height: 14px; background: #E1E8F2; border-radius: 7px; overflow: hidden; margin-bottom: 6px; }
+    .bar-fill { height: 100%; border-radius: 7px; transition: width 0.25s ease; background: #C7922C; }
+    .bar-caption { font-size: 12px; color: #6b7a99; margin-bottom: 16px; }
+
+    .sentence-card { background: #0E1C42; border-radius: 8px; padding: 22px 26px; margin: 10px 0 18px 0; color: #E8F6FB; font-size: 18px; line-height: 1.7; text-align: center; min-height: 56px; }
+
+    .rule-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+    @media (max-width: 600px) { .rule-grid { grid-template-columns: repeat(2, 1fr); } }
+    .rule-btn { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 14px 10px; font-size: 15px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: center; }
+    .rule-btn:hover:not(:disabled) { background: #F4F6FA; border-color: #55C8E8; }
+    .rule-btn:disabled { cursor: default; }
+    .rule-btn.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .rule-btn.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; opacity: 0.7; }
+
+    .round-feedback { min-height: 24px; text-align: center; font-size: 15px; line-height: 1.55; padding: 10px 16px; border-radius: 6px; margin: 0 0 8px 0; }
+    .round-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .round-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+
+    .end-screen { display: none; text-align: center; padding: 30px 20px; }
+    .end-screen.show { display: block; }
+    .end-score { font-size: 44px; color: #0E1C42; margin: 6px 0 4px 0; }
+    .end-label { font-size: 15px; color: #6b7a99; margin-bottom: 18px; }
+
+    .btn-playagain { background: #0E1C42; color: #FFFFFF; border: none; border-radius: 8px; padding: 12px 28px; font-size: 16px; cursor: pointer; font-family: inherit; }
+    .btn-playagain:hover { opacity: 0.88; }
+    .btn-restart-small { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 14px; font-size: 12px; cursor: pointer; font-family: inherit; float: right; }
+    .btn-restart-small:hover { background: #FDF3E3; }
+
+    .game-play.hide { display: none; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 9</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Type</div><div style="font-size: 17px; color: #0e1c42;">Bonus Game</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Six Comma Rules</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #C7922C; border-radius: 7px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px; letter-spacing: 0.5px;">&#127918; OPTIONAL PRACTICE &middot; NOT GRADED</div>
+        <div style="font-size: 19px; color: #0e1c42; margin-bottom: 4px;">Rule Sort</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.55;">This is a just-for-fun round to practice the six comma jobs from Lessons 1.41 and 1.43: series, joining two sentences, openers, extra information, dates, and addresses. It does not count toward any grade and does not need to be turned in.</div>
+    </div>
+
+    <div class="game-panel">
+        <div class="game-kicker">&#9889; HOW TO PLAY</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 4px;">Read the sentence, then click the comma job it needs (or already shows). A correct pick locks in green with the rule confirmed. A wrong pick flashes red and gives you a hint so you can try again. Your score counts your first try on each sentence.</div>
+    </div>
+
+    <div id="playArea" class="game-play">
+        <div class="stat-row">
+            <div class="stat-box"><div class="stat-label">Sentence</div><div class="stat-value" id="itemCounter">1 / 18</div></div>
+            <div class="stat-box"><div class="stat-label">Score</div><div class="stat-value" id="scoreValue">0</div></div>
+        </div>
+
+        <div class="bar-track"><div class="bar-fill" id="progressBar" style="width:0%;"></div></div>
+        <div class="bar-caption">Sentences sorted</div>
+
+        <div class="sentence-card" id="sentenceCard"></div>
+        <div class="round-feedback" id="roundFeedback" style="visibility:hidden;"></div>
+        <div class="rule-grid" id="ruleGrid"></div>
+
+        <button class="btn-restart-small" id="restartSmallBtn">Restart</button>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="end-screen" id="endScreen">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 8px; letter-spacing: 0.5px;">&#127942; ALL 18 SORTED</div>
+        <div class="end-score" id="finalScore">0 / 18</div>
+        <div class="end-label">correct on the first try</div>
+        <button class="btn-playagain" id="playAgainBtn">Play Again</button>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Optional Practice</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Rule Sort &middot; Week 9 Bonus Game</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+    var RULES = ["Series", "Joining", "Opener", "Extra Info", "Date", "Address"];
+
+    var BANK = [
+        { text: "Emma packed her sketchbook, her bonnet, and a small parasol before the walk.", rule: 0, why: "Three items are separated by commas: sketchbook, bonnet, and parasol. That is the series rule." },
+        { text: "The evening was calm quiet and unusually warm.", rule: 0, why: "Three items in a row need commas between them: \"calm, quiet, and unusually warm.\" That is the series rule." },
+        { text: "Mr. Weston was cheerful, generous, and endlessly hopeful.", rule: 0, why: "Three qualities are listed and separated by commas. That is the series rule." },
+
+        { text: "Emma meant to help, but her plan went badly wrong.", rule: 1, why: "Two complete sentences are joined by \"but,\" with a comma right before it. That is the joining rule." },
+        { text: "The letter arrived early and Emma read it twice before breakfast.", rule: 1, why: "Both halves could stand alone as sentences, so a comma belongs before \"and\": \"...arrived early, and Emma read...\" That is the joining rule." },
+        { text: "Harriet trusted her friend completely, so she followed the advice at once.", rule: 1, why: "Two complete sentences are joined by \"so,\" with a comma before it. That is the joining rule." },
+
+        { text: "After much hesitation, Emma decided to apologize.", rule: 2, why: "A comma follows the short phrase that opens the sentence before the main clause. That is the opener rule." },
+        { text: "Before the guests arrived Emma checked every room twice.", rule: 2, why: "A comma belongs after the opening phrase: \"Before the guests arrived, Emma checked...\" That is the opener rule." },
+        { text: "Without a word of warning, Mr. Knightley left the room.", rule: 2, why: "A comma follows the phrase that opens the sentence. That is the opener rule." },
+
+        { text: "Miss Bates, the vicar's talkative neighbor, rarely paused for breath.", rule: 3, why: "\"The vicar's talkative neighbor\" just renames Miss Bates and could be dropped, so it is fenced with a pair of commas. That is the extra information rule." },
+        { text: "Mr. Elton the new vicar seemed eager to please everyone.", rule: 3, why: "\"The new vicar\" renames Mr. Elton and is extra, so it needs a comma on each side: \"Mr. Elton, the new vicar, seemed...\" That is the extra information rule." },
+        { text: "The picnic, a plan Emma had arranged herself, nearly ended in disaster.", rule: 3, why: "\"A plan Emma had arranged herself\" adds extra detail and could be dropped, so it is fenced with commas. That is the extra information rule." },
+
+        { text: "The letter was dated June 3, 1815, and signed simply a friend.", rule: 4, why: "The year sits inside the sentence and is set off with a comma on each side. That is the date rule." },
+        { text: "On October 12 1815 the family finally received good news.", rule: 4, why: "The year needs commas around it: \"On October 12, 1815, the family...\" That is the date rule." },
+        { text: "She was born on April 21, 1801, in a quiet corner of Surrey.", rule: 4, why: "The year is fenced with a comma on each side inside the sentence. That is the date rule." },
+
+        { text: "The Woodhouses had lived at Hartfield, Highbury, Surrey, for three generations.", rule: 5, why: "Each larger place name is set off with commas after the smaller one. That is the address rule." },
+        { text: "She addressed the letter to Randalls Highbury Surrey without a second thought.", rule: 5, why: "Each place name needs a comma after it: \"Randalls, Highbury, Surrey.\" That is the address rule." },
+        { text: "He often visited Donwell Abbey, Highbury, England, on Sunday afternoons.", rule: 5, why: "Each larger place name is set off with commas. That is the address rule." }
+    ];
+
+    var HINTS = [
+        "How many separate items are being listed here?",
+        "Could each half of this sentence stand alone as its own sentence?",
+        "What comes before the main part of the sentence, and could you drop it?",
+        "If you removed the marked phrase, would the sentence still make full sense?",
+        "Is there a year or a specific date sitting inside this sentence?",
+        "Is a smaller place named right before a larger one inside this sentence?"
+    ];
+
+    var order = [];
+    var pointer = 0;
+    var score = 0;
+    var gameOver = false;
+    var currentItem = null;
+    var locked = false;
+    var roundToken = 0;
+    var firstAttemptScored = false;
+
+    var itemCounterEl = document.getElementById('itemCounter');
+    var scoreValueEl = document.getElementById('scoreValue');
+    var progressBarEl = document.getElementById('progressBar');
+    var sentenceCardEl = document.getElementById('sentenceCard');
+    var ruleGridEl = document.getElementById('ruleGrid');
+    var roundFeedbackEl = document.getElementById('roundFeedback');
+    var playAreaEl = document.getElementById('playArea');
+    var endScreenEl = document.getElementById('endScreen');
+    var finalScoreEl = document.getElementById('finalScore');
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+        }
+        return a;
+    }
+
+    function buildGrid() {
+        ruleGridEl.innerHTML = '';
+        RULES.forEach(function (label, idx) {
+            var btn = document.createElement('button');
+            btn.className = 'rule-btn';
+            btn.textContent = label;
+            btn.dataset.idx = idx;
+            btn.addEventListener('click', function () { handleAnswer(idx, btn); });
+            ruleGridEl.appendChild(btn);
+        });
+    }
+
+    function nextQuestion() {
+        if (gameOver) return;
+        if (pointer >= order.length) { endGame(); return; }
+        currentItem = BANK[order[pointer]];
+        locked = false;
+        firstAttemptScored = false;
+        itemCounterEl.textContent = (pointer + 1) + ' / ' + BANK.length;
+        progressBarEl.style.width = (pointer / BANK.length * 100) + '%';
+        roundFeedbackEl.style.visibility = 'hidden';
+        roundFeedbackEl.textContent = '';
+        roundFeedbackEl.className = 'round-feedback';
+        sentenceCardEl.textContent = currentItem.text;
+        buildGrid();
+    }
+
+    function handleAnswer(idx, btn) {
+        if (gameOver || locked) return;
+        var right = idx === currentItem.rule;
+
+        if (!firstAttemptScored) {
+            firstAttemptScored = true;
+            if (right) { score++; scoreValueEl.textContent = String(score); }
+        }
+
+        if (right) {
+            locked = true;
+            var tokenAtLock = roundToken;
+            Array.prototype.forEach.call(ruleGridEl.children, function (b) { b.disabled = true; });
+            btn.classList.add('correct');
+            roundFeedbackEl.style.visibility = 'visible';
+            roundFeedbackEl.textContent = 'Locked in. ' + currentItem.why;
+            roundFeedbackEl.className = 'round-feedback correct';
+            pointer++;
+            setTimeout(function () { if (!gameOver && tokenAtLock === roundToken) nextQuestion(); }, 1400);
+        } else {
+            btn.classList.add('incorrect');
+            btn.disabled = true;
+            roundFeedbackEl.style.visibility = 'visible';
+            roundFeedbackEl.textContent = 'Not quite. ' + HINTS[currentItem.rule];
+            roundFeedbackEl.className = 'round-feedback incorrect';
+        }
+    }
+
+    function endGame() {
+        gameOver = true;
+        playAreaEl.classList.add('hide');
+        finalScoreEl.textContent = score + ' / ' + BANK.length;
+        endScreenEl.classList.add('show');
+    }
+
+    function startGame() {
+        roundToken++;
+        gameOver = false;
+        locked = false;
+        score = 0;
+        pointer = 0;
+        scoreValueEl.textContent = '0';
+        progressBarEl.style.width = '0%';
+        endScreenEl.classList.remove('show');
+        playAreaEl.classList.remove('hide');
+        order = shuffle(BANK.map(function (_, idx) { return idx; }));
+        nextQuestion();
+    }
+
+    document.getElementById('playAgainBtn').addEventListener('click', startGame);
+    document.getElementById('restartSmallBtn').addEventListener('click', startGame);
+
+    startGame();
+})();
+</script>
+</body>
+</html>

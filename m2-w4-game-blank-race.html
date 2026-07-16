@@ -1,0 +1,305 @@
+<!--
+    Optima Academy Online — OPTIONAL PRACTICE GAME. M/J Language Arts 3 · Module 2 OOTSP · Week 4.
+    "Blank Race": timed discrimination game for gerund / participle / infinitive / none of these,
+    reviewing this week's verbals content (Lessons 2.16 and 2.18). Standalone, ungraded, no Canvas
+    grade or Tier. Click-based only. Plain inline script, no external libraries or server calls.
+    All example sentences are original (not reproduced from Out of the Silent Planet).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Blank Race (Optional Practice Game)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .opt-banner { background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 14px 20px; margin-bottom: 20px; text-align: center; }
+    .opt-banner .kicker { font-size: 12px; color: #C7922C; letter-spacing: 1px; margin-bottom: 4px; }
+    .opt-banner .msg { font-size: 16px; color: #0E1C42; line-height: 1.5; }
+
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .how-to { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+    .how-to ol { margin: 8px 0 0 20px; padding: 0; font-size: 16px; color: #1a2340; line-height: 1.7; }
+
+    .race-status { display: flex; justify-content: space-between; align-items: center; background: #0E1C42; color: #fff; border-radius: 8px; padding: 12px 20px; margin-bottom: 18px; font-size: 16px; flex-wrap: wrap; gap: 10px; }
+    .race-status .accent { color: #55C8E8; }
+    .restart-link { background: transparent; border: 1px solid #55C8E8; color: #55C8E8; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; }
+    .restart-link:hover { background: rgba(85,200,232,0.15); }
+
+    .sentence-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #2196D0; border-radius: 8px; padding: 26px 26px; margin-bottom: 18px; font-size: 20px; color: #0E1C42; line-height: 1.6; min-height: 70px; }
+
+    .choice-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    .choice-btn { flex: 1; min-width: 150px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 14px 12px; font-size: 15px; color: #0E1C42; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    .choice-btn:hover { border-color: #55C8E8; background: #F4F6FA; }
+    .choice-btn.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .choice-btn.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .choice-btn:disabled { cursor: default; }
+
+    .feedback-line { padding: 12px 16px; border-radius: 6px; font-size: 15px; line-height: 1.55; margin-bottom: 10px; display: none; }
+    .feedback-line.show { display: block; }
+    .feedback-line.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .feedback-line.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+
+    .big-btn { background: #0E1C42; color: #fff; border: none; border-radius: 8px; padding: 14px 30px; font-size: 16px; cursor: pointer; font-family: inherit; }
+    .big-btn:hover { opacity: 0.88; }
+    .outline-btn { background: transparent; border: 2px solid #C7922C; color: #C7922C; border-radius: 8px; padding: 12px 28px; font-size: 15px; cursor: pointer; font-family: inherit; }
+    .outline-btn:hover { background: #FDF3E3; }
+    .btn-row { text-align: center; margin: 18px 0; }
+
+    .end-card { background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 8px; padding: 26px; text-align: center; }
+    .end-card .end-title { font-size: 24px; color: #0E1C42; margin-bottom: 10px; }
+    .end-card .end-summary { font-size: 18px; color: #1a2340; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 2</div><div style="font-size: 12px; color: #666;">Out of the Silent Planet &middot; Week 4</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Bonus &middot; Optional</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Gerunds, Participles &amp; Infinitives</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Understanding the Other</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div class="opt-banner">
+        <div class="kicker">&#127918; OPTIONAL PRACTICE</div>
+        <div class="msg">This game is not graded and does not appear in your gradebook. Play it as many times as you like to sharpen the skill from this week's two grammar lessons.</div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Bonus Game</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Blank Race</div>
+        <div style="font-size: 16px; color: #666;">Gerund, participle, infinitive, or none of these? Race the clock.</div>
+    </div>
+
+    <!-- ===== INTRO PANEL ===== -->
+    <div id="intro-panel" class="panel active">
+        <div class="how-to">
+            <div style="font-size: 11px; color: #c7922c; margin-bottom: 6px;">&#128218; HOW TO PLAY</div>
+            <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 6px 0 0 0;">A sentence appears with one phrase bolded. Click the button that names what the bolded phrase is doing: a <strong>gerund</strong> (an <em>-ing</em> word acting as a noun), a <strong>participle</strong> (an <em>-ing</em> or <em>-ed</em> word acting as an adjective), an <strong>infinitive</strong> (<em>to</em> plus a verb), or <strong>none of these</strong> (a plain verb or a preposition plus a noun).</p>
+            <ol>
+                <li>You have 75 seconds on the clock.</li>
+                <li>Each correct answer adds to your score, with a quick note on why.</li>
+                <li>Each miss gives you a quick note on the right answer, then moves on.</li>
+                <li>Answer as many as you can before time runs out, then see your final score.</li>
+            </ol>
+        </div>
+        <div class="btn-row"><button id="start-btn" class="big-btn">Start the Race</button></div>
+    </div>
+
+    <!-- ===== GAME PANEL ===== -->
+    <div id="game-panel" class="panel">
+        <div class="race-status">
+            <div><span id="score-display">0 correct / 0 tried</span></div>
+            <div><span class="accent" id="time-display">75s left</span></div>
+            <button id="restart-btn" class="restart-link">Restart Race</button>
+        </div>
+
+        <div class="sentence-card" id="sentence-text"></div>
+
+        <div class="choice-row">
+            <button class="choice-btn" data-cat="gerund">Gerund</button>
+            <button class="choice-btn" data-cat="participle">Participle</button>
+            <button class="choice-btn" data-cat="infinitive">Infinitive</button>
+            <button class="choice-btn" data-cat="none">None of these</button>
+        </div>
+
+        <div class="feedback-line" id="feedback-line"></div>
+    </div>
+
+    <!-- ===== END PANEL ===== -->
+    <div id="end-panel" class="panel">
+        <div class="end-card">
+            <div class="end-title">Time's Up!</div>
+            <div class="end-summary" id="result-summary"></div>
+            <div style="font-size: 15px; color: #6b7a99; margin-bottom: 16px;">Play again to beat your score.</div>
+            <button id="play-again-btn" class="outline-btn">Play Again</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-top: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; THE TEST TO REMEMBER</div>
+        <p style="font-size: 16px; color: #1a2340; line-height: 1.6; margin: 0;">If you can swap the phrase for &ldquo;something&rdquo; or &ldquo;it&rdquo; and the sentence still works, it is a gerund. If the phrase describes a noun the way an adjective would, it is a participle. If it starts with &ldquo;to&rdquo; plus a verb, it is an infinitive. If none of those fit, it is just a verb doing its normal job, or a preposition plus a noun.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Optional Practice Game</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Blank Race &middot; Week 4 Bonus, Not Graded</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  var RACE_SECONDS = 75;
+  var FEEDBACK_DELAY = 1400;
+
+  var QUESTIONS = [
+    { html: '<strong>Charting the new moon</strong> kept Mira awake past midnight.', correct: 'gerund', explain: '"Charting the new moon" names an activity and is the subject of the sentence. That makes it a gerund phrase.' },
+    { html: 'The crew members avoided <strong>waking the sleeping reactor</strong>.', correct: 'gerund', explain: '"Waking the sleeping reactor" names the thing the crew avoided. It works as a noun, the object of "avoided," so it is a gerund phrase.' },
+    { html: '<strong>Glowing faintly in the dark</strong>, the crystal pulsed in Mira\'s palm.', correct: 'participle', explain: '"Glowing faintly in the dark" describes the crystal. It acts as an adjective, so it is a participle phrase, not a gerund.' },
+    { html: 'The signal <strong>buzzing through the static</strong> grew louder every minute.', correct: 'participle', explain: '"Buzzing through the static" tells you which signal. It modifies a noun, so it is a participle phrase.' },
+    { html: 'Captain Reyes hoped <strong>to reach the outpost by dawn</strong>.', correct: 'infinitive', explain: '"To reach the outpost by dawn" is "to" plus the verb "reach." It names what Captain Reyes hoped for, so it is an infinitive phrase.' },
+    { html: 'Dr. Ines sprinted down the corridor <strong>to warn the others</strong>.', correct: 'infinitive', explain: '"To warn the others" is "to" plus the verb "warn." It tells why Dr. Ines sprinted, so it is an infinitive phrase.' },
+    { html: 'The old engine <strong>was humming</strong> steadily below deck.', correct: 'none', explain: '"Was humming" is the verb of the sentence. It tells what the engine was doing right then, so it is not a gerund, a participle, or an infinitive.' },
+    { html: 'The rover rolled <strong>to the ridge</strong> just after first light.', correct: 'none', explain: '"To the ridge" is "to" plus a place, not "to" plus a verb. That makes it a prepositional phrase, not an infinitive.' },
+    { html: '<strong>Reading the old star charts</strong> taught Mira more than any lecture.', correct: 'gerund', explain: '"Reading the old star charts" names an activity and is the subject of the sentence. That makes it a gerund phrase.' },
+    { html: 'The pilot, <strong>shaken by the rough landing</strong>, checked the controls twice.', correct: 'participle', explain: '"Shaken by the rough landing" describes the pilot. It acts as an adjective, so it is a participle phrase.' },
+    { html: 'The team needed <strong>to decode the message</strong> before nightfall.', correct: 'infinitive', explain: '"To decode the message" is "to" plus the verb "decode." It names what the team needed, so it is an infinitive phrase.' },
+    { html: 'The scanner <strong>was flashing</strong> red across the whole panel.', correct: 'none', explain: '"Was flashing" is the verb of the sentence, telling what the scanner was doing. It is not acting as a noun or an adjective, so it is not a verbal.' },
+    { html: 'Mira packed a spare battery <strong>to survive the coming storm</strong>.', correct: 'infinitive', explain: '"To survive the coming storm" is "to" plus the verb "survive." It tells why Mira packed the battery, so it is an infinitive phrase.' },
+    { html: 'The crew succeeded by <strong>timing the launch perfectly</strong>.', correct: 'gerund', explain: '"Timing the launch perfectly" names an activity and is the object of the preposition "by." That makes it a gerund phrase.' }
+  ];
+
+  var order = [];
+  var idx = 0;
+  var score = 0;
+  var attempted = 0;
+  var timeLeft = RACE_SECONDS;
+  var timerId = null;
+  var advanceTimer = null;
+  var answered = false;
+  var gameOver = true;
+
+  var introPanel = document.getElementById('intro-panel');
+  var gamePanel = document.getElementById('game-panel');
+  var endPanel = document.getElementById('end-panel');
+  var sentenceEl = document.getElementById('sentence-text');
+  var feedbackEl = document.getElementById('feedback-line');
+  var scoreEl = document.getElementById('score-display');
+  var timeEl = document.getElementById('time-display');
+  var resultEl = document.getElementById('result-summary');
+  var choiceBtns = Array.prototype.slice.call(document.querySelectorAll('.choice-btn'));
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  function buildOrder() {
+    var idxs = [];
+    for (var i = 0; i < QUESTIONS.length; i++) idxs.push(i);
+    return shuffle(idxs);
+  }
+
+  function showPanel(panel) {
+    introPanel.classList.remove('active');
+    gamePanel.classList.remove('active');
+    endPanel.classList.remove('active');
+    panel.classList.add('active');
+  }
+
+  function updateStatus() {
+    scoreEl.textContent = score + ' correct / ' + attempted + ' tried';
+    timeEl.textContent = timeLeft + 's left';
+  }
+
+  function showQuestion() {
+    answered = false;
+    feedbackEl.classList.remove('show', 'correct', 'incorrect');
+    feedbackEl.textContent = '';
+    choiceBtns.forEach(function (b) {
+      b.disabled = false;
+      b.classList.remove('correct', 'incorrect');
+    });
+    sentenceEl.innerHTML = QUESTIONS[order[idx]].html;
+  }
+
+  function nextQuestion() {
+    if (gameOver) return;
+    idx++;
+    if (idx >= order.length) {
+      order = buildOrder();
+      idx = 0;
+    }
+    showQuestion();
+  }
+
+  function tick() {
+    if (gameOver) return;
+    timeLeft--;
+    if (timeLeft <= 0) {
+      timeLeft = 0;
+      updateStatus();
+      endGame();
+      return;
+    }
+    updateStatus();
+  }
+
+  function startGame() {
+    if (timerId) { clearInterval(timerId); timerId = null; }
+    if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+    order = buildOrder();
+    idx = 0;
+    score = 0;
+    attempted = 0;
+    timeLeft = RACE_SECONDS;
+    answered = false;
+    gameOver = false;
+    showPanel(gamePanel);
+    updateStatus();
+    showQuestion();
+    timerId = setInterval(tick, 1000);
+  }
+
+  function endGame() {
+    gameOver = true;
+    if (timerId) { clearInterval(timerId); timerId = null; }
+    if (advanceTimer) { clearTimeout(advanceTimer); advanceTimer = null; }
+    resultEl.textContent = 'You answered ' + score + ' correct out of ' + attempted + ' tried.';
+    showPanel(endPanel);
+  }
+
+  function onChoice(cat, btn) {
+    if (gameOver || answered) return;
+    answered = true;
+    attempted++;
+    var q = QUESTIONS[order[idx]];
+    var right = cat === q.correct;
+    if (right) score++;
+    updateStatus();
+    choiceBtns.forEach(function (b) { b.disabled = true; });
+    btn.classList.add(right ? 'correct' : 'incorrect');
+    feedbackEl.textContent = (right ? 'Right. ' : 'Not quite. ') + q.explain;
+    feedbackEl.classList.add('show', right ? 'correct' : 'incorrect');
+    advanceTimer = setTimeout(function () {
+      advanceTimer = null;
+      if (!gameOver) nextQuestion();
+    }, FEEDBACK_DELAY);
+  }
+
+  document.getElementById('start-btn').addEventListener('click', startGame);
+  document.getElementById('play-again-btn').addEventListener('click', startGame);
+  document.getElementById('restart-btn').addEventListener('click', startGame);
+  choiceBtns.forEach(function (b) {
+    b.addEventListener('click', function () { onChoice(b.dataset.cat, b); });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!--
+    Optima Academy Online — OPTIONAL PRACTICE GAME (ungraded, not a Canvas Assignment). M/J Language Arts 3 · Module 1 Emma · Week 7.
+    Companion to Lessons 1.31 (verb tenses) and 1.33 (subject-verb agreement). Click-based two-column match.
+    No native drag-and-drop. Plain inline script, no external libraries. This comment is not student-facing.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Match-Up (Optional Practice)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .status-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; background: #0E1C42; color: #ffffff; border-radius: 8px; padding: 12px 18px; margin-bottom: 16px; }
+    .match-counter { font-size: 18px; color: #55C8E8; }
+    .match-hint { font-size: 13px; color: rgba(255,255,255,0.75); }
+    .match-columns { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 10px; }
+    .match-column { flex: 1 1 260px; display: flex; flex-direction: column; gap: 8px; }
+    .column-label { font-size: 11px; color: #6b7a99; letter-spacing: 0.4px; margin-bottom: 2px; }
+    .match-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 12px 14px; font-size: 15px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; transition: all 0.15s; }
+    .match-item:hover:not(.matched) { border-color: #55C8E8; background: #F4F6FA; }
+    .match-item.selected { background: #0E1C42; color: #ffffff; border-color: #0E1C42; }
+    .match-item.matched { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; opacity: 0.7; }
+    .match-item.wrong { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .final-screen { text-align: center; padding: 18px 10px; display: none; }
+    .final-screen .final-score { font-size: 26px; color: #0E1C42; margin-bottom: 8px; }
+    .final-screen .final-note { font-size: 16px; color: #1a2340; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 7</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Companion Lessons</div><div style="font-size: 17px; color: #0e1c42;">1.31 &amp; 1.33</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Optional Practice Game</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 16px 22px; margin-bottom: 20px; text-align: center;">
+        <div style="font-size: 12px; color: #8a6d1f; letter-spacing: 0.5px;">&#127918; OPTIONAL PRACTICE. NOT GRADED.</div>
+        <div style="font-size: 16px; color: #0e1c42; margin-top: 6px;">This is a bonus matching game for extra practice with this week's grammar. It does not count toward any grade and is not a Canvas assignment.</div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Match-Up</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Tenses and Agreement</div>
+        <div style="font-size: 16px; color: #666;">Two-column matching game</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; HOW TO PLAY</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">The left column holds verb phrases and subjects. The right column holds tense labels and matching verbs. Click one item on the left, then click the item on the right you think goes with it. A correct pair locks in green and fades out of play. A wrong pair flashes red and both stay available so you can try a new combination. Match all twelve pairs.</div>
+    </div>
+
+    <div class="optima-widget" id="gameCard">
+        <div class="widget-kicker">&#9889; PLAY: MATCH-UP</div>
+
+        <div class="status-bar">
+            <span class="match-counter" id="matchCounter">Matches: 0/12</span>
+            <span class="match-hint" id="matchHint">Click one item on each side.</span>
+        </div>
+
+        <div class="match-columns" id="matchColumns">
+            <div class="match-column">
+                <div class="column-label">VERB PHRASE OR SUBJECT</div>
+                <div id="leftColumn"></div>
+            </div>
+            <div class="match-column">
+                <div class="column-label">TENSE LABEL OR MATCHING VERB</div>
+                <div id="rightColumn"></div>
+            </div>
+        </div>
+
+        <div class="final-screen" id="finalScreen">
+            <div class="final-score" id="finalScoreText">All 12 pairs matched.</div>
+            <div class="final-note">You matched every tense and every agreeing verb. Well done.</div>
+        </div>
+
+        <button type="button" class="widget-reset" id="playAgainBtn">Play Again</button>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; WHY THIS HELPS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Matching a verb phrase to its tense, and a subject to the verb that agrees with it, trains the same instinct: find the true subject, and ask what job the verb is doing in time. You will use both skills every time you write about the novel.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Optional Practice</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Match-Up &middot; Companion to Lessons 1.31 &amp; 1.33</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+    var PAIRS = [
+        { id: 1, left: "Emma walks", right: "Simple present" },
+        { id: 2, left: "Emma walked", right: "Simple past" },
+        { id: 3, left: "Emma will walk", right: "Simple future" },
+        { id: 4, left: "Emma has walked", right: "Present perfect" },
+        { id: 5, left: "Emma had walked", right: "Past perfect" },
+        { id: 6, left: "Emma will have walked", right: "Future perfect" },
+        { id: 7, left: "The basket of apples", right: "sits on the table" },
+        { id: 8, left: "Emma and Harriet", right: "walk to Highbury" },
+        { id: 9, left: "Each of the sisters", right: "deserves an answer" },
+        { id: 10, left: "The letters from Miss Bates", right: "arrive every week" },
+        { id: 11, left: "The crowd of visitors", right: "fills the parlor" },
+        { id: 12, left: "Mr. Weston", right: "admires the view" }
+    ];
+
+    var TOTAL = PAIRS.length;
+
+    var state = { leftSel: null, rightSel: null, matches: 0, locked: false };
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+        }
+        return a;
+    }
+
+    function el(id) { return document.getElementById(id); }
+
+    function buildColumn(container, items, side) {
+        container.innerHTML = "";
+        items.forEach(function (item) {
+            var b = document.createElement("button");
+            b.type = "button";
+            b.className = "match-item";
+            b.textContent = item.label;
+            b.setAttribute("data-pair", item.pairId);
+            b.setAttribute("data-side", side);
+            container.appendChild(b);
+        });
+    }
+
+    function startGame() {
+        state.leftSel = null;
+        state.rightSel = null;
+        state.matches = 0;
+        state.locked = false;
+        el("finalScreen").style.display = "none";
+        el("matchColumns").style.display = "flex";
+        el("matchCounter").textContent = "Matches: 0/" + TOTAL;
+        el("matchHint").textContent = "Click one item on each side.";
+
+        var leftItems = shuffle(PAIRS.map(function (p) { return { pairId: p.id, label: p.left }; }));
+        var rightItems = shuffle(PAIRS.map(function (p) { return { pairId: p.id, label: p.right }; }));
+
+        buildColumn(el("leftColumn"), leftItems, "left");
+        buildColumn(el("rightColumn"), rightItems, "right");
+    }
+
+    function clearSelection(side) {
+        var col = side === "left" ? el("leftColumn") : el("rightColumn");
+        Array.prototype.forEach.call(col.children, function (b) { b.classList.remove("selected"); });
+    }
+
+    function attemptMatch() {
+        if (state.leftSel === null || state.rightSel === null) return;
+        state.locked = true;
+        var leftBtn = el("leftColumn").querySelector('[data-pair="' + state.leftSel + '"]');
+        var rightBtn = el("rightColumn").querySelector('[data-pair="' + state.rightSel + '"]');
+
+        if (state.leftSel === state.rightSel) {
+            leftBtn.classList.remove("selected");
+            rightBtn.classList.remove("selected");
+            leftBtn.classList.add("matched");
+            rightBtn.classList.add("matched");
+            state.matches++;
+            el("matchCounter").textContent = "Matches: " + state.matches + "/" + TOTAL;
+            el("matchHint").textContent = "Right. That is a matched pair.";
+            state.leftSel = null;
+            state.rightSel = null;
+            state.locked = false;
+            if (state.matches === TOTAL) {
+                el("matchColumns").style.display = "none";
+                el("finalScreen").style.display = "block";
+            }
+        } else {
+            leftBtn.classList.add("wrong");
+            rightBtn.classList.add("wrong");
+            el("matchHint").textContent = "Not quite. Look again and try a different match.";
+            setTimeout(function () {
+                leftBtn.classList.remove("wrong", "selected");
+                rightBtn.classList.remove("wrong", "selected");
+                state.leftSel = null;
+                state.rightSel = null;
+                state.locked = false;
+            }, 550);
+        }
+    }
+
+    document.addEventListener("click", function (e) {
+        var playAgain = e.target.closest("#playAgainBtn");
+        if (playAgain) { startGame(); return; }
+
+        var item = e.target.closest(".match-item");
+        if (item && !state.locked && !item.classList.contains("matched")) {
+            var side = item.getAttribute("data-side");
+            var pairId = parseInt(item.getAttribute("data-pair"), 10);
+            if (side === "left") {
+                clearSelection("left");
+                item.classList.add("selected");
+                state.leftSel = pairId;
+            } else {
+                clearSelection("right");
+                item.classList.add("selected");
+                state.rightSel = pairId;
+            }
+            attemptMatch();
+            return;
+        }
+    });
+
+    startGame();
+})();
+</script>
+</body>
+</html>

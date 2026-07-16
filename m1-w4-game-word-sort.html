@@ -1,0 +1,323 @@
+<!--
+    Optima Academy Online — OPTIONAL PRACTICE GAME (ungraded, not a Canvas Assignment). M/J Language Arts 3 · Module 1 Emma · Week 4.
+    Companion to Lesson 1.18 (Grammar 2, Parts of Speech synthesis). Click-based sort: click a word chip, then click its part of speech.
+    No native drag-and-drop. Plain inline script, no external libraries. Delete this comment before deploy if desired; it is not student-facing.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Word Sort (Optional Practice)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .score-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; background: #0E1C42; color: #ffffff; border-radius: 8px; padding: 12px 18px; margin-bottom: 16px; }
+    .score-bar .score-value { font-size: 18px; color: #55C8E8; }
+    .score-bar .sentence-counter { font-size: 14px; color: rgba(255,255,255,0.8); }
+    .sentence-row { display: flex; flex-wrap: wrap; gap: 8px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+    .word-chip { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 16px; color: #0E1C42; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    .word-chip:hover:not(.locked) { border-color: #55C8E8; background: #F4F6FA; }
+    .word-chip.active { background: #0E1C42; color: #ffffff; border-color: #0E1C42; }
+    .word-chip.locked { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .word-chip.shake { animation: shakeChip 0.35s; border-color: #C0392B; background: #FDECEC; color: #8A1F16; }
+    @keyframes shakeChip { 0% { transform: translateX(0); } 25% { transform: translateX(-4px); } 50% { transform: translateX(4px); } 75% { transform: translateX(-4px); } 100% { transform: translateX(0); } }
+    .category-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+    .cat-btn { flex: 1 1 150px; background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 12px 10px; font-size: 15px; color: #0E1C42; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    .cat-btn:hover { border-color: #55C8E8; background: #F4F6FA; }
+    .cat-btn.flash-wrong { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .feedback-panel { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 12px 16px; font-size: 15px; color: #1a2340; line-height: 1.55; margin-bottom: 14px; border-radius: 4px; min-height: 20px; }
+    .feedback-panel.correct { border-left-color: #2A9D5C; background: #F2FAF4; }
+    .feedback-panel.incorrect { border-left-color: #C0392B; background: #FDF6F5; }
+    .next-btn { background: #0E1C42; color: #ffffff; border: none; border-radius: 6px; padding: 10px 20px; font-size: 14px; cursor: pointer; font-family: inherit; margin-bottom: 6px; }
+    .next-btn:hover { background: #16295c; }
+    .final-screen { text-align: center; padding: 20px 10px; }
+    .final-screen .final-score { font-size: 30px; color: #0E1C42; margin-bottom: 8px; }
+    .final-screen .final-note { font-size: 16px; color: #1a2340; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Emma &middot; Week 4</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Companion Lesson</div><div style="font-size: 17px; color: #0e1c42;">1.18 &middot; Grammar</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Optional Practice Game</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Self-Knowledge &amp; Moral Growth</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #FDF3E3; border: 2px solid #C7922C; border-radius: 8px; padding: 16px 22px; margin-bottom: 20px; text-align: center;">
+        <div style="font-size: 12px; color: #8a6d1f; letter-spacing: 0.5px;">&#127918; OPTIONAL PRACTICE. NOT GRADED.</div>
+        <div style="font-size: 16px; color: #0e1c42; margin-top: 6px;">This is a bonus game for extra practice with this week's grammar. It does not count toward any grade and is not a Canvas assignment.</div>
+    </div>
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Word Sort</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Tag Every Word's Job</div>
+        <div style="font-size: 16px; color: #666;">Practice game: all eight parts of speech</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; HOW TO PLAY</div>
+        <div style="font-size: 17px; color: #1a2340; line-height: 1.65;">A sentence appears below, broken into clickable pieces. Click a word or phrase, then click the part of speech it is playing in that sentence. Get it right and the chip locks in green with a short reason. Get it wrong and it flashes red so you can look again and retry. Sort every chip in a sentence to move to the next one. Your running score is always visible at the top.</div>
+    </div>
+
+    <div class="optima-widget" id="gameCard">
+        <div class="widget-kicker">&#9889; PLAY: WORD SORT</div>
+
+        <div class="score-bar">
+            <span class="score-value" id="scoreDisplay">Score: 0/0 correct</span>
+            <span class="sentence-counter" id="sentenceCounter">Sentence 1 of 4</span>
+        </div>
+
+        <div class="sentence-row" id="sentenceDisplay"></div>
+
+        <div class="category-grid" id="categoryGrid">
+            <button type="button" class="cat-btn" data-cat="noun">Noun</button>
+            <button type="button" class="cat-btn" data-cat="pronoun">Pronoun</button>
+            <button type="button" class="cat-btn" data-cat="verb">Verb</button>
+            <button type="button" class="cat-btn" data-cat="adjective">Adjective</button>
+            <button type="button" class="cat-btn" data-cat="adverb">Adverb</button>
+            <button type="button" class="cat-btn" data-cat="preposition">Preposition</button>
+            <button type="button" class="cat-btn" data-cat="conjunction">Conjunction</button>
+            <button type="button" class="cat-btn" data-cat="interjection">Interjection</button>
+        </div>
+
+        <div class="feedback-panel" id="feedbackPanel">Click a word to begin.</div>
+
+        <div id="nextArea" style="display: none;">
+            <button type="button" class="next-btn" id="nextSentenceBtn">Next Sentence &#8594;</button>
+        </div>
+
+        <div class="final-screen" id="finalScreen" style="display: none;">
+            <div class="final-score" id="finalScoreText">Score: 0/0</div>
+            <div class="final-note">Every word sorted. Nice careful work.</div>
+        </div>
+
+        <button type="button" class="widget-reset" id="playAgainBtn">Play Again</button>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; WHY THIS HELPS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Naming a word's job is a way of seeing. The more sentences you sort, the faster you will spot the part of speech in your own writing notebook and in the Parts of Speech Project.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 1 &middot; Optional Practice</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Word Sort &middot; Companion to Lesson 1.18</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+    var SENTENCES = [
+        {
+            words: [
+                { t: "She", c: "pronoun", r: "Right. \"She\" stands in for a noun, so it is a pronoun." },
+                { t: "walked", c: "verb", r: "Right. \"Walked\" is the action she performed." },
+                { t: "bravely", c: "adverb", r: "Right. \"Bravely\" tells how she walked." },
+                { t: "toward", c: "preposition", r: "Right. \"Toward\" shows the relationship between the walking and the house." },
+                { t: "the", c: "adjective", r: "Right. \"The\" is an article, a kind of adjective." },
+                { t: "old", c: "adjective", r: "Right. \"Old\" describes the house." },
+                { t: "house", c: "noun", r: "Right. \"House\" names a thing." },
+                { t: "and", c: "conjunction", r: "Right. \"And\" joins two actions." },
+                { t: "smiled", c: "verb", r: "Right. \"Smiled\" is a second action she performed." }
+            ]
+        },
+        {
+            words: [
+                { t: "Alas", c: "interjection", r: "Right. \"Alas\" is a burst of feeling set apart from the sentence." },
+                { t: "the", c: "adjective", r: "Right. \"The\" is an article." },
+                { t: "foolish", c: "adjective", r: "Right. \"Foolish\" describes the plan." },
+                { t: "plan", c: "noun", r: "Right. \"Plan\" names a thing." },
+                { t: "failed", c: "verb", r: "Right. \"Failed\" tells what the plan did." },
+                { t: "instantly", c: "adverb", r: "Right. \"Instantly\" tells how quickly it failed." }
+            ]
+        },
+        {
+            words: [
+                { t: "Emma", c: "noun", r: "Right. \"Emma\" names a person." },
+                { t: "and", c: "conjunction", r: "Right. \"And\" joins Emma and Harriet." },
+                { t: "Harriet", c: "noun", r: "Right. \"Harriet\" names a person." },
+                { t: "walked", c: "verb", r: "Right. \"Walked\" is the action they performed." },
+                { t: "quietly", c: "adverb", r: "Right. \"Quietly\" tells how they walked." },
+                { t: "through", c: "preposition", r: "Right. \"Through\" shows the relationship between the walking and the garden." },
+                { t: "the", c: "adjective", r: "Right. \"The\" is an article." },
+                { t: "garden", c: "noun", r: "Right. \"Garden\" names a place." },
+                { t: "but", c: "conjunction", r: "Right. \"But\" joins the two halves of the sentence." },
+                { t: "Frank", c: "noun", r: "Right. \"Frank\" names a person." },
+                { t: "arrived", c: "verb", r: "Right. \"Arrived\" is the action Frank performed." },
+                { t: "suddenly", c: "adverb", r: "Right. \"Suddenly\" tells how he arrived." }
+            ]
+        },
+        {
+            words: [
+                { t: "Well", c: "interjection", r: "Right. \"Well\" is a burst of feeling set apart from the sentence." },
+                { t: "Mr. Weston", c: "noun", r: "Right. \"Mr. Weston\" names a person." },
+                { t: "admired", c: "verb", r: "Right. \"Admired\" is the action he performed." },
+                { t: "the", c: "adjective", r: "Right. \"The\" is an article." },
+                { t: "cheerful", c: "adjective", r: "Right. \"Cheerful\" describes the girl." },
+                { t: "girl", c: "noun", r: "Right. \"Girl\" names a person." },
+                { t: "and", c: "conjunction", r: "Right. \"And\" joins two actions." },
+                { t: "clapped", c: "verb", r: "Right. \"Clapped\" is a second action he performed." },
+                { t: "happily", c: "adverb", r: "Right. \"Happily\" tells how he clapped." }
+            ]
+        }
+    ];
+
+    var TOTAL = SENTENCES.reduce(function (sum, s) { return sum + s.words.length; }, 0);
+
+    var state = { order: [0, 1, 2, 3], sIndex: 0, words: [], activeIdx: null, correct: 0 };
+
+    function shuffle(arr) {
+        var a = arr.slice();
+        for (var i = a.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+        }
+        return a;
+    }
+
+    function el(id) { return document.getElementById(id); }
+
+    function startGame() {
+        state.order = shuffle([0, 1, 2, 3]);
+        state.sIndex = 0;
+        state.correct = 0;
+        el("finalScreen").style.display = "none";
+        el("gameCard").querySelectorAll(".sentence-row, .category-grid, #feedbackPanel, .score-bar").forEach(function (n) { n.style.display = ""; });
+        loadSentence();
+        renderScore();
+    }
+
+    function loadSentence() {
+        var sentence = SENTENCES[state.order[state.sIndex]];
+        state.words = sentence.words.map(function (w) { return { t: w.t, c: w.c, r: w.r, locked: false }; });
+        state.activeIdx = null;
+        el("nextArea").style.display = "none";
+        el("feedbackPanel").className = "feedback-panel";
+        el("feedbackPanel").textContent = "Click a word to begin.";
+        el("sentenceCounter").textContent = "Sentence " + (state.sIndex + 1) + " of " + state.order.length;
+        renderSentence();
+    }
+
+    function renderSentence() {
+        var wrap = el("sentenceDisplay");
+        wrap.innerHTML = "";
+        state.words.forEach(function (w, idx) {
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "word-chip" + (w.locked ? " locked" : "") + (state.activeIdx === idx ? " active" : "");
+            btn.textContent = w.t;
+            btn.setAttribute("data-idx", idx);
+            wrap.appendChild(btn);
+        });
+    }
+
+    function renderScore() {
+        el("scoreDisplay").textContent = "Score: " + state.correct + "/" + TOTAL + " correct";
+    }
+
+    function allLocked() {
+        return state.words.every(function (w) { return w.locked; });
+    }
+
+    function showFinal() {
+        el("gameCard").querySelectorAll(".sentence-row, .category-grid").forEach(function (n) { n.style.display = "none"; });
+        el("feedbackPanel").style.display = "none";
+        el("nextArea").style.display = "none";
+        el("finalScoreText").textContent = "Score: " + state.correct + "/" + TOTAL;
+        el("finalScreen").style.display = "block";
+    }
+
+    document.addEventListener("click", function (e) {
+        var playAgain = e.target.closest("#playAgainBtn");
+        if (playAgain) { startGame(); return; }
+
+        var next = e.target.closest("#nextSentenceBtn");
+        if (next) {
+            state.sIndex++;
+            if (state.sIndex < state.order.length) {
+                loadSentence();
+            } else {
+                showFinal();
+            }
+            return;
+        }
+
+        var chip = e.target.closest(".word-chip");
+        if (chip && chip.closest("#sentenceDisplay")) {
+            var idx = parseInt(chip.getAttribute("data-idx"), 10);
+            if (state.words[idx].locked) return;
+            state.activeIdx = idx;
+            renderSentence();
+            el("feedbackPanel").className = "feedback-panel";
+            el("feedbackPanel").textContent = "Now click the part of speech for \"" + state.words[idx].t + "\".";
+            return;
+        }
+
+        var catBtn = e.target.closest(".cat-btn");
+        if (catBtn) {
+            if (state.activeIdx === null) {
+                el("feedbackPanel").className = "feedback-panel";
+                el("feedbackPanel").textContent = "Click a word first, then choose its job.";
+                return;
+            }
+            var word = state.words[state.activeIdx];
+            var chosen = catBtn.getAttribute("data-cat");
+            if (chosen === word.c) {
+                word.locked = true;
+                state.correct++;
+                state.activeIdx = null;
+                renderScore();
+                renderSentence();
+                el("feedbackPanel").className = "feedback-panel correct";
+                el("feedbackPanel").textContent = word.r;
+                if (allLocked()) {
+                    if (state.sIndex < state.order.length - 1) {
+                        el("nextArea").style.display = "block";
+                    } else {
+                        setTimeout(showFinal, 700);
+                    }
+                }
+            } else {
+                catBtn.classList.add("flash-wrong");
+                setTimeout(function () { catBtn.classList.remove("flash-wrong"); }, 500);
+                var activeChip = el("sentenceDisplay").querySelector('[data-idx="' + state.activeIdx + '"]');
+                if (activeChip) {
+                    activeChip.classList.add("shake");
+                    setTimeout(function () { activeChip.classList.remove("shake"); }, 400);
+                }
+                el("feedbackPanel").className = "feedback-panel incorrect";
+                el("feedbackPanel").textContent = "Not quite. Look again at the job \"" + word.t + "\" is doing in this sentence. Try again.";
+            }
+            return;
+        }
+    });
+
+    startGame();
+})();
+</script>
+</body>
+</html>

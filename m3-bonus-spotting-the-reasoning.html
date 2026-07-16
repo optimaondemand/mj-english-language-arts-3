@@ -1,0 +1,162 @@
+<!--
+    Optima Academy Online — INTERACTIVE lesson (BONUS, ungraded, LIGHT). M/J Language Arts 3 · Module 3 Whitman · supplement alongside Lessons 3.1-3.5.
+    Standard: ELA.8.R.2.4 (reasoning/argumentation). Two fallacies tied to the poem's study-vs-wonder tension: false dilemma, appeal to authority. Poem is PD. Engine: select (x2, short). Delete .preview-banner before deploy.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &mdash; Bonus Skill: Spotting the Reasoning (Module 3)</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="preview-banner"><strong>Local preview only.</strong> Delete this banner before deploying. Widgets run on the GitHub-hosted page, not in a Canvas RCE paste.</div>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J LANGUAGE ARTS 3</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 3</div><div style="font-size: 12px; color: #666;">Whitman &middot; One Week</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Bonus Skill</div><div style="font-size: 12px; color: #666;">Ungraded, pairs with 3.1&ndash;3.5</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Anchor Text</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">When I Heard the Learn&rsquo;d Astronomer</div><div style="font-size: 12px; color: #666;">Walt Whitman</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Knowledge and Wonder</div></div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Bonus Skill &middot; Module 3</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Spotting the Reasoning: Study or Wonder?</div>
+        <div style="font-size: 16px; color: #666;">A short, ungraded page, lighter than usual since this is a one-week module. It sits alongside this week&rsquo;s grammar and Word Study, not in place of them.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; WHY THIS MATTERS</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Whitman&rsquo;s poem only reports one person&rsquo;s one night: a lecture that wears him out, and a walk outside that does not. It is easy to turn that single moment into a bigger rule than the poem actually makes. Two ways that happens have names.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; ONE &middot; FALSE DILEMMA</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;"><strong>A false dilemma</strong> claims there are only two choices when other options actually exist. Someone might argue that you must pick one path forever: study the stars scientifically, or feel real wonder at them, never both. Plenty of astronomers feel wonder while doing careful science. The poem describes one person&rsquo;s one night, not a permanent either/or rule for everybody.</div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; FALSE DILEMMA, OR JUST WHAT HAPPENED?</div>
+            <div class="widget-question">For each claim, decide whether it forces a choice between only two options, or simply describes what happened in the poem.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Studying the stars and feeling wonder at them are not opposites that cancel each other out. Plenty of scientists have both. The poem shows one man's one difficult night, not a rule that the two can never mix." data-hint="Are science and wonder actually opposites that cancel each other out, or can a person have both?">
+                <div class="widget-row-prompt">1. A classmate says the poem proves you can either study the stars scientifically or feel real wonder at them, never both.</div>
+                <div class="widget-options"><button data-choice="0">Just what happened</button><button data-choice="1">False dilemma</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. This just states what the speaker did on one occasion. It is not claiming that everyone, always, must choose one path or the other." data-hint="Is this describing one person's one night, or laying down a permanent rule for everyone?">
+                <div class="widget-row-prompt">2. The speaker in the poem grows tired of the lecture, rises, and walks outside to look at the stars in silence.</div>
+                <div class="widget-options"><button data-choice="0">Just what happened</button><button data-choice="1">False dilemma</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. This squeezes every possible life into two extremes and leaves out everyone who studies facts and still makes room for wonder, which is most working scientists." data-hint="Does this leave room for a person to be careful about facts and still capable of wonder?">
+                <div class="widget-row-prompt">3. A student argues that everyone must pick one path for life: become a scientist who only measures things, or a dreamer who never studies facts.</div>
+                <div class="widget-options"><button data-choice="0">Just what happened</button><button data-choice="1">False dilemma</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9889; TWO &middot; APPEAL TO AUTHORITY</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65; margin-bottom: 14px;"><strong>An appeal to authority</strong> treats a claim as settled just because an expert said so, without asking whether the expert&rsquo;s knowledge actually covers the question at hand. Experts are usually worth listening to on their own subject. The astronomer in the poem is a real expert on facts about the stars. That does not make him an expert on the separate question of how a person should feel while looking at them.</div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; APPEAL TO AUTHORITY, OR A FAIR USE OF EXPERTISE?</div>
+            <div class="widget-question">For each claim, decide whether it leans on the astronomer&rsquo;s expertise where it actually applies, or stretches it to settle a question it cannot answer.</div>
+
+            <div class="widget-row" data-correct="1" data-fb="Right. Knowing the facts about a star is a different skill from knowing the one true way to feel about it. Applause for his lecture proves he is a good lecturer on facts, not that his approach to wonder is the only valid one." data-hint="Does being an expert on star facts also make someone an expert on how a person should feel?">
+                <div class="widget-row-prompt">1. Because the astronomer lectures &ldquo;with much applause,&rdquo; a listener assumes his way of explaining the stars must be the only valid way to encounter them.</div>
+                <div class="widget-options"><button data-choice="0">A fair use of expertise</button><button data-choice="1">Appeal to authority</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. Distance and formation are exactly the kind of fact the astronomer's training covers. Trusting an expert within their real field of expertise is not a fallacy." data-hint="Is this question about a measurable fact, which is the astronomer's actual field, or about something else?">
+                <div class="widget-row-prompt">2. If you want to know the distance to a star or how it was formed, it makes sense to trust the astronomer&rsquo;s measurements over a guess.</div>
+                <div class="widget-options"><button data-choice="0">A fair use of expertise</button><button data-choice="1">Appeal to authority</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. Being the expert in the room on facts does not settle a completely different question: how someone else prefers to experience the night sky. That stretch is the appeal to authority." data-hint="Does expertise on star facts also decide how another person should choose to experience the sky?">
+                <div class="widget-row-prompt">3. A student insists that since the lecturer is the expert in the room, anyone who prefers to look at the stars in silence instead of studying his charts must be wrong.</div>
+                <div class="widget-options"><button data-choice="0">A fair use of expertise</button><button data-choice="1">Appeal to authority</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU GO</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The poem does not actually argue that science and wonder are enemies. It just shows one tired man choosing silence for one night. Keep that distinction in mind as you write your own Juxtaposition Poem this week.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Bonus Skill &middot; Spotting the Reasoning: Study or Wonder?</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>
