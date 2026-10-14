@@ -29,8 +29,9 @@
     .seed-label { font-size: 11px; color: #1B6A94; margin-bottom: 6px; letter-spacing: 0.4px; }
     .seed-value { font-size: 17px; color: #0E1C42; min-height: 24px; }
 </style>
+<link rel="stylesheet" href="assets/dp/dp.css" />
 </head>
-<body>
+<body class="bk-lottery" data-dp-lesson="m5-w2-tue-lit-1">
 <div class="canvas-frame">
 
 <div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
@@ -275,7 +276,7 @@
 
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
-        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Writing notebook, the Week 1 Quick Write (the hints and blanks found), and about 15 minutes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The Week 1 Quick Write (the hints and blanks found) and about 15 minutes.</div></div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -296,7 +297,7 @@
 
         <div class="optima-widget" id="seed-widget">
             <div class="widget-kicker">&#127922; STORY SEED ROLLER</div>
-            <div class="widget-question">Roll a seed, then write it into the notebook.</div>
+            <div class="widget-question">Roll a seed, then write it in the seed box below.</div>
             <button class="seed-btn" id="seed-roll">Roll a story seed</button>
             <div class="seed-grid">
                 <div class="seed-card"><div class="seed-label">&#127757; WORLD</div><div class="seed-value" id="seed-world">&middot;</div></div>
@@ -310,7 +311,7 @@
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#9999;&#65039; PART 2 &middot; OUTLINE THE STORY</div>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the notebook, sketch a short outline of four or five lines. Use the seed, and plan in the three Jackson tools.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sketch a short outline of four or five lines in the box below. Use the seed, and plan in the three Jackson tools.</p>
         <div style="background: #0E1C42; border-radius: 8px; padding: 16px 20px; margin: 8px 0; color: #E8F6FB; font-size: 15px; line-height: 1.85;">
             <strong style="color:#55c8e8;">1. The ordinary world.</strong> Where and when does the day begin? Keep it calm.<br>
             <strong style="color:#55c8e8;">2. The tradition.</strong> What custom is being carried out, and how routine does it feel to the people?<br>
@@ -318,9 +319,11 @@
             <strong style="color:#55c8e8;">4. The turn.</strong> What changes, or is revealed, near the end?<br>
             <strong style="color:#55c8e8;">5. The blank.</strong> What is deliberately never explained?
         </div>
+        <div class="wbox"><div class="wbox-k">&#9997;&#65039; YOUR WRITING</div><div class="wbox-p">Your seed: the world, the place, and the tradition, kept or reshaped.</div><textarea data-key="seed" data-label="Story seed (world, place, tradition)" aria-label="Story seed (world, place, tradition)"></textarea><div class="wbox-s"><span class="wbox-dot"></span>Saves automatically on this computer. It also appears in Week 2 Daily Practice.</div></div>
 
-        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
-            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Write your five-line outline first. Then click to see a sample outline built from a seed.</summary>
+        <div class="wbox"><div class="wbox-k">&#9997;&#65039; YOUR WRITING</div><div class="wbox-p">Write your outline in five lines: the ordinary world, the tradition, the buried hint, the turn, and the blank.</div><textarea data-key="outline" data-label="Five-line story outline" aria-label="Five-line story outline"></textarea><div class="wbox-s"><span class="wbox-dot"></span>Saves automatically on this computer. It also appears in Week 2 Daily Practice.</div></div>
+        <details class="wbox-reveal" data-for="outline" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Compare with a sample outline built from a seed.</summary>
             <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Sample (from the seed: small mountain town, the public library, the yearly "returning of the books"): <em>1. A bright autumn Saturday; townspeople file into the old library. 2. Once a year every family returns one book, chosen by the head librarian. 3. Buried hint: a child asks which book her family must return, and her mother goes quiet. 4. Turn: the returned books are never reshelved; they are taken to a locked room. 5. Blank: why the room exists, and what happens to the books, is never explained.</em> Your outline will differ; that is the point.</div>
         </details>
     </div>
@@ -364,7 +367,7 @@
       document.getElementById('seed-place').textContent = pick(places);
       document.getElementById('seed-tradition').textContent = pick(traditions);
       var note = document.getElementById('seed-note');
-      note.textContent = 'There is your seed. Keep it, change any one piece, or roll again. Then write it into your notebook.';
+      note.textContent = 'There is your seed. Keep it, change any one piece, or roll again. Then write it in the seed box below.';
       note.classList.add('show');
       return;
     }
@@ -383,5 +386,6 @@
   });
 })();
 </script>
+<script src="assets/dp/dp.js"></script>
 </body>
 </html>

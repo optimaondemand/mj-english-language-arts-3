@@ -30,8 +30,9 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 </style>
+<link rel="stylesheet" href="assets/dp/dp.css" />
 </head>
-<body>
+<body class="bk-lottery" data-dp-lesson="m5-w1-poetry-pairing-we-wear-the-mask">
 <div class="canvas-frame">
 
 <div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
@@ -281,7 +282,7 @@
 
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
-        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The poem (printed below), writing notebook, and about fifteen minutes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">The poem (printed below) and about fifteen minutes.</div></div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -343,6 +344,7 @@
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128221; WORD STUDY</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Write a sentence using <em>myriad</em>. Then rewrite it twice: once with a synonym, once expanding it ("myriad, in the sense that&hellip;").</div>
+        <div class="wbox"><div class="wbox-k">&#9997;&#65039; YOUR WRITING</div><div class="wbox-p">Your sentence and its two rewrites.</div><textarea data-key="wordStudy" data-label="Word Study: myriad" aria-label="Word Study: myriad"></textarea><div class="wbox-s"><span class="wbox-dot"></span>Saves automatically on this computer.</div></div>
         </div>
     </div>
 
@@ -373,8 +375,9 @@
             <button class="widget-reset">Reset</button>
         </div>
 
-        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
-            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; In your notebook, write one sentence naming what you think is hardest about wearing a mask like this one. Click to compare.</summary>
+        <div class="wbox"><div class="wbox-k">&#9997;&#65039; YOUR WRITING</div><div class="wbox-p">Write one sentence naming what you think is hardest about wearing a mask like this one.</div><textarea data-key="hardest" data-label="What is hardest about wearing the mask" aria-label="What is hardest about wearing the mask"></textarea><div class="wbox-s"><span class="wbox-dot"></span>Saves automatically on this computer.</div></div>
+        <details class="wbox-reveal" data-for="hardest" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Compare with what many readers notice.</summary>
             <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Many readers point to the loneliness of it: the mask works precisely because no one else can tell it is there. The wearer carries the real feeling alone, in the middle of a crowd. Your answer may name something different, such as the exhaustion of keeping it up every day. What matters is that you can point to a line and say why.</div>
         </details>
     </div>
@@ -450,5 +453,6 @@
   });
 })();
 </script>
+<script src="assets/dp/dp.js"></script>
 </body>
 </html>

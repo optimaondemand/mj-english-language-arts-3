@@ -26,8 +26,9 @@
     .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
     .widget-reset:hover { background: #FDF3E3; }
 </style>
+<link rel="stylesheet" href="assets/dp/dp.css" />
 </head>
-<body>
+<body class="bk-lottery" data-dp-lesson="m5-w2-wed-grammar-2">
 <div class="canvas-frame">
 
 <div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
@@ -272,7 +273,7 @@
 
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; MATERIALS</div>
-        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Story outline and writing notebook. About 10 to 15 minutes.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Your story outline. About 10 to 15 minutes.</div></div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -319,8 +320,9 @@
             <button class="widget-reset">Reset</button>
         </div>
 
-        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
-            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Now write the opening of your own story: three or four sentences of an ordinary scene with exactly one buried hint. Then click for a checklist.</summary>
+        <div class="wbox"><div class="wbox-k">&#9997;&#65039; YOUR WRITING</div><div class="wbox-p">Write the opening of your own story: three or four sentences of an ordinary scene with exactly one buried hint.</div><textarea data-key="opening" data-label="Jackson-style opening" aria-label="Jackson-style opening"></textarea><div class="wbox-s"><span class="wbox-dot"></span>Saves automatically on this computer. It also appears in Week 2 Daily Practice.</div></div>
+        <details class="wbox-reveal" data-for="opening" style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Compare with a checklist.</summary>
             <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Check your opening: Is most of it calm and specific? Did you bury exactly one hint, not three? Could a first-time reader skim past the hint without alarm? Does the scene start in the middle of the day, not with a history lesson? If yes to all, your trap is set.</div>
         </details>
     </div>
@@ -380,5 +382,6 @@
   });
 })();
 </script>
+<script src="assets/dp/dp.js"></script>
 </body>
 </html>

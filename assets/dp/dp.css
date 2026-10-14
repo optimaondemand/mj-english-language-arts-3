@@ -1,0 +1,123 @@
+/* M/J Language Arts 3, Semester 2: Daily Practice writing lessons + in-lesson write boxes.
+   Layered on project.css (the shared Optima project-lesson engine).
+   One theme per book, set by a body class:
+     .bk-lotf     Lord of the Flies     "Island Log"        accent Odyssey Orange #F78F1E (signal fire)
+     .bk-lottery  The Lottery           "The Village Square" accent Portal Purple #67308F
+     .bk-tkam     To Kill a Mockingbird "Maycomb Case File"  accent Pixel Pink   #A53E97 (Mrs. Dubose's camellias)
+   Gold #C7922C stays as template chrome. Green/red stay functional feedback only. */
+
+body { --acc: #C7922C; --acc-dk: #8A6418; --acc-fill: #FDF3E3; --acc-soft: #F0DDB8; --paper: #FFFFFF; --ink: #1a2340; --hand: Georgia, "Times New Roman", serif; }
+body.bk-lotf    { --acc: #F78F1E; --acc-dk: #B5620A; --acc-fill: #FEF1DF; --acc-soft: #F8D9B0; --paper: #FFFCF5; }
+body.bk-lottery { --acc: #67308F; --acc-dk: #4E2370; --acc-fill: #F1EAF6; --acc-soft: #DCCBE8; --paper: #FBFAF6; }
+body.bk-tkam    { --acc: #A53E97; --acc-dk: #8A2F7E; --acc-fill: #F7EAF4; --acc-soft: #E9D3E4; --paper: #FCF8EE; --hand: "Courier New", Courier, monospace; }
+
+/* ---------- accent activity border ---------- */
+.activity.bl-acc { border-left-color: var(--acc); } .activity.bl-acc .activity-num { background: var(--acc-dk); }
+
+/* ---------- themed progress + tabs ---------- */
+.bk-lotf .progress-fill    { background: linear-gradient(90deg, #C7922C, #F78F1E, #FFD08A); }
+.bk-lottery .progress-fill { background: linear-gradient(90deg, #55C8E8, #67308F); }
+.bk-tkam .progress-fill    { background: linear-gradient(90deg, #C7922C, #A53E97); }
+.bk-lotf .progress-label::before    { content: "\1F525  "; }
+.bk-lottery .progress-label::before { content: "\1F4DC  "; }
+.bk-tkam .progress-label::before    { content: "\2696\FE0F  "; }
+body[class*="bk-"] .tab-btn.active { border-bottom-color: var(--acc); color: #0e1c42; }
+body[class*="bk-"] .tab-btn.visited .tab-n { background: var(--acc-dk); color: #fff; }
+.bk-lottery .tab-btn { font-family: Georgia, serif; }
+.bk-tkam .tab-bar { background: #F3E7C9; border-bottom-color: #D9C38E; }
+.bk-tkam .tab-btn { font-family: "Courier New", Courier, monospace; color: #5a4a22; border-radius: 10px 10px 0 0; margin: 6px 3px 0; background: #EADBB2; }
+.bk-tkam .tab-btn.active { background: #FFFDF6; }
+
+/* ---------- scene banner (top of each Daily Practice page) ---------- */
+.scene { position: relative; border-radius: 14px; overflow: hidden; margin: 0 0 16px; min-height: 170px; padding: 22px 26px; color: #fff; background-color: #0E1C42; background-repeat: no-repeat; background-size: cover; background-position: center bottom; }
+.scene .scene-k { font-size: 12px; letter-spacing: 1.5px; opacity: .92; margin-bottom: 6px; }
+.scene .scene-h { font-family: Georgia, serif; font-size: 30px; line-height: 1.15; margin-bottom: 6px; text-shadow: 0 2px 6px rgba(0,0,0,.35); }
+.scene .scene-s { font-size: 15px; max-width: 560px; line-height: 1.5; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
+.scene .scene-badge { position: absolute; right: 18px; top: 16px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 5px 12px; font-size: 12px; }
+/* Island: dusk sky, sea, island, a signal fire */
+.bk-lotf .scene { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 220' preserveAspectRatio='xMidYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230E1C42'/%3E%3Cstop offset='.65' stop-color='%23314a7a'/%3E%3Cstop offset='1' stop-color='%23F78F1E'/%3E%3C/linearGradient%3E%3CradialGradient id='f' cx='.5' cy='.5' r='.5'%3E%3Cstop offset='0' stop-color='%23FFD08A' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23F78F1E' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1000' height='220' fill='url(%23s)'/%3E%3Ccircle cx='820' cy='120' r='70' fill='url(%23f)'/%3E%3Cpath d='M560 175 Q700 95 900 160 Q960 172 1000 178 L1000 220 L560 220Z' fill='%231d2b4f'/%3E%3Cpath d='M812 132 l8 -22 l7 14 l6 -20 l9 28Z' fill='%23F78F1E'/%3E%3Cpath d='M0 180 Q60 172 120 180 T240 180 T360 180 T480 180 T600 182 T720 184 T840 186 T1000 188 L1000 220 L0 220Z' fill='%2355C8E8' opacity='.55'/%3E%3Cpath d='M0 196 Q70 188 140 196 T280 196 T420 196 T560 196 T700 198 T840 198 T1000 200 L1000 220 L0 220Z' fill='%232196D0' opacity='.7'/%3E%3C/svg%3E"); }
+/* Village square: stones, a black box on a three-legged stool, slips of paper */
+.bk-lottery .scene { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 220' preserveAspectRatio='xMidYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23302047'/%3E%3Cstop offset='1' stop-color='%2367308F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1000' height='220' fill='url(%23s)'/%3E%3Crect x='0' y='186' width='1000' height='34' fill='%231c1430'/%3E%3Crect x='780' y='112' width='90' height='54' rx='3' fill='%23111111' stroke='%23ffffff' stroke-opacity='.25'/%3E%3Cpath d='M792 166 L784 196 M825 166 L825 196 M858 166 L866 196' stroke='%23d8cbb0' stroke-width='5'/%3E%3Crect x='690' y='70' width='26' height='16' rx='2' fill='%23FBFAF6' transform='rotate(-14 703 78)'/%3E%3Crect x='905' y='60' width='26' height='16' rx='2' fill='%23FBFAF6' transform='rotate(18 918 68)'/%3E%3Crect x='620' y='120' width='22' height='14' rx='2' fill='%23FBFAF6' opacity='.8' transform='rotate(8 631 127)'/%3E%3Cg fill='%23a39db0'%3E%3Cellipse cx='560' cy='196' rx='12' ry='8'/%3E%3Cellipse cx='590' cy='200' rx='9' ry='6'/%3E%3Cellipse cx='610' cy='194' rx='7' ry='5'/%3E%3Cellipse cx='950' cy='198' rx='11' ry='7'/%3E%3C/g%3E%3C/svg%3E"); }
+/* Maycomb: courthouse with columns and clock tower, a camellia */
+.bk-tkam .scene { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 220' preserveAspectRatio='xMidYMax slice'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230E1C42'/%3E%3Cstop offset='1' stop-color='%235a3b63'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1000' height='220' fill='url(%23s)'/%3E%3Cg fill='%23F3E7C9'%3E%3Crect x='700' y='40' width='60' height='60'/%3E%3Ccircle cx='730' cy='66' r='14' fill='%230E1C42'/%3E%3Cpath d='M680 100 L780 100 L730 80Z'/%3E%3Cpath d='M620 112 L840 112 L730 86Z'/%3E%3Crect x='630' y='112' width='200' height='10'/%3E%3Crect x='640' y='124' width='14' height='62'/%3E%3Crect x='672' y='124' width='14' height='62'/%3E%3Crect x='704' y='124' width='14' height='62'/%3E%3Crect x='742' y='124' width='14' height='62'/%3E%3Crect x='774' y='124' width='14' height='62'/%3E%3Crect x='806' y='124' width='14' height='62'/%3E%3Crect x='620' y='186' width='220' height='12'/%3E%3C/g%3E%3Cpath d='M730 66 L730 56 M730 66 L738 70' stroke='%23F3E7C9' stroke-width='2'/%3E%3Crect x='0' y='198' width='1000' height='22' fill='%23241a33'/%3E%3Cg transform='translate(915 150)'%3E%3Ccircle r='16' fill='%23A53E97'/%3E%3Ccircle r='9' fill='%23E9D3E4'/%3E%3Ccircle r='4' fill='%23C7922C'/%3E%3C/g%3E%3C/svg%3E"); }
+
+/* ---------- themed writing surfaces ---------- */
+body[class*="bk-"] textarea.answer { background: var(--paper); font-family: var(--hand); font-size: 16px; line-height: 28px; }
+.bk-lotf textarea.answer { background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, #E9DCC4 27px, #E9DCC4 28px); background-attachment: local; border-left: 4px solid var(--acc); }
+.bk-lottery textarea.answer { border: 1px dashed #b7aec6; border-radius: 3px; box-shadow: 2px 3px 0 #e6e0d2; }
+.bk-tkam textarea.answer { background: #FFFDF6; border: 1px solid #D9C38E; letter-spacing: .2px; }
+body[class*="bk-"] textarea.answer:focus { border-color: var(--acc); box-shadow: 0 0 0 3px var(--acc-fill); }
+
+/* ---------- "from the book" card: where the student copies from their own copy ---------- */
+.copybox { background: var(--acc-fill); border: 1px solid var(--acc-soft); border-left: 5px solid var(--acc); border-radius: 10px; padding: 14px 18px; margin: 10px 0 14px; }
+.copybox .cb-k { font-size: 11px; letter-spacing: .6px; color: var(--acc-dk); margin-bottom: 6px; }
+.copybox .cb-t { font-size: 16px; color: #0e1c42; line-height: 1.55; }
+
+/* ---------- proofread ticks (copywork) ---------- */
+.ticks { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 4px; }
+.tick { border: 1.5px solid #D0D9E8; background: #fff; border-radius: 999px; padding: 7px 14px; font-size: 13px; color: #0e1c42; cursor: pointer; font-family: inherit; }
+.tick.on { background: var(--acc-fill); border-color: var(--acc); color: var(--acc-dk); }
+.tick.on::before { content: "\2713  "; }
+
+/* ---------- order it (retell sequencer) ---------- */
+.order { border: 1px solid #D0D9E8; border-radius: 12px; padding: 14px 16px; background: #FAFBFD; margin: 10px 0 14px; }
+.order .ord-k { font-size: 11px; letter-spacing: .6px; color: var(--acc-dk); margin-bottom: 4px; }
+.order .ord-q { font-size: 15px; color: #0e1c42; margin-bottom: 10px; }
+.order .ord-pool { display: flex; flex-direction: column; gap: 7px; }
+.order .ord-item { display: flex; align-items: center; gap: 10px; text-align: left; background: #fff; border: 1.5px solid #D0D9E8; border-radius: 10px; padding: 9px 12px; font-size: 14px; color: #0e1c42; cursor: pointer; font-family: inherit; }
+.order .ord-item .ord-n { width: 26px; height: 26px; border-radius: 50%; background: #EEF1F8; color: #6b7a99; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.order .ord-item.picked .ord-n { background: var(--acc-dk); color: #fff; }
+.order .ord-item.right { border-color: #2A9D5C; background: #EAF7EE; }
+.order .ord-item.wrong { border-color: #C0392B; background: #FDECEC; }
+.order .ord-bar { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+.order .ord-fb { font-size: 14px; color: #1a2340; }
+.bk-lottery .order .ord-item { border-style: dashed; border-radius: 3px; transform: rotate(-.4deg); }
+.bk-lottery .order .ord-item:nth-child(even) { transform: rotate(.5deg); }
+
+/* ---------- draw a slip (The Lottery fix-it draw; works in any theme) ---------- */
+.draw { border-radius: 12px; padding: 16px 18px; margin: 10px 0 14px; background: #1c1430; color: #fff; }
+.draw .dr-k { font-size: 11px; letter-spacing: .8px; color: #DCCBE8; margin-bottom: 8px; }
+.draw .dr-box { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.draw .dr-btn { background: #111; color: #fff; border: 2px solid #DCCBE8; border-radius: 8px; padding: 12px 18px; font-size: 15px; cursor: pointer; font-family: Georgia, serif; }
+.draw .dr-btn:hover { background: #2a2140; }
+.draw .dr-left { font-size: 12px; color: #DCCBE8; }
+.draw .slip { display: none; margin-top: 12px; background: #FBFAF6; color: #1a2340; border-radius: 3px; padding: 12px 14px; box-shadow: 3px 4px 0 rgba(0,0,0,.35); transform: rotate(-.6deg); }
+.draw .slip.shown { display: block; }
+.draw .slip .sl-n { font-size: 11px; color: #67308F; letter-spacing: .6px; margin-bottom: 6px; }
+.draw .slip .sl-t { font-family: Georgia, serif; font-size: 16px; line-height: 1.5; margin-bottom: 8px; }
+
+/* ---------- objection (TKAM ruling widget: styled .check) ---------- */
+.bk-tkam .check { background: #FFFDF6; border: 1px solid #D9C38E; border-left: 5px solid var(--acc); }
+.bk-tkam .check .check-k::before { content: "\2696\FE0F  "; }
+.bk-tkam .check-q { font-family: "Courier New", Courier, monospace; }
+
+/* ---------- signal-fire meter (LOTF: grows as pieces are done) ---------- */
+.fire { display: flex; align-items: flex-end; gap: 6px; height: 46px; margin: 4px 0 12px; }
+.fire span { width: 16px; border-radius: 8px 8px 3px 3px; background: #E2E8F4; transition: height .4s, background .4s; height: 10px; }
+.fire span.lit { background: linear-gradient(0deg, #C7922C, #F78F1E, #FFD08A); }
+.fire-cap { font-size: 12px; color: #6b7a99; }
+
+/* =====================================================================
+   In-lesson write boxes (the regular Mon-Thu lesson pages)
+   ===================================================================== */
+.wbox { background: var(--paper, #fff); border: 1px solid #D0D9E8; border-left: 5px solid var(--acc); border-radius: 10px; padding: 14px 18px; margin: 14px 0 10px; }
+.wbox .wbox-k { font-size: 11px; letter-spacing: .6px; color: var(--acc-dk); margin-bottom: 6px; }
+.wbox .wbox-p { font-size: 17px; color: #0E1C42; line-height: 1.55; margin-bottom: 10px; }
+.wbox textarea { width: 100%; min-height: 96px; resize: vertical; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 10px 12px; font-family: var(--hand); font-size: 16px; line-height: 28px; color: #1a2340; background: #fff; box-sizing: border-box; }
+.wbox textarea:focus { outline: none; border-color: var(--acc); box-shadow: 0 0 0 3px var(--acc-fill); }
+.bk-lotf .wbox textarea { background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, #E9DCC4 27px, #E9DCC4 28px); background-attachment: local; }
+.bk-lottery .wbox textarea { border-style: dashed; border-radius: 3px; box-shadow: 2px 3px 0 #e6e0d2; }
+.bk-tkam .wbox textarea { background: #FFFDF6; border-color: #D9C38E; }
+.wbox .wbox-s { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6b7a99; margin-top: 6px; }
+.wbox .wbox-dot { width: 9px; height: 9px; border-radius: 50%; background: #D0D9E8; flex-shrink: 0; }
+.wbox .wbox-dot.saved { background: var(--acc); }
+details.wbox-reveal.locked > summary { opacity: .6; cursor: not-allowed; }
+.wbox-hint { display: none; font-size: 13px; color: var(--acc-dk); margin: -4px 0 8px; }
+.wbox-hint.show { display: block; }
+
+@media (max-width: 640px) {
+  .scene { padding: 18px 16px; min-height: 150px; }
+  .scene .scene-h { font-size: 24px; }
+  .scene .scene-badge { position: static; display: inline-block; margin-bottom: 8px; }
+}
+@media print { .scene, .order .ord-bar, .draw .dr-box, .ticks { display: none; } }

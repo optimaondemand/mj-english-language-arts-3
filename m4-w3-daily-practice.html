@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Language Arts 3 &middot; Lord of the Flies Week 3 Daily Practice</title>
+<link rel="stylesheet" href="assets/dp/project.css" />
+<link rel="stylesheet" href="assets/dp/dp.css" />
+</head>
+<body class="bk-lotf" data-ns="ela8s2" data-lesson="m4-w3-dp" data-title="Week 3 Daily Practice: Island Log" data-course="M/J Language Arts 3" data-project-name="Lord of the Flies" data-assignment="Week 3 Daily Practice" data-code="ELA8">
+<div class="frame canvas-frame" id="pageTop" data-readaloud-root>
+
+<div class="progress-wrap"><span class="progress-label">ISLAND LOG</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><span class="progress-pct" id="progressPct">0%</span></div>
+
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div><div class="header-org">Optima Academy Online</div><div class="header-tag">An Education Experience Company</div></div>
+  </div>
+  <div class="header-course">M/J LANGUAGE ARTS 3</div>
+</div>
+<div class="strip">
+  <div class="strip-cell"><div class="strip-k">Quarter / Module</div><div class="strip-v">Q3 &middot; Module 4</div><div class="strip-s">Lord of the Flies &middot; Week 3</div></div>
+  <div class="strip-cell"><div class="strip-k">Type</div><div class="strip-v">Daily Practice</div><div class="strip-s">Writing lesson</div></div>
+  <div class="strip-cell"><div class="strip-k">Pieces</div><div class="strip-v">Copywork, character map, style</div><div class="strip-s">Chapters 5 to 6</div></div>
+  <div class="strip-cell"><div class="strip-k">Turn in</div><div class="strip-v">One PDF &middot; 10 pts</div><div class="strip-s">Week 3 Daily Practice in Canvas</div></div>
+</div>
+
+<div style="padding: 18px 28px 0;">
+<!-- ═══ OPTIMA READ-ALOUD PLAYER ═══ -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD &middot; LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] , one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] , one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+
+</div>
+
+<div class="intro">
+  <div class="scene">
+    <div class="scene-badge">WEEK 3 &middot; CHAPTERS 5 TO 6</div>
+    <div class="scene-k">ISLAND LOG</div>
+    <div class="scene-h">The Beast on the Mountain</div>
+    <div class="scene-s">Four boys carry four ideas, and a dead airman fools the boys who glimpse him. This week&rsquo;s log maps the ideas and names the irony.</div>
+  </div>
+  <div class="path">
+    <div class="path-title">THIS WEEK&rsquo;S LOG</div>
+    <div class="path-steps">
+      <span class="path-step">&#128218; Copy a line</span><span class="path-arrow">&#8594;</span><span class="path-step">&#128026; Map the four boys</span><span class="path-arrow">&#8594;</span><span class="path-step">&#128293; Signal Fire Sentences</span><span class="path-arrow">&#8594;</span><span class="path-step">&#128228; Download the PDF</span>
+    </div>
+  </div>
+  <div class="need-strip"><span class="need-label">You will need:</span><span class="need-chip"><em>Lord of the Flies</em>, Chapters 5 to 6 (own copy)</span><span class="need-chip">About 25 minutes</span></div>
+  <div class="q plain" style="max-width:420px;"><div class="q-prompt">Your name<span class="saved-dot"></span></div><input class="answer" type="text" data-key="name" data-project="name" data-label="Name" placeholder="First and last name" /></div>
+  <div class="fire" data-count="5"></div><div class="fire-cap"></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn" data-tab="copy"><span class="tab-n">1</span>Copywork</button>
+  <button class="tab-btn" data-tab="chars"><span class="tab-n">2</span>Characters</button>
+  <button class="tab-btn" data-tab="style"><span class="tab-n">3</span>Style</button>
+  <button class="tab-btn" data-tab="turnin"><span class="tab-n">4</span>Turn in</button>
+</div>
+<div class="reset-row"><button class="reset-btn">Start this lesson over</button></div>
+
+<!-- ============ COPYWORK ============ -->
+<div class="tab-panel" id="tab-copy">
+  <div class="activity bl-acc">
+    <div class="activity-head"><div class="activity-num">1</div><div><div class="activity-title">Copywork: the beast or the failing assembly</div><div class="activity-sub">Chapter 5 or 6</div></div></div>
+    <div class="activity-body">
+      <div class="copybox"><div class="cb-k">&#128218; FROM YOUR OWN COPY</div><div class="cb-t">Find a place in Chapter 5 or 6 about the beast or the failing assembly. Type one or two sentences of it exactly as printed.</div></div>
+      <div class="q"><div class="q-prompt">Copywork<div class="q-hint">Check every comma and capital against the book.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="copy" data-label="Copywork" data-required></textarea></div>
+      <div class="q-prompt" style="margin-top:6px;">Proofread against the page. Tick each one you checked.</div><div class="ticks" data-key="proof"><button class="tick" type="button">Every capital letter</button><button class="tick" type="button">Every comma</button><button class="tick" type="button">End punctuation</button><button class="tick" type="button">Quotation marks</button><button class="tick" type="button">Spelling of every word</button></div>
+      <div class="q"><div class="q-prompt">Why you chose it<div class="q-hint">One sentence: what does your passage show about the boys&rsquo; fear or the failing assembly?</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="copyWhy" data-label="Why you chose it" data-required></textarea></div>
+    </div>
+  </div>
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">2</div><div><div class="activity-title">Who believes what?</div><div class="activity-sub">The beast on the mountain</div></div></div>
+    <div class="activity-body">
+      <div class="check">
+        <div class="check-k">FEED THE FIRE &middot; NOT GRADED</div>
+        <div class="check-row"><div class="cr-p">1. What do the boys who glimpse the figure on the mountain believe it is?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="The boys take it for something far more frightening than a person.">A ship&rsquo;s lookout</button>
+          <button class="opt" data-correct="true" data-fb="Yes. They are certain the beast is real.">The beast</button>
+          <button class="opt" data-correct="false" data-fb="They do not see a sleeping boy. They see something that seems to bow and lift.">A sleeping hunter</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">2. What is actually on the mountain?</div><div class="opts">
+          <button class="opt" data-correct="true" data-fb="Yes. The wind tugs the lines so the body seems to move.">A dead parachutist moved by the wind</button>
+          <button class="opt" data-correct="false" data-fb="A boar is a hunter&rsquo;s target, not what the boys glimpse here.">A wild boar</button>
+          <button class="opt" data-correct="false" data-fb="The figure is not a living boy.">A hidden hunter</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">3. What does the fear of the beast do to the boys&rsquo; order?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="Fear works against the rule of the conch.">It strengthens the conch</button>
+          <button class="opt" data-correct="false" data-fb="Fear does not bring a ship.">It brings them rescue</button>
+          <button class="opt" data-correct="true" data-fb="Yes. Frightened boys follow the one who promises action.">It pushes them toward Jack and weakens order</button>
+          </div><div class="opt-fb"></div></div>
+        <button class="check-reset" type="button">Reset</button></div>
+      <div class="q"><div class="q-prompt">What the boys believe is on the mountain, and what the reader knows is there<div class="q-hint">From the lesson <em>Irony in the Beast and the Parachutist</em>. Not required.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="believeKnow" data-seed-from="m4-w3-thu-lit-2.believeKnow" data-label="What the boys believe is on the mountain, and what the reader knows is there"></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="chars">Continue: the four boys &#8594;</button>
+</div>
+
+<!-- ============ CHARACTERS ============ -->
+<div class="tab-panel" id="tab-chars">
+  <div class="activity bl-acc">
+    <div class="activity-head"><div class="activity-num">3</div><div><div class="activity-title">Four boys, four ideas</div><div class="activity-sub">Who carries what</div></div></div>
+    <div class="activity-body">
+      <div class="copybox"><div class="cb-k">&#127917; THE RULE</div><div class="cb-t">If the island is a small model of society, each boy can be read as an idea. These are not locked labels. Each boy is still a person.</div></div>
+      <div class="check">
+        <div class="check-k">FEED THE FIRE &middot; NOT GRADED</div>
+        <div class="check-row"><div class="cr-p">1. A boy calls a meeting and holds up the conch so each speaker can be heard. Which idea does he carry?</div><div class="opts">
+          <button class="opt" data-correct="true" data-fb="Yes. Meetings and the conch point to order and the rule of law.">Order</button>
+          <button class="opt" data-correct="false" data-fb="Savagery is the hunt and power taken by force.">Savagery</button>
+          <button class="opt" data-correct="false" data-fb="Insight is quiet understanding, not running a meeting.">Insight</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">2. A boy cares most about the hunt and about power taken by force. Which idea does he carry?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="Reason is science and planning.">Reason</button>
+          <button class="opt" data-correct="false" data-fb="Order is meetings and rules, the opposite of taking power by force.">Order</button>
+          <button class="opt" data-correct="true" data-fb="Yes. The hunt, the painted face, and power by force.">Savagery</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">3. A boy plans and reasons, and his glasses make fire. Which idea does he carry?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="Insight is a quiet, almost spiritual understanding.">Insight</button>
+          <button class="opt" data-correct="true" data-fb="Yes. Science, planning, and the glasses that make fire.">Reason</button>
+          <button class="opt" data-correct="false" data-fb="Nothing here is about the hunt.">Savagery</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">4. A quiet boy understands something the others cannot. Which idea does he carry?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="Reason is about planning and science.">Reason</button>
+          <button class="opt" data-correct="false" data-fb="Order is about running the meetings.">Order</button>
+          <button class="opt" data-correct="false" data-fb="Savagery is about the hunt.">Savagery</button>
+          <button class="opt" data-correct="true" data-fb="Yes. A quiet, almost spiritual understanding.">Insight</button>
+          </div><div class="opt-fb"></div></div>
+        <button class="check-reset" type="button">Reset</button></div>
+    </div>
+  </div>
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">4</div><div><div class="activity-title">Character-to-idea map</div><div class="activity-sub">Ralph, Jack, Piggy, and Simon</div></div></div>
+    <div class="activity-body">
+      <div class="q"><div class="q-prompt">Character-to-idea map<div class="q-hint">From the lesson <em>Characters as Ideas</em>: each boy matched to his idea, with one line of evidence each.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="charMap" data-seed-from="m4-w3-tue-lit-1.charMap" data-label="Character-to-idea map" data-required style="min-height:170px;"></textarea></div>
+      <div class="q"><div class="q-prompt">Word Study: <em>representative</em><div class="q-hint">From the lesson <em>Characters as Ideas</em>. Not required.</div><span class="saved-dot"></span></div><textarea class="answer" data-key="wordStudy" data-seed-from="m4-w3-tue-lit-1.wordStudy" data-label="Word Study: representative"></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="style">Continue: Signal Fire Sentences &#8594;</button>
+</div>
+
+<!-- ============ STYLE ============ -->
+<div class="tab-panel" id="tab-style">
+  <div class="activity bl-acc">
+    <div class="activity-head"><div class="activity-num">5</div><div><div class="activity-title">Signal Fire Sentences: allegory</div><div class="activity-sub">A second story under the first</div></div></div>
+    <div class="activity-body">
+      <div class="copybox"><div class="cb-k">&#128293; THE RULE</div><div class="cb-t">An allegory is a whole story whose characters and events stand for larger ideas, all the way through. It is not a code with one locked answer.</div></div>
+      <div class="check">
+        <div class="check-k">FEED THE FIRE &middot; NOT GRADED</div>
+        <div class="check-row"><div class="cr-p">1. A story has travelers named Greed, Doubt, and Mercy, and their choices play out their names. Is it likely an allegory?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="Look at the names. Each traveler stands for an idea.">No, it is only about a trip</button>
+          <button class="opt" data-correct="true" data-fb="Yes. The second meaning runs through the whole story.">Yes, each traveler stands for an idea</button>
+          <button class="opt" data-correct="false" data-fb="Here the names carry the meaning.">No, names never matter</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">2. A family story includes one locket that stands for a lost mother, and the rest is an ordinary life. Is it likely an allegory?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="One meaningful object is not a second story running all the way through.">Yes</button>
+          <button class="opt" data-correct="true" data-fb="Yes. A single symbol does not make a whole allegory.">Probably not</button>
+          <button class="opt" data-correct="false" data-fb="The material of the locket does not matter.">Only if the locket is gold</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">3. Why do many readers treat the island as an allegory?</div><div class="opts">
+          <button class="opt" data-correct="true" data-fb="Yes. With no adults, the boys must build order from nothing.">It works like a small model of human society</button>
+          <button class="opt" data-correct="false" data-fb="Length does not make an allegory.">It is a very long book</button>
+          <button class="opt" data-correct="false" data-fb="Settings alone do not create a second meaning.">It has a beach and a mountain</button>
+          </div><div class="opt-fb"></div></div>
+        <button class="check-reset" type="button">Reset</button></div>
+      <div class="q"><div class="q-prompt">Your allegory sentence<div class="q-hint">From the lesson <em>A Story That Means a Second Thing</em>: why many readers treat the island as a small model of society.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="allegory" data-seed-from="m4-w3-mon-grammar-1.allegory" data-label="Your allegory sentence" data-required></textarea></div>
+    </div>
+  </div>
+  <div class="activity bl-navy">
+    <div class="activity-head"><div class="activity-num">6</div><div><div class="activity-title">Signal Fire Sentences: irony</div><div class="activity-sub">What seems true and what is true</div></div></div>
+    <div class="activity-body">
+      <div class="copybox"><div class="cb-k">&#128293; THE RULE</div><div class="cb-t">Dramatic irony: the reader knows something a character does not. Situational irony: what happens is the opposite of what was expected.</div></div>
+      <div class="order" data-key="scene">
+        <div class="ord-k">&#128026; ORDER THE SCENE</div>
+        <div class="ord-q">Click the events in the order they happen in the parachutist scene.</div>
+        <div class="ord-pool">
+          <button class="ord-item" type="button" data-pos="3"><span class="ord-n"></span>The wind tugs the lines, and the body seems to bow and lift.</button>
+          <button class="ord-item" type="button" data-pos="5"><span class="ord-n"></span>The fear of the beast pushes the boys toward Jack and weakens order.</button>
+          <button class="ord-item" type="button" data-pos="1"><span class="ord-n"></span>A dead airman drifts down on his parachute in the dark.</button>
+          <button class="ord-item" type="button" data-pos="4"><span class="ord-n"></span>The boys who glimpse the figure are certain the beast is real.</button>
+          <button class="ord-item" type="button" data-pos="2"><span class="ord-n"></span>The parachute snags on the mountain.</button>
+        </div>
+        <div class="ord-bar"><button class="gbtn ord-check" type="button">Check the order</button><button class="gbtn ghost ord-reset" type="button">Start over</button><span class="ord-fb"></span></div>
+      </div>
+      <div class="check">
+        <div class="check-k">WEIGH THE GAP &middot; NOT GRADED</div>
+        <div class="check-row"><div class="cr-p">1. The reader has seen that the ladder is broken, but the climber trusts it. Which irony is this?</div><div class="opts">
+          <button class="opt" data-correct="true" data-fb="Yes. The reader knows more than the climber.">Dramatic irony</button>
+          <button class="opt" data-correct="false" data-fb="Nothing here is a reversal of what was expected.">Situational irony</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">2. A guard hired to stop thieves is the one who steals the key. Which irony is this?</div><div class="opts">
+          <button class="opt" data-correct="false" data-fb="The result is the opposite of what anyone expected, not a gap in knowledge.">Dramatic irony</button>
+          <button class="opt" data-correct="true" data-fb="Yes. The result is the opposite of what was expected.">Situational irony</button>
+          </div><div class="opt-fb"></div></div>
+        <div class="check-row"><div class="cr-p">3. The boys fear a monster from outside, but the real danger is the fear and cruelty inside them. Which irony is this?</div><div class="opts">
+          <button class="opt" data-correct="true" data-fb="Yes. The danger is the opposite of what the boys expect.">Situational irony</button>
+          <button class="opt" data-correct="false" data-fb="Dramatic irony is a gap in what the reader knows and the boys do not. This one is a reversal of what the boys expect.">Dramatic irony</button>
+          </div><div class="opt-fb"></div></div>
+        <button class="check-reset" type="button">Reset</button></div>
+      <div class="q"><div class="q-prompt">The irony in the parachutist scene<div class="q-hint">From the lesson <em>When the Truth Is Not What It Seems</em>: one sentence naming the gap or the reversal.</div><span class="saved-dot"></span><span class="words"></span></div><textarea class="answer" data-key="irony" data-seed-from="m4-w3-wed-grammar-2.irony" data-label="The irony in the parachutist scene" data-required></textarea></div>
+    </div>
+  </div>
+  <button class="tab-next" data-next="turnin">Continue: turn it in &#8594;</button>
+</div>
+
+<!-- ============ TURN IN ============ -->
+<div class="tab-panel" id="tab-turnin">
+  <div class="gathered">
+    <div class="gathered-head"><div class="gk">&#128293;</div><div class="gt">Your Week 3 Island Log</div></div>
+    <div class="gathered-body">
+      <textarea class="gathered-output" id="gathered" readonly></textarea>
+      <div class="gathered-actions"><button class="gbtn pdf" data-action="pdf" type="button">&#128196; Download as PDF</button><button class="gbtn ghost" data-action="copy" type="button">&#128203; Copy all</button></div>
+      <div class="gstatus" id="gstatus"></div>
+    </div>
+  </div>
+  <div class="turn-in">
+    <div class="turn-in-head"><div class="gk">&#128228;</div><div class="gt">Before you turn it in</div></div>
+    <div class="turn-in-body">
+      <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">Copywork from Chapter 5 or 6, proofread against the book</div></div>
+      <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">Character-to-idea map: Ralph, Jack, Piggy, and Simon, with a line of evidence each</div></div>
+      <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">The allegory sentence and the irony sentence</div></div>
+      <div class="turn-in-item"><div class="turn-in-check"></div><div class="turn-in-text">PDF saved, then uploaded to <b>Week 3 Daily Practice</b> in Canvas</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="f1"><span>Optima Academy Online</span> &middot; M/J LANGUAGE ARTS 3 &middot; Quarter 3 &middot; Daily Practice</div>
+  <div class="f2">Lord of the Flies &middot; Week 3 &middot; Island Log</div>
+  <div class="f3">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+<script src="assets/dp/project.js"></script>
+<script src="assets/dp/dp.js"></script>
+</body>
+</html>
