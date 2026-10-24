@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silent Planet Week 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0E1C42; --ink: #0E1C42; --ink2: #3A4A6B; --mute: #6B7895; --line: #E2E8F4; --bg: #F5F7FB; --card: #FFFFFF;
+  --pur: #67308F; --pur-fill: #F1EAF6; --org: #F78F1E; --org-fill: #FEF1DF; --gold: #C7922C; --ok: #2E9E62; --old: #A3312B;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #9FB3E6; --ink: #E8ECF6; --ink2: #B9C3DA; --mute: #8E9AB6; --line: #2A3552; --bg: #0D1426; --card: #141D33;
+    --pur-fill: #2A1D3A; --org-fill: #33240F; --ok: #5BC98C; --old: #F08A84;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #9FB3E6; --ink: #E8ECF6; --ink2: #B9C3DA; --mute: #8E9AB6; --line: #2A3552; --bg: #0D1426; --card: #141D33;
+  --pur-fill: #2A1D3A; --org-fill: #33240F; --ok: #5BC98C; --old: #F08A84;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; padding: 28px 16px 60px; }
+.wrap { max-width: 860px; margin: 0 auto; }
+h1 { font-family: 'Lora', Georgia, serif; font-size: 26px; margin-bottom: 4px; }
+.sub { color: var(--mute); font-size: 14px; font-weight: 700; margin-bottom: 22px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.stat .n { font-size: 34px; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 13px; font-weight: 700; color: var(--mute); }
+.stat.now .n { color: var(--old); } .stat.new .n { color: var(--ok); }
+.module { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 26px; }
+.module-head { background: var(--navy); color: #fff; padding: 12px 16px; font-weight: 800; font-size: 15px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .module-head { background: #1E2B4D; } }
+:root[data-theme="dark"] .module-head { background: #1E2B4D; }
+.item { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 12px 16px; border-top: 1px solid var(--line); }
+.item:first-of-type { border-top: none; }
+.item .ic { font-size: 20px; text-align: center; }
+.item a, .item .t { font-weight: 700; color: var(--ink); text-decoration: none; }
+.item a:hover { text-decoration: underline; }
+.item .m { font-size: 13px; color: var(--mute); font-weight: 600; }
+.item .pts { font-size: 13px; font-weight: 800; color: var(--ink2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+h2 { font-family: 'Lora', Georgia, serif; font-size: 20px; margin: 30px 0 10px; scroll-margin-top: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+.card p { margin-bottom: 8px; } .card p:last-child { margin-bottom: 0; }
+.kv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 14px; font-size: 14px; }
+.kv dt { font-weight: 800; color: var(--mute); } .kv dd { color: var(--ink); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--mute); }
+td.p { font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 800; border-bottom: none; }
+.tbl-wrap { overflow-x: auto; }
+@media (max-width: 600px) { .compare { grid-template-columns: 1fr; } .kv { grid-template-columns: 1fr; } .item { grid-template-columns: 28px 1fr; } .item .pts { grid-column: 2; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Module 2: Out of the Silent Planet &middot; Week 6</h1>
+  <div class="sub">8th Grade ELA &middot; Canvas week module, integrated</div>
+
+  <div class="compare">
+    <div class="stat now"><div class="n">9 items</div><div class="l">Week 6 now: 5 pages (module map, 2 grammar, 2 literature) and 4 graded items (check-up discussion, Set the Scene completion, First-Contact Short Story, Malacandra Speaks)</div></div>
+    <div class="stat new"><div class="n">7 items</div><div class="l">Chapters 21 and 22 and the Postscript: 4 lesson pages, 1 PDF upload graded with one rubric, and the Short Story and Malacandra Speaks, unchanged</div></div>
+  </div>
+
+  <div class="module">
+    <div class="module-head">Module 2: Out of the Silent Planet &middot; Week 6</div>
+    <div class="item"><div class="ic">📄</div><div><a href="w6-lesson1-only-mars.html">Only Mars</a><div class="m">Page &middot; Chapters 21 and 22 and the Postscript &middot; frame narrative, word cards, The Control Board, copywork, the comma after an opening adverb clause</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w6-lesson2-a-mere-story.html">A Mere Story</a><div class="m">Page &middot; no new reading (a reread of the Postscript&rsquo;s last two scenes) &middot; pacing, Letter and Reply, Set the Scene sketch, Story Ladder 6 plan (the final revision)</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w6-lesson3-writers-observatory.html">The Writer&rsquo;s Observatory</a><div class="m">Page &middot; no new reading &middot; adverb clauses, the editing pass (run-ons, fragments, comma splices), all ten words and their roots, Story Ladder 6 editing</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w6-lesson4-space-to-heaven.html">From Space to Heaven</a><div class="m">Page &middot; review &middot; analogy, The Preface, Malacandra Speaks plan and rehearsal, Story Ladder 6 polish, turn in</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📝</div><div><a href="#week6work">Week 6 Work</a><div class="m">Assignment &middot; PDF upload, up to 4 files</div></div><div class="pts">20 pts</div></div>
+    <div class="item"><div class="ic">📝</div><div><span class="t">First-Contact Short Story</span><div class="m">Assignment &middot; unchanged &middot; your finished story</div></div><div class="pts">100 pts</div></div>
+    <div class="item"><div class="ic">🎙️</div><div><span class="t">Malacandra Speaks</span><div class="m">Assignment &middot; unchanged rubric &middot; an audio or video recording of your monologue</div></div><div class="pts">30 pts</div></div>
+  </div>
+
+  <h2 id="week6work">Week 6 Work</h2>
+  <div class="card">
+    <dl class="kv">
+      <dt>Type</dt><dd>Assignment + native rubric</dd>
+      <dt>Points</dt><dd>20 (replaces Week 6 check-up, 10; Set the Scene completion, 10)</dd>
+      <dt>Submission</dt><dd>Online: File Uploads, restricted to .pdf; up to 4 files in one submission</dd>
+      <dt>Attempts</dt><dd>Unlimited until due</dd>
+      <dt>Student directions</dt><dd>Upload the Week 6 PDF from the last lesson. If a lesson shows ✗ on its status line, also attach that lesson&rsquo;s own PDF. The First-Contact Short Story and the Malacandra Speaks recording are turned in on their own pages.</dd>
+    </dl>
+  </div>
+  <div class="card tbl-wrap">
+    <table>
+      <tr><th>Criterion</th><th>Full credit</th><th>Pts</th></tr>
+      <tr><td>Chapter thinking</td><td>All five chapter answers (three in Lesson 1, two in Lesson 2) are complete sentences with a specific detail from Chapters 20 to 22 or the Postscript.</td><td class="p">4</td></tr>
+      <tr><td>The Control Board and the Letter</td><td>Board: eight entries placed, decoys left out, a gauge word on each, and the cure answer points to an entry; mask sort with the Chapter 22 answer. Letter: six pairs matched with a reasoned sentence.</td><td class="p">3</td></tr>
+      <tr><td>Set the Scene and the traveler&rsquo;s letter</td><td>Scene card complete (scale, sound, smell, touch, the being); one real mismatch found and fixed with a before and after; the traveler&rsquo;s letter has a date, greeting, specific complaint, request, closing and signature.</td><td class="p">4</td></tr>
+      <tr><td>Story Ladder 6: plan, edit, polish</td><td>Revision goal names a place and a change; the editing pass shows a fixed run-on or splice and an adverb-clause join (before and after); a final before and after.</td><td class="p">4</td></tr>
+      <tr><td>Adverb clauses in the student&rsquo;s own writing</td><td>Step 4: one opening clause with its comma and one closing clause, both complete sentences; dictation punctuated.</td><td class="p">2</td></tr>
+      <tr><td>The Preface</td><td>My world (setting and proudest sensory detail); a claim on the module question; two evidence cards explained; the "In my story" sentence; an objection answered.</td><td class="p">3</td></tr>
+      <tr class="total"><td>Total</td><td></td><td class="p">20</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <p>No Language Check this week: the original Module 2 has no quizzes. The two memory-work passages are not graded here: Lesson 3 has one uncounted box, "I recited both memory passages aloud today." The First-Contact Short Story and Malacandra Speaks are graded on their own pages and are not scored in Week 6 Work.</p>
+  </div>
+</div>
+</body>
+</html>

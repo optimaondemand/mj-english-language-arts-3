@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silent Planet Week 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0E1C42; --ink: #0E1C42; --ink2: #3A4A6B; --mute: #6B7895; --line: #E2E8F4; --bg: #F5F7FB; --card: #FFFFFF;
+  --pur: #67308F; --pur-fill: #F1EAF6; --org: #F78F1E; --org-fill: #FEF1DF; --gold: #C7922C; --ok: #2E9E62; --old: #A3312B;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #9FB3E6; --ink: #E8ECF6; --ink2: #B9C3DA; --mute: #8E9AB6; --line: #2A3552; --bg: #0D1426; --card: #141D33;
+    --pur-fill: #2A1D3A; --org-fill: #33240F; --ok: #5BC98C; --old: #F08A84;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #9FB3E6; --ink: #E8ECF6; --ink2: #B9C3DA; --mute: #8E9AB6; --line: #2A3552; --bg: #0D1426; --card: #141D33;
+  --pur-fill: #2A1D3A; --org-fill: #33240F; --ok: #5BC98C; --old: #F08A84;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; padding: 28px 16px 60px; }
+.wrap { max-width: 860px; margin: 0 auto; }
+h1 { font-family: 'Lora', Georgia, serif; font-size: 26px; margin-bottom: 4px; }
+.sub { color: var(--mute); font-size: 14px; font-weight: 700; margin-bottom: 22px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.stat .n { font-size: 34px; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 13px; font-weight: 700; color: var(--mute); }
+.stat.now .n { color: var(--old); } .stat.new .n { color: var(--ok); }
+.module { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 26px; }
+.module-head { background: var(--navy); color: #fff; padding: 12px 16px; font-weight: 800; font-size: 15px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .module-head { background: #1E2B4D; } }
+:root[data-theme="dark"] .module-head { background: #1E2B4D; }
+.item { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 12px 16px; border-top: 1px solid var(--line); }
+.item:first-of-type { border-top: none; }
+.item .ic { font-size: 20px; text-align: center; }
+.item a, .item .t { font-weight: 700; color: var(--ink); text-decoration: none; }
+.item a:hover { text-decoration: underline; }
+.item .m { font-size: 13px; color: var(--mute); font-weight: 600; }
+.item .pts { font-size: 13px; font-weight: 800; color: var(--ink2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+h2 { font-family: 'Lora', Georgia, serif; font-size: 20px; margin: 30px 0 10px; scroll-margin-top: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+.card p { margin-bottom: 8px; } .card p:last-child { margin-bottom: 0; }
+.kv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 14px; font-size: 14px; }
+.kv dt { font-weight: 800; color: var(--mute); } .kv dd { color: var(--ink); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--mute); }
+td.p { font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 800; border-bottom: none; }
+.tbl-wrap { overflow-x: auto; }
+@media (max-width: 600px) { .compare { grid-template-columns: 1fr; } .kv { grid-template-columns: 1fr; } .item { grid-template-columns: 28px 1fr; } .item .pts { grid-column: 2; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Module 2: Out of the Silent Planet &middot; Week 2</h1>
+  <div class="sub">8th Grade ELA &middot; Canvas week module, integrated</div>
+
+  <div class="compare">
+    <div class="stat now"><div class="n">9 items</div><div class="l">Week 2 now: 6 pages (module map, 2 grammar, 2 literature, optional speed-round game) and 3 graded items (Daily Practice notebook photos, Quick Write, discussion)</div></div>
+    <div class="stat new"><div class="n">5 items</div><div class="l">Chapters 5 to 8: 4 lesson pages and 1 PDF upload graded with one rubric</div></div>
+  </div>
+
+  <div class="module">
+    <div class="module-head">Module 2: Out of the Silent Planet &middot; Week 2</div>
+    <div class="item"><div class="ic">📄</div><div><a href="w2-lesson1-the-heavens.html">The Heavens</a><div class="m">Page &middot; Chapters 5 and 6 &middot; tone and mood, five words, The Ship&rsquo;s Log, copywork</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w2-lesson2-watercolour-world.html">A Watercolour World</a><div class="m">Page &middot; Chapters 7 and 8 &middot; concrete detail, five words, Specimen Plates, Quick Write 2 plan (imitate a Lewis description)</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w2-lesson3-writers-observatory.html">The Writer&rsquo;s Observatory</a><div class="m">Page &middot; no new reading &middot; simple and compound sentences, FANBOYS, comma splices, all ten words and their roots, Quick Write 2 draft</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w2-lesson4-old-school-tie.html">The Old School Tie</a><div class="m">Page &middot; review &middot; characterization (direct and indirect), The Case of Devine, Quick Write 2 revision, turn in</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📝</div><div><a href="#week2work">Week 2 Work</a><div class="m">Assignment &middot; PDF upload, up to 4 files</div></div><div class="pts">30 pts</div></div>
+  </div>
+
+  <h2 id="week2work">Week 2 Work</h2>
+  <div class="card">
+    <dl class="kv">
+      <dt>Type</dt><dd>Assignment + native rubric</dd>
+      <dt>Points</dt><dd>30 (replaces Week 2 Quick Write, 10; Week 2 Daily Practice, 10; Check-up discussion, 10)</dd>
+      <dt>Submission</dt><dd>Online: File Uploads, restricted to .pdf; up to 4 files in one submission</dd>
+      <dt>Attempts</dt><dd>Unlimited until due</dd>
+      <dt>Student directions</dt><dd>Upload the Week 2 PDF from the last lesson. If a lesson shows ✗ on its status line, also attach that lesson&rsquo;s own PDF.</dd>
+    </dl>
+  </div>
+  <div class="card tbl-wrap">
+    <table>
+      <tr><th>Criterion</th><th>Full credit</th><th>Pts</th></tr>
+      <tr><td>Chapter thinking</td><td>All six chapter answers in Lessons 1 and 2 are complete sentences with a specific detail from Chapters 5 to 8.</td><td class="p">6</td></tr>
+      <tr><td>The Ship&rsquo;s Log and the Specimen Plates</td><td>Log: seven moods set, mood words tapped, the narrator&rsquo;s tone named, and a typed answer on how the mood really moves. Plates: seven plates stamped and a typed answer on what Ransom had to know before he could see.</td><td class="p">5</td></tr>
+      <tr><td>Copywork</td><td>One sentence from Chapter 5 or 6 copied exactly, punctuation and all, with a sentence on what one mark does.</td><td class="p">2</td></tr>
+      <tr><td>The Case of Devine</td><td>Eight pieces filed with a remark; a clear position; evidence with the chapter named; the strongest objection stated fairly and answered.</td><td class="p">5</td></tr>
+      <tr><td>Quick Write 2: the imitation</td><td>The student&rsquo;s own scene (no copied wording); senses in Lewis&rsquo;s order; at least two concrete details; the feeling shown and turning where his turns; 150 to 250 words.</td><td class="p">6</td></tr>
+      <tr><td>Quick Write 2: the move and the joins</td><td>Closing sentence names the borrowed move; at least one correct compound sentence (comma and FANBOYS, or a semicolon); no comma splices; the before-and-after sentence shows a join or splice fix.</td><td class="p">6</td></tr>
+      <tr class="total"><td>Total</td><td></td><td class="p">30</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <p>No Language Check this week: the original Week 2 has no quiz. The memory-work passage (the three kinds of hnau) is not due yet; it moves to the week that reads Chapter 11.</p>
+  </div>
+</div>
+</body>
+</html>

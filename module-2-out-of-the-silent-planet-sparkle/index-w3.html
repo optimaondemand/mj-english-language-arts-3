@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silent Planet Week 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0E1C42; --ink: #0E1C42; --ink2: #3A4A6B; --mute: #6B7895; --line: #E2E8F4; --bg: #F5F7FB; --card: #FFFFFF;
+  --pur: #67308F; --pur-fill: #F1EAF6; --org: #F78F1E; --org-fill: #FEF1DF; --gold: #C7922C; --ok: #2E9E62; --old: #A3312B;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #9FB3E6; --ink: #E8ECF6; --ink2: #B9C3DA; --mute: #8E9AB6; --line: #2A3552; --bg: #0D1426; --card: #141D33;
+    --pur-fill: #2A1D3A; --org-fill: #33240F; --ok: #5BC98C; --old: #F08A84;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #9FB3E6; --ink: #E8ECF6; --ink2: #B9C3DA; --mute: #8E9AB6; --line: #2A3552; --bg: #0D1426; --card: #141D33;
+  --pur-fill: #2A1D3A; --org-fill: #33240F; --ok: #5BC98C; --old: #F08A84;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; padding: 28px 16px 60px; }
+.wrap { max-width: 860px; margin: 0 auto; }
+h1 { font-family: 'Lora', Georgia, serif; font-size: 26px; margin-bottom: 4px; }
+.sub { color: var(--mute); font-size: 14px; font-weight: 700; margin-bottom: 22px; }
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.stat .n { font-size: 34px; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 13px; font-weight: 700; color: var(--mute); }
+.stat.now .n { color: var(--old); } .stat.new .n { color: var(--ok); }
+.module { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 26px; }
+.module-head { background: var(--navy); color: #fff; padding: 12px 16px; font-weight: 800; font-size: 15px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .module-head { background: #1E2B4D; } }
+:root[data-theme="dark"] .module-head { background: #1E2B4D; }
+.item { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; padding: 12px 16px; border-top: 1px solid var(--line); }
+.item:first-of-type { border-top: none; }
+.item .ic { font-size: 20px; text-align: center; }
+.item a, .item .t { font-weight: 700; color: var(--ink); text-decoration: none; }
+.item a:hover { text-decoration: underline; }
+.item .m { font-size: 13px; color: var(--mute); font-weight: 600; }
+.item .pts { font-size: 13px; font-weight: 800; color: var(--ink2); white-space: nowrap; font-variant-numeric: tabular-nums; }
+h2 { font-family: 'Lora', Georgia, serif; font-size: 20px; margin: 30px 0 10px; scroll-margin-top: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+.card p { margin-bottom: 8px; } .card p:last-child { margin-bottom: 0; }
+.kv { display: grid; grid-template-columns: 150px 1fr; gap: 6px 14px; font-size: 14px; }
+.kv dt { font-weight: 800; color: var(--mute); } .kv dd { color: var(--ink); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--mute); }
+td.p { font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.total td { font-weight: 800; border-bottom: none; }
+.tbl-wrap { overflow-x: auto; }
+@media (max-width: 600px) { .compare { grid-template-columns: 1fr; } .kv { grid-template-columns: 1fr; } .item { grid-template-columns: 28px 1fr; } .item .pts { grid-column: 2; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Module 2: Out of the Silent Planet &middot; Week 3</h1>
+  <div class="sub">8th Grade ELA &middot; Canvas week module, integrated</div>
+
+  <div class="compare">
+    <div class="stat now"><div class="n">8 items</div><div class="l">Week 3 now: 5 pages (module map, 2 grammar, 2 literature) and 3 graded items (Daily Practice notebook photos, Quick Write, discussion)</div></div>
+    <div class="stat new"><div class="n">5 items</div><div class="l">Chapters 9 to 12: 4 lesson pages and 1 PDF upload graded with one rubric</div></div>
+  </div>
+
+  <div class="module">
+    <div class="module-head">Module 2: Out of the Silent Planet &middot; Week 3</div>
+    <div class="item"><div class="ic">📄</div><div><a href="w3-lesson1-it-had-language.html">It Had Language</a><div class="m">Page &middot; Chapters 9 and 10 &middot; connotation and denotation, five words, Field Notes, copywork</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w3-lesson2-why-silent.html">Why Silent?</a><div class="m">Page &middot; Chapters 11 and 12 &middot; point of view as theme, five words, The Lexicon, memory work (the hnau passage), Quick Write 3 plan (build your world)</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w3-lesson3-writers-observatory.html">The Writer&rsquo;s Observatory</a><div class="m">Page &middot; no new reading &middot; prepositional, appositive and participial phrases, all ten words and their roots, Quick Write 3 draft (the opening of your world)</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📄</div><div><a href="w3-lesson4-other-eyes.html">Through Other Eyes</a><div class="m">Page &middot; review &middot; figurative language, Transactions, Quick Write 3 revision, turn in</div></div><div class="pts"></div></div>
+    <div class="item"><div class="ic">📝</div><div><a href="#week3work">Week 3 Work</a><div class="m">Assignment &middot; PDF upload, up to 4 files</div></div><div class="pts">30 pts</div></div>
+  </div>
+
+  <h2 id="week3work">Week 3 Work</h2>
+  <div class="card">
+    <dl class="kv">
+      <dt>Type</dt><dd>Assignment + native rubric</dd>
+      <dt>Points</dt><dd>30 (replaces Week 3 Quick Write, 10; Week 3 Daily Practice, 10; Check-up discussion, 10)</dd>
+      <dt>Submission</dt><dd>Online: File Uploads, restricted to .pdf; up to 4 files in one submission</dd>
+      <dt>Attempts</dt><dd>Unlimited until due</dd>
+      <dt>Student directions</dt><dd>Upload the Week 3 PDF from the last lesson. If a lesson shows ✗ on its status line, also attach that lesson&rsquo;s own PDF.</dd>
+    </dl>
+  </div>
+  <div class="card tbl-wrap">
+    <table>
+      <tr><th>Criterion</th><th>Full credit</th><th>Pts</th></tr>
+      <tr><td>Chapter thinking</td><td>All six chapter answers in Lessons 1 and 2 are complete sentences with a specific detail from Chapters 9 to 12.</td><td class="p">6</td></tr>
+      <tr><td>Field Notes and the Lexicon</td><td>Captions sorted; four loaded phrases found; first words matched and Malacandra built; ten cards filed; four guesses stamped; bent answered; both typed inferences give a reason from the text.</td><td class="p">5</td></tr>
+      <tr><td>Copywork and memory work</td><td>One sentence from Chapter 9 or 10 copied exactly, with one phrase named and what it adds; the Chapter 11 hnau passage copied and the memory box checked.</td><td class="p">2</td></tr>
+      <tr><td>Transactions</td><td>Nine specimens labelled; two explained; a claim for the specimen that makes Malacandra most real, with a reason, and an answered objection; a telescope paragraph that avoids our names and reasons.</td><td class="p">5</td></tr>
+      <tr><td>Quick Write 3: the world</td><td>Plan complete: world, five or six details across at least three senses, mood, whose eyes the reader borrows.</td><td class="p">3</td></tr>
+      <tr><td>Quick Write 3: the opening</td><td>150 to 250 words; builds the world through specific sensory description; the student&rsquo;s own world.</td><td class="p">6</td></tr>
+      <tr><td>Phrases and word choice in own writing</td><td>One prepositional or appositive phrase and one participial phrase, correctly punctuated and not dangling, plus one connotation word, all three marked; the before-and-after sentence shows a real fix.</td><td class="p">3</td></tr>
+      <tr class="total"><td>Total</td><td></td><td class="p">30</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <p>No Language Check this week: the original Week 3 has no quiz. The memory-work passage (the three kinds of hnau, Chapter 11) now sits in Lesson 2, where students copy it from their own book and check a box when they can say it from memory.</p>
+  </div>
+</div>
+</body>
+</html>
