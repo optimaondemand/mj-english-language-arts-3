@@ -2060,7 +2060,7 @@ Christ home, Christ and his mother and all his hallows.</div>
 </script>
 <script>
 /* Optima ELA 8 · Module 2 Out of the Silent Planet Weeks 2-6 · shared lesson engines.
-   Page config comes from <script type="application/json" id="page-config">:
+   Page config comes from \x3cscript type="application/json" id="page-config">:
    { "week": 2, "weekKey": "ela6-m4-w2", "lesson": 1, "lessons": [ { "n", "title", "href", "expect" } ] }
    Every saved value lives under weekKey + "-L" + lesson + "-" so the last lesson of the week
    can read the other two (same site = same browser storage). */
@@ -2510,7 +2510,7 @@ function statusTableHtml(list){
 }
 function openPrint(title, heading, body){
   var nm = (STORE.rawGet(CFG.weekKey + '-name') || '').trim();
-  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>' + esc(title) + '<\/title><style>' +
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>' + esc(title) + '<\/title>\x3cstyle>' +
     'body{font-family:Nunito,Segoe UI,Arial,sans-serif;color:#0E1C42;padding:28px 40px;max-width:760px;margin:0 auto;}' +
     'h1{font-size:20px;margin:0 0 2px;} .sub{font-size:13px;color:#7A88A8;margin-bottom:18px;}' +
     'h2{font-size:17px;margin:26px 0 6px;padding-top:10px;border-top:2px solid #E2E8F4;} h3{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:#67308F;margin:14px 0 4px;}' +
@@ -2725,7 +2725,7 @@ document.addEventListener('DOMContentLoaded', function(){
 <script>
 /* Week 2, Lesson 4, The Old School Tie: Deep Heaven skin, Professor Lovelore's narrated parts, the characterization board, the poem read-along + word pen,
    The Case of Devine (a school report: file eight pieces, remarks, verdict), the splice desk and Quick Write 2 revising desk, Turn In, resets.
-   Images and narrations come from <script type="application/json" id="l4-assets">. A narration whose audio is missing is packed as {}: its player hides and every lit part shows.
+   Images and narrations come from \x3cscript type="application/json" id="l4-assets">. A narration whose audio is missing is packed as {}: its player hides and every lit part shows.
    Week words and poem glosses are wired by the shared engine from week.json and the manifest (no wiring here). */
 var L4A = (function(){ try { return JSON.parse(document.getElementById('l4-assets').textContent); } catch(e){ return { img: {} }; } })();
 function l4src(k){ return (L4A.img[k] || {}).src || ''; }
