@@ -1,0 +1,1894 @@
+{
+ "module": "Lord of the Flies",
+ "note": "Weeks 1-7 and the Final Essay lessons. Signs (the places an activity sorts into), numbered moments (the lines students handle) and the few pictures the lessons show inside an activity. Header art, the book cover and the Lovelore and Jonah pictures are left out. Nothing about a death is on a card.",
+ "look": {
+  "accent": "#0F5560",
+  "paper": "#F6EEDC",
+  "ink": "#1F2A2C",
+  "muted": "#5d6b6c"
+ },
+ "lessons": [
+  {
+   "page": "w1-lesson1-sound-of-the-shell.html",
+   "title": "The Sound of the Shell",
+   "week": 1,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "Map the Island",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "the long scar smashed into the jungle was a bath of heat",
+       "short": "the long scar smashed"
+      },
+      {
+       "type": "moment",
+       "text": "the white surf flinked on a coral reef",
+       "short": "the white surf flinked"
+      },
+      {
+       "type": "moment",
+       "text": "the lagoon was still as a mountain lake",
+       "short": "the lagoon was still"
+      },
+      {
+       "type": "moment",
+       "text": "a great platform of pink granite",
+       "short": "a great platform of"
+      },
+      {
+       "type": "moment",
+       "text": "a long, deep pool in the beach",
+       "short": "a long deep pool"
+      },
+      {
+       "type": "moment",
+       "text": "the square top of the mountain",
+       "short": "the square top of"
+      },
+      {
+       "type": "moment",
+       "text": "a rock, almost detached, standing like a fort",
+       "short": "a rock almost detached"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph looked down the other way where there was no reef.",
+       "short": "Ralph looked down the"
+      }
+     ]
+    },
+    {
+     "name": "Where Are We?",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "ctx_village",
+       "label": "An island with a village, smoke and canoes"
+      },
+      {
+       "type": "picture",
+       "img": "ctx_cold",
+       "label": "A cold, treeless island in a grey sea"
+      },
+      {
+       "type": "picture",
+       "img": "ctx_island",
+       "label": "A jungle island with a mountain, palms and a lagoon inside a reef"
+      },
+      {
+       "type": "picture",
+       "img": "ctx_islet",
+       "label": "A tiny flat islet of sand and a few palms"
+      }
+     ]
+    },
+    {
+     "name": "Poetry Corner",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "yeats",
+       "label": "W. B. Yeats",
+       "credit": "Photograph: George Charles Beresford, 1911, public domain"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson2-fire-on-the-mountain.html",
+   "title": "Fire on the Mountain",
+   "week": 1,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "The Assembly",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Kept"
+      },
+      {
+       "type": "sign",
+       "label": "Bent"
+      },
+      {
+       "type": "sign",
+       "label": "Broken"
+      },
+      {
+       "type": "moment",
+       "text": "Jack seized the conch.",
+       "short": "Jack seized the conch"
+      },
+      {
+       "type": "moment",
+       "text": "Jack clamored among them, the conch forgotten.",
+       "short": "Jack clamored among them"
+      },
+      {
+       "type": "moment",
+       "text": "I got the conch! Just you listen!",
+       "short": "I got the conch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson3-writers-island.html",
+   "title": "The Writer's Island",
+   "week": 1,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Sense Lens",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "sight"
+      },
+      {
+       "type": "sign",
+       "label": "sound"
+      },
+      {
+       "type": "sign",
+       "label": "touch"
+      },
+      {
+       "type": "sign",
+       "label": "smell"
+      },
+      {
+       "type": "sign",
+       "label": "taste"
+      },
+      {
+       "type": "moment",
+       "text": "the long scar smashed into the jungle was a bath of heat",
+       "short": "the long scar smashed"
+      },
+      {
+       "type": "moment",
+       "text": "the long, grinding roar of the breakers on the reef",
+       "short": "the long grinding roar"
+      },
+      {
+       "type": "moment",
+       "text": "the white surf flinked on a coral reef",
+       "short": "the white surf flinked"
+      },
+      {
+       "type": "moment",
+       "text": "The bushes were dark evergreen and aromatic",
+       "short": "The bushes were dark"
+      },
+      {
+       "type": "moment",
+       "text": "A deep, harsh note boomed under the palms",
+       "short": "A deep harsh note"
+      },
+      {
+       "type": "moment",
+       "text": "a glossy white image of the declining sun lay on a piece of rotten wood",
+       "short": "a glossy white image"
+      },
+      {
+       "type": "moment",
+       "text": "Acres of black and yellow smoke rolled steadily toward the sea.",
+       "short": "Acres of black and"
+      }
+     ]
+    },
+    {
+     "name": "The Connotation Ladder",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "most orderly"
+      },
+      {
+       "type": "sign",
+       "label": "most wild"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w1-lesson4-chosen-or-leading.html",
+   "title": "Chosen or Leading?",
+   "week": 1,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "Chosen or Leading?",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Shows he was chosen"
+      },
+      {
+       "type": "sign",
+       "label": "Shows him leading"
+      },
+      {
+       "type": "sign",
+       "label": "Shows him failing to lead"
+      },
+      {
+       "type": "moment",
+       "text": "The boys elect Ralph by acclaim before he has done anything. Golding says: “None of the boys could have found good reason for this”",
+       "short": "The boys elect Ralph"
+      },
+      {
+       "type": "moment",
+       "text": "What marks him out is the shell he blew. The boys call: “Him with the shell.”",
+       "short": "What marks him out"
+      },
+      {
+       "type": "moment",
+       "text": "After the vote, Ralph hands Jack a job: “The choir belongs to you, of course.”",
+       "short": "After the vote Ralph"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph decides how to find out if this is an island, and who goes: “three of us will go on an expedition and find out”",
+       "short": "Ralph decides how to"
+      },
+      {
+       "type": "moment",
+       "text": "He sets the rule that makes meetings possible: “I'll give the conch to the next person to speak”",
+       "short": "He sets the rule"
+      },
+      {
+       "type": "moment",
+       "text": "He promises rescue and the boys cheer, though he offers no proof: “sooner or later a ship will put in here”",
+       "short": "He promises rescue and"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph proposes a signal fire so a passing ship will notice them: “We must make a fire.”",
+       "short": "Ralph proposes a signal"
+      },
+      {
+       "type": "moment",
+       "text": "When the boys rush after Jack, Ralph is left with the shell and one listener: “Ralph was left, holding the conch, with no one but Piggy.”",
+       "short": "When the boys rush"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy asks Ralph not to tell anyone his nickname. Ralph tells everyone, and later offers only a half apology: “I'm sorry if you feel like that”",
+       "short": "Piggy asks Ralph not"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph gave Piggy the job of taking names. When Piggy asks who knows how many they are, Ralph turns on him: “I told you to get a list of names!”",
+       "short": "Ralph gave Piggy the"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson1-two-continents.html",
+   "title": "Two Continents",
+   "week": 2,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Tone Dial",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "tender"
+      },
+      {
+       "type": "sign",
+       "label": "wondering"
+      },
+      {
+       "type": "sign",
+       "label": "wry"
+      },
+      {
+       "type": "sign",
+       "label": "uneasy"
+      },
+      {
+       "type": "sign",
+       "label": "bitter"
+      },
+      {
+       "type": "sign",
+       "label": "menacing"
+      },
+      {
+       "type": "moment",
+       "text": "Then dog-like, uncomfortably on all fours yet unheeding his discomfort, he stole forward five yards and stopped.",
+       "short": "Then dog-like uncomfortably on"
+      },
+      {
+       "type": "moment",
+       "text": "The silence of the forest was more oppressive than the heat",
+       "short": "The silence of the"
+      },
+      {
+       "type": "moment",
+       "text": "Meetings. Don't we love meetings?",
+       "short": "Meetings Don't we love"
+      },
+      {
+       "type": "moment",
+       "text": "Jack had to think for a moment before he could remember what rescue was.",
+       "short": "Jack had to think"
+      },
+      {
+       "type": "moment",
+       "text": "Simon found for them the fruit they could not reach, pulled off the choicest from up in the foliage, passed them back down to the endless, outstretched hands.",
+       "short": "Simon found for them"
+      },
+      {
+       "type": "moment",
+       "text": "Nothing moved but a pair of gaudy butterflies that danced round each other in the hot air.",
+       "short": "Nothing moved but a"
+      },
+      {
+       "type": "moment",
+       "text": "Darkness poured out, submerging the ways between the trees till they were dim and strange as the bottom of the sea.",
+       "short": "Darkness poured out submerging"
+      },
+      {
+       "type": "moment",
+       "text": "Their scent spilled out into the air and took possession of the island.",
+       "short": "Their scent spilled out"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson2-there-was-a-ship.html",
+   "title": "There Was a Ship",
+   "week": 2,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "The Two Fires",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The ship"
+      },
+      {
+       "type": "sign",
+       "label": "The dead fire"
+      },
+      {
+       "type": "sign",
+       "label": "The new fire"
+      },
+      {
+       "type": "moment",
+       "text": "A pile of unused fuel lay ready.",
+       "short": "A pile of unused"
+      },
+      {
+       "type": "moment",
+       "text": "They became a circle of boys round a camp fire",
+       "short": "They became a circle"
+      },
+      {
+       "type": "moment",
+       "text": "the smoke of home had beckoned",
+       "short": "the smoke of home"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph stood among the ashes of the signal fire, his hands full of meat, saying nothing.",
+       "short": "Ralph stood among the"
+      },
+      {
+       "type": "moment",
+       "text": "Before these fantastically attractive flowers of violet and red and yellow, unkindness melted away.",
+       "short": "Before these fantastically attractive"
+      },
+      {
+       "type": "moment",
+       "text": "The smoke was a tight little knot on the horizon and was uncoiling slowly.",
+       "short": "The smoke was a"
+      },
+      {
+       "type": "moment",
+       "text": "The fire was out, smokeless and dead; the watchers were gone.",
+       "short": "The fire was out"
+      },
+      {
+       "type": "moment",
+       "text": "Instantly the fire was alight",
+       "short": "Instantly the fire was"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson3-behind-the-mask.html",
+   "title": "Behind the Mask",
+   "week": 2,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Tone or Mood?",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "TONE"
+      },
+      {
+       "type": "sign",
+       "label": "MOOD"
+      },
+      {
+       "type": "moment",
+       "text": "Reading about the forest’s “oppressive” silence, I feel shut in and watched.",
+       "short": "Reading about the forests"
+      },
+      {
+       "type": "moment",
+       "text": "Golding seems to admire Simon when he passes fruit to “the endless, outstretched hands.”",
+       "short": "Golding seems to admire"
+      },
+      {
+       "type": "moment",
+       "text": "When the fire is “smokeless and dead,” I feel sick with disappointment.",
+       "short": "When the fire is"
+      },
+      {
+       "type": "moment",
+       "text": "The candle-buds opening under “the first stars” make me feel calm and hushed.",
+       "short": "The candle-buds opening under"
+      },
+      {
+       "type": "moment",
+       "text": "Golding sounds dry and mocking when Jack “had to think for a moment before he could remember what rescue was.”",
+       "short": "Golding sounds dry and"
+      },
+      {
+       "type": "moment",
+       "text": "The narrator is cool and distant when he says the littluns were “very brown, and filthily dirty.”",
+       "short": "The narrator is cool"
+      }
+     ]
+    },
+    {
+     "name": "Three Tests of a Symbol",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "It returns"
+      },
+      {
+       "type": "sign",
+       "label": "It is tied to an idea"
+      },
+      {
+       "type": "sign",
+       "label": "Its meaning grows"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w2-lesson4-already-a-tyrant.html",
+   "title": "Already a Tyrant?",
+   "week": 2,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Charge Sheet",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Seizes power"
+      },
+      {
+       "type": "sign",
+       "label": "Uses power cruelly"
+      },
+      {
+       "type": "sign",
+       "label": "Ignores the rules others rely on"
+      },
+      {
+       "type": "sign",
+       "label": "FOR THE DEFENCE"
+      },
+      {
+       "type": "moment",
+       "text": "Jack apologizes in front of everyone: “I'm sorry. About the fire, I mean.”",
+       "short": "Jack apologizes in front"
+      },
+      {
+       "type": "moment",
+       "text": "Jack calls the twins away to hunt: “No. You two come with me.” Later, at the dead fire, he says: “We had to have them in the hunt”",
+       "short": "Jack calls the twins"
+      },
+      {
+       "type": "moment",
+       "text": "Jack copies Piggy's whine until the hunters laugh: “Jack felt encouraged.”",
+       "short": "Jack copies Piggy's whine"
+      },
+      {
+       "type": "moment",
+       "text": "Jack feeds the group and shouts: “I got you meat!”",
+       "short": "Jack feeds the group"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy says the hunters let the fire go out. Jack hits him, and one lens of his glasses breaks: “One side's broken.”",
+       "short": "Piggy says the hunters"
+      },
+      {
+       "type": "moment",
+       "text": "Jack still offers to help Ralph with the shelters: “Do a bit for you”",
+       "short": "Jack still offers to"
+      },
+      {
+       "type": "moment",
+       "text": "Jack keeps the meat from Piggy, and Golding says he “had meant to leave him in doubt, as an assertion of power”",
+       "short": "Jack keeps the meat"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph stands silent among the ashes of the old fire, and Golding says “No one, not even Jack, would ask him to move”",
+       "short": "Ralph stands silent among"
+      },
+      {
+       "type": "moment",
+       "text": "The twins start to protest, and Golding writes: “The mask compelled them.” They go anyway",
+       "short": "The twins start to"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph tells Jack: “You said you'd keep the fire going and you let it out!”",
+       "short": "Ralph tells Jack You"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson1-beast-from-water.html",
+   "title": "Beast from Water",
+   "week": 3,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Two-Layer Key",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Order and rules"
+      },
+      {
+       "type": "sign",
+       "label": "Reason and science"
+      },
+      {
+       "type": "sign",
+       "label": "Force and the hunt"
+      },
+      {
+       "type": "sign",
+       "label": "Insight: seeing inside"
+      },
+      {
+       "type": "sign",
+       "label": "Fear"
+      },
+      {
+       "type": "sign",
+       "label": "Fun and games"
+      },
+      {
+       "type": "moment",
+       "text": "“The rules!” shouted Ralph. “You’re breaking the rules!”",
+       "short": "The rules shouted Ralph You’re"
+      },
+      {
+       "type": "moment",
+       "text": "“Because the rules are the only thing we’ve got!”",
+       "short": "Because the rules are the"
+      },
+      {
+       "type": "moment",
+       "text": "“Life,” said Piggy expansively, “is scientific, that’s what it is.”",
+       "short": "Life said Piggy expansively is"
+      },
+      {
+       "type": "moment",
+       "text": "“You have doctors for everything, even the inside of your mind.”",
+       "short": "You have doctors for everything"
+      },
+      {
+       "type": "moment",
+       "text": "“Am I a hunter or am I not?”",
+       "short": "Am I a hunter or"
+      },
+      {
+       "type": "moment",
+       "text": "“If there’s a beast, we’ll hunt it down!”",
+       "short": "If there’s a beast we’ll"
+      },
+      {
+       "type": "moment",
+       "text": "“What I mean is . . . maybe it’s only us.”",
+       "short": "What I mean is maybe"
+      },
+      {
+       "type": "moment",
+       "text": "“Simon became inarticulate in his effort to express mankind’s essential illness.”",
+       "short": "Simon became inarticulate in his"
+      }
+     ]
+    },
+    {
+     "name": "Poetry Corner",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "dickinson",
+       "label": "Emily Dickinson",
+       "caption": "Emily Dickinson, daguerreotype, c. 1847.",
+       "credit": "Public domain"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson2-beast-from-air.html",
+   "title": "Beast from Air",
+   "week": 3,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "The Beast Evidence Board",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "What the twins report"
+      },
+      {
+       "type": "sign",
+       "label": "What Golding showed the reader"
+      },
+      {
+       "type": "moment",
+       "text": "It was furry.",
+       "short": "It was furry"
+      },
+      {
+       "type": "moment",
+       "text": "There was something moving behind its head—wings.",
+       "short": "There was something moving behind"
+      },
+      {
+       "type": "moment",
+       "text": "It kind of sat up—",
+       "short": "It kind of sat up"
+      },
+      {
+       "type": "moment",
+       "text": "There were eyes—",
+       "short": "There were eyes"
+      },
+      {
+       "type": "moment",
+       "text": "The beast followed us—",
+       "short": "The beast followed us"
+      },
+      {
+       "type": "moment",
+       "text": "The beast moved too—",
+       "short": "The beast moved too"
+      },
+      {
+       "type": "moment",
+       "text": "the parachute flopped and banged and pulled",
+       "short": "the parachute flopped and banged"
+      },
+      {
+       "type": "moment",
+       "text": "some accident of this pull lifted the head and chest upright so that the figure seemed to peer across the brow of the mountain",
+       "short": "some accident of this pull"
+      },
+      {
+       "type": "moment",
+       "text": "each time the wind dropped, the lines would slacken and the figure bow forward again",
+       "short": "each time the wind dropped"
+      },
+      {
+       "type": "moment",
+       "text": "Fifteen yards away from them came the plopping noise of fabric blown open.",
+       "short": "Fifteen yards away from them"
+      },
+      {
+       "type": "moment",
+       "text": "the figure sat, its helmeted head between its knees, held by a complication of lines",
+       "short": "the figure sat its helmeted"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson3-seems-and-is.html",
+   "title": "Seems and Is",
+   "week": 3,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "The Split Card",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Verbal irony"
+      },
+      {
+       "type": "sign",
+       "label": "Situational irony"
+      },
+      {
+       "type": "sign",
+       "label": "Dramatic irony"
+      },
+      {
+       "type": "moment",
+       "text": "“That's a clever beast,” said Piggy, jeering, “if it can hide on this island.”",
+       "short": "That's a clever beast said"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph says Piggy will look after the littluns. The answer: “That's right. Keep Piggy out of danger.”",
+       "short": "Ralph says Piggy will look"
+      },
+      {
+       "type": "moment",
+       "text": "On the wettest day of the year, a boy steps into the classroom, dripping, and says, “Lovely weather we're having.”",
+       "short": "On the wettest day of"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph plans his speech: “This meeting must not be fun, but business.”",
+       "short": "Ralph plans his speech This"
+      },
+      {
+       "type": "moment",
+       "text": "“They were the twins, on duty at the fire.”",
+       "short": "They were the twins on"
+      },
+      {
+       "type": "moment",
+       "text": "The biguns set out with spears to find the beast at the castle.",
+       "short": "The biguns set out with"
+      },
+      {
+       "type": "moment",
+       "text": "“The circle of boys shrank away in horror.” They are looking at Eric's face.",
+       "short": "The circle of boys shrank"
+      },
+      {
+       "type": "moment",
+       "text": "Jack: “This'll be a real hunt! Who'll come?”",
+       "short": "Jack This'll be a real"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph says they must climb the mountain. The answer: “The beast won't be there.”",
+       "short": "Ralph says they must climb"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w3-lesson4-the-narrow-neck.html",
+   "title": "The Narrow Neck",
+   "week": 3,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Narrow Neck",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "BETTER"
+      },
+      {
+       "type": "sign",
+       "label": "WORSE"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph goes first out along the neck: “I’m chief. I’ll go. Don’t argue.”",
+       "short": "Ralph goes first out along"
+      },
+      {
+       "type": "moment",
+       "text": "Jack edges along the ledge behind him: “Couldn’t let you do it on your own.”",
+       "short": "Jack edges along the ledge"
+      },
+      {
+       "type": "moment",
+       "text": "Simon, in the dark, to Ralph: “Go on being chief.”",
+       "short": "Simon in the dark to"
+      },
+      {
+       "type": "moment",
+       "text": "When the littluns cry along with Percival, Maurice clowns until they laugh: “Maurice saved them.”",
+       "short": "When the littluns cry along"
+      },
+      {
+       "type": "moment",
+       "text": "When Percival is quiet again after his crying in the dark, Ralph and Simon look after him: “Ralph and Simon picked him up unhandily and carried him to a shelter.”",
+       "short": "When Percival is quiet again"
+      },
+      {
+       "type": "moment",
+       "text": "Reminded of rescue, the boys swing back to Ralph: “with a violent swing to Ralph’s side, the crisis passed.”",
+       "short": "Reminded of rescue the boys"
+      },
+      {
+       "type": "moment",
+       "text": "When Simon tries to say what he thinks, “the laughter beat him cruelly” and he shrinks back to his seat.",
+       "short": "When Simon tries to say"
+      },
+      {
+       "type": "moment",
+       "text": "The assembly breaks up and scatters down the beach: “The sound of mock hunting, hysterical laughter and real terror came from the beach.”",
+       "short": "The assembly breaks up and"
+      },
+      {
+       "type": "moment",
+       "text": "Percival yawns and staggers when Jack questions him, “so that Jack seized and shook him.”",
+       "short": "Percival yawns and staggers when"
+      },
+      {
+       "type": "moment",
+       "text": "Told by Ralph that he is breaking the rules, Jack answers: “Who cares?”",
+       "short": "Told by Ralph that he"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy struggles to get his breath back after the argument. Golding writes: “Nobody minded him.”",
+       "short": "Piggy struggles to get his"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph says they need smoke, and Roger shouts back: “We’ve got plenty of time!”",
+       "short": "Ralph says they need smoke"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson1-far-shore.html",
+   "title": "The Far Shore",
+   "week": 4,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Trail of Hints",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Rescue slipping away"
+      },
+      {
+       "type": "sign",
+       "label": "Simon set apart"
+      },
+      {
+       "type": "sign",
+       "label": "A game turning on a boy"
+      },
+      {
+       "type": "sign",
+       "label": "Ralph and Jack at odds"
+      },
+      {
+       "type": "sign",
+       "label": "Fear of the beast growing"
+      },
+      {
+       "type": "moment",
+       "text": "when they next came to fruit the whole party stopped and ate",
+       "short": "when they next came"
+      },
+      {
+       "type": "moment",
+       "text": "one was clamped down, one was helpless, one was condemned",
+       "short": "one was clamped down"
+      },
+      {
+       "type": "moment",
+       "text": "You’ll get back to where you came from.",
+       "short": "Youll get back to"
+      },
+      {
+       "type": "moment",
+       "text": "Once, following his father from Chatham to Devonport, they had lived in a cottage on the edge of the moors.",
+       "short": "Once following his father"
+      },
+      {
+       "type": "moment",
+       "text": "You haven’t got Piggy’s specs",
+       "short": "You havent got Piggys"
+      },
+      {
+       "type": "moment",
+       "text": "They found fruit in a haunt of bright little birds that hovered like insects.",
+       "short": "They found fruit in"
+      },
+      {
+       "type": "moment",
+       "text": "Before Ralph had time to reply, he smiled quickly, turned and climbed into the forest.",
+       "short": "Before Ralph had time"
+      },
+      {
+       "type": "moment",
+       "text": "Why do you hate me?",
+       "short": "Why do you hate"
+      },
+      {
+       "type": "moment",
+       "text": "holding toward them the ruin of a face",
+       "short": "holding toward them the"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson2-held-up-to-the-light.html",
+   "title": "Held Up to the Light",
+   "week": 4,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Held Up to the Light",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Ralph and Jack"
+      },
+      {
+       "type": "sign",
+       "label": "Piggy and Roger"
+      },
+      {
+       "type": "moment",
+       "text": "We’re going to forget the beast.",
+       "short": "Were going to forget"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph sat down and began to poke little holes in the sand.",
+       "short": "Ralph sat down and"
+      },
+      {
+       "type": "moment",
+       "text": "The humiliating tears were running from the corner of each eye.",
+       "short": "The humiliating tears were"
+      },
+      {
+       "type": "moment",
+       "text": "They were regarding him gravely, not yet troubled by any doubts about his sufficiency.",
+       "short": "They were regarding him"
+      },
+      {
+       "type": "moment",
+       "text": "so full of pride in his contribution to the good of society, that he helped to fetch wood",
+       "short": "so full of pride"
+      },
+      {
+       "type": "moment",
+       "text": "They ought to do two turns.",
+       "short": "They ought to do"
+      },
+      {
+       "type": "moment",
+       "text": "a space round Henry, perhaps six yards in diameter, into which he dare not throw",
+       "short": "a space round Henry"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy stood on the platform, the white conch gripped in his hands.",
+       "short": "Piggy stood on the"
+      },
+      {
+       "type": "moment",
+       "text": "Roger can snatch a branch while I say what I want.",
+       "short": "Roger can snatch a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson3-told-or-shown.html",
+   "title": "Told or Shown",
+   "week": 4,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "The Report and the Snapshot",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The report"
+      },
+      {
+       "type": "sign",
+       "label": "The snapshot"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph was full of fright and apprehension and pride.",
+       "short": "Ralph was full of"
+      },
+      {
+       "type": "moment",
+       "text": "Jack flushed suddenly.",
+       "short": "Jack flushed suddenly"
+      },
+      {
+       "type": "moment",
+       "text": "Only Piggy could have the intellectual daring to suggest moving the fire from the mountain.",
+       "short": "Only Piggy could have"
+      },
+      {
+       "type": "moment",
+       "text": "He laid the conch with great care in the grass at his feet.",
+       "short": "He laid the conch"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph tapped his teeth with the dirty point of Eric’s spear.",
+       "short": "Ralph tapped his teeth"
+      },
+      {
+       "type": "moment",
+       "text": "He was vexed to find how little he thought like a grownup and sighed again.",
+       "short": "He was vexed to"
+      },
+      {
+       "type": "moment",
+       "text": "Simon shook his head violently till the coarse black hair flew backwards and forwards across his face.",
+       "short": "Simon shook his head"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph sat down and began to poke little holes in the sand.",
+       "short": "Ralph sat down and"
+      }
+     ]
+    },
+    {
+     "name": "Plant a Hint",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "the signal fire may not be seen"
+      },
+      {
+       "type": "sign",
+       "label": "danger in the forest"
+      },
+      {
+       "type": "sign",
+       "label": "a storm is coming"
+      },
+      {
+       "type": "moment",
+       "text": "The boys built the new fire on the sand by the platform.",
+       "short": "The boys built the"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph walked back along the beach as the sun went down.",
+       "short": "Ralph walked back along"
+      },
+      {
+       "type": "moment",
+       "text": "The littluns played by the bathing pool.",
+       "short": "The littluns played by"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w4-lesson4-where-is-the-beast.html",
+   "title": "Where Is the Beast?",
+   "week": 4,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Clearing",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "IN THE TREES"
+      },
+      {
+       "type": "sign",
+       "label": "IN THE LIGHT"
+      },
+      {
+       "type": "moment",
+       "text": "The beast had teeth",
+       "short": "The beast had teeth"
+      },
+      {
+       "type": "moment",
+       "text": "The beast is a hunter.",
+       "short": "The beast is a"
+      },
+      {
+       "type": "moment",
+       "text": "a sign came down from the world of grownups",
+       "short": "a sign came down"
+      },
+      {
+       "type": "moment",
+       "text": "maybe it's only us.",
+       "short": "maybe it's only us"
+      },
+      {
+       "type": "moment",
+       "text": "Supposing I got like the others--not caring.",
+       "short": "Supposing I got like"
+      },
+      {
+       "type": "moment",
+       "text": "I expect it's him.",
+       "short": "I expect it's him"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson1-storm-breaks.html",
+   "title": "The Storm Breaks",
+   "week": 5,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Storm Glass",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "FAIR"
+      },
+      {
+       "type": "sign",
+       "label": "CHANGE"
+      },
+      {
+       "type": "sign",
+       "label": "STORM"
+      },
+      {
+       "type": "moment",
+       "text": "Over the island the build-up of clouds continued.",
+       "short": "Over the island the"
+      },
+      {
+       "type": "moment",
+       "text": "under a brassy sky",
+       "short": "under a brassy sky"
+      },
+      {
+       "type": "moment",
+       "text": "I don't like them clouds.",
+       "short": "I don't like them"
+      },
+      {
+       "type": "moment",
+       "text": "So they stood and ate beneath a sky of thunderous brass that rang with the storm-coming.",
+       "short": "So they stood and"
+      },
+      {
+       "type": "moment",
+       "text": "All at once the thunder struck.",
+       "short": "All at once the"
+      },
+      {
+       "type": "moment",
+       "text": "The air was cool, moist, and clear; and presently even the sound of the water was still.",
+       "short": "The air was cool"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson2-frame-by-frame.html",
+   "title": "Frame by Frame",
+   "week": 5,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "The Slowed Film Strip",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Fast-forward"
+      },
+      {
+       "type": "sign",
+       "label": "Real time"
+      },
+      {
+       "type": "sign",
+       "label": "Slow motion"
+      },
+      {
+       "type": "moment",
+       "text": "He lay in the mat of creepers while the evening advanced and the cannon continued to play.",
+       "short": "He lay in the"
+      },
+      {
+       "type": "moment",
+       "text": "Presently the creepers festooned the trees less frequently and there was a scatter of pearly light from the sky down through the trees.",
+       "short": "Presently the creepers festooned"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph dived into the pool.",
+       "short": "Ralph dived into the"
+      },
+      {
+       "type": "moment",
+       "text": "All at once the thunder struck.",
+       "short": "All at once the"
+      },
+      {
+       "type": "moment",
+       "text": "Jack leapt on to the sand.",
+       "short": "Jack leapt on to"
+      },
+      {
+       "type": "moment",
+       "text": "Toward midnight the rain ceased and the clouds drifted away, so that the sky was scattered once more with the incredible lamps of stars.",
+       "short": "Toward midnight the rain"
+      },
+      {
+       "type": "moment",
+       "text": "The line of phosphorescence bulged about the sand grains and little pebbles; it held them each in a dimple of tension, then suddenly accepted them with an inaudible syllable and moved on.",
+       "short": "The line of phosphorescence"
+      },
+      {
+       "type": "moment",
+       "text": "Here and there a larger pebble clung to its own air and was covered with a coat of pearls.",
+       "short": "Here and there a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson3-where-weight-falls.html",
+   "title": "Where the Weight Falls",
+   "week": 5,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "The Compositor’s Tray",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Simple"
+      },
+      {
+       "type": "sign",
+       "label": "Compound"
+      },
+      {
+       "type": "sign",
+       "label": "Complex"
+      },
+      {
+       "type": "sign",
+       "label": "Compound-complex"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph made a sudden movement that became a stumble.",
+       "short": "Ralph made a sudden"
+      },
+      {
+       "type": "moment",
+       "text": "Simon got to his feet.",
+       "short": "Simon got to his"
+      },
+      {
+       "type": "moment",
+       "text": "Toward midnight the rain ceased and the clouds drifted away, so that the sky was scattered once more with the incredible lamps of stars.",
+       "short": "Toward midnight the rain"
+      },
+      {
+       "type": "moment",
+       "text": "The beast was harmless and horrible; and the news must reach the others as soon as possible.",
+       "short": "The beast was harmless"
+      },
+      {
+       "type": "moment",
+       "text": "When the wind reached the mountain-top he could see something happen, a flicker of blue stuff against brown clouds.",
+       "short": "When the wind reached"
+      },
+      {
+       "type": "moment",
+       "text": "He hid his face, and toiled on.",
+       "short": "He hid his face"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy and Ralph came to the edge of the grassy platform; and the boys, as they noticed them, fell silent one by one till only the boy next to Jack was talking.",
+       "short": "Piggy and Ralph came"
+      },
+      {
+       "type": "moment",
+       "text": "The air was cool, moist, and clear; and presently even the sound of the water was still.",
+       "short": "The air was cool"
+      }
+     ]
+    },
+    {
+     "name": "The Weight Beam",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "EARLY"
+      },
+      {
+       "type": "sign",
+       "label": "LATE"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w5-lesson4-wall-and-wave.html",
+   "title": "The Wall and the Wave",
+   "week": 5,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Sea Wall",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Holds the claim up"
+      },
+      {
+       "type": "sign",
+       "label": "Pushes against it"
+      },
+      {
+       "type": "moment",
+       "text": "Jack, in the first days: “We've got to have rules and obey them.”",
+       "short": "Jack in the first"
+      },
+      {
+       "type": "moment",
+       "text": "Roger throws stones near Henry but not at him: “Roger's arm was conditioned by a civilization that knew nothing of him and was in ruins.”",
+       "short": "Roger throws stones near"
+      },
+      {
+       "type": "moment",
+       "text": "The hunters let the signal fire go out, and Ralph says: “There was a ship.”",
+       "short": "The hunters let the"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph at the assembly: “Because the rules are the only thing we've got!”",
+       "short": "Ralph at the assembly"
+      },
+      {
+       "type": "moment",
+       "text": "In a game of hunting, even Ralph is swept up: “The desire to squeeze and hurt was over-mastering.”",
+       "short": "In a game of"
+      },
+      {
+       "type": "moment",
+       "text": "Jack walks away from the assembly: “I'm going off by myself.” Later Ralph sees how few of the older boys are left.",
+       "short": "Jack walks away from"
+      },
+      {
+       "type": "moment",
+       "text": "After Jack leaves, Piggy builds a new fire on the beach: “Piggy himself removed his one glass, knelt down and focused the sun on tinder.”",
+       "short": "After Jack leaves Piggy"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph, without the conch, tells Jack: “The conch counts here too”.",
+       "short": "Ralph without the conch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w6-lesson1-shell-and-glasses.html",
+   "title": "The Shell and the Glasses",
+   "week": 6,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Good Lens",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "You're still chief.",
+       "short": "You're still chief"
+      },
+      {
+       "type": "moment",
+       "text": "We left early",
+       "short": "We left early"
+      },
+      {
+       "type": "moment",
+       "text": "He's a proper chief, isn't he?",
+       "short": "He's a proper chief isn't"
+      },
+      {
+       "type": "moment",
+       "text": "They'll try to spoil things we do.",
+       "short": "They'll try to spoil things"
+      },
+      {
+       "type": "moment",
+       "text": "We shall take fire from the others.",
+       "short": "We shall take fire from"
+      },
+      {
+       "type": "moment",
+       "text": "We've got to keep it going.",
+       "short": "We've got to keep it"
+      },
+      {
+       "type": "moment",
+       "text": "There was something good about a fire.",
+       "short": "There was something good about"
+      },
+      {
+       "type": "moment",
+       "text": "I thought they wanted the conch.",
+       "short": "I thought they wanted the"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w6-lesson2-whats-right.html",
+   "title": "What's Right's Right",
+   "week": 6,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Call and Echo",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "The conch and the old rules"
+      },
+      {
+       "type": "sign",
+       "label": "Fairness: what’s right"
+      },
+      {
+       "type": "sign",
+       "label": "Rescue: the fire"
+      },
+      {
+       "type": "sign",
+       "label": "Anger: names and threats"
+      },
+      {
+       "type": "moment",
+       "text": "I’m calling an assembly.",
+       "short": "I’m calling an assembly"
+      },
+      {
+       "type": "moment",
+       "text": "You voted for me for chief. Didn’t you hear the conch?",
+       "short": "You voted for me for"
+      },
+      {
+       "type": "moment",
+       "text": "Your only hope is keeping a signal fire going as long as there’s light to see.",
+       "short": "Your only hope is keeping"
+      },
+      {
+       "type": "moment",
+       "text": "Don’t you understand, you painted fools?",
+       "short": "Don’t you understand you painted"
+      },
+      {
+       "type": "moment",
+       "text": "I got the conch!",
+       "short": "I got the conch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w6-lesson3-doer-and-deed.html",
+   "title": "The Doer and the Deed",
+   "week": 6,
+   "lesson": 3,
+   "activities": [
+    {
+     "name": "Find the Doer",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Active"
+      },
+      {
+       "type": "sign",
+       "label": "Passive"
+      },
+      {
+       "type": "moment",
+       "text": "Their spears were taken from them.",
+       "short": "Their spears were taken from"
+      },
+      {
+       "type": "moment",
+       "text": "Jack made a rush and stabbed at Ralph’s chest with his spear.",
+       "short": "Jack made a rush and"
+      },
+      {
+       "type": "moment",
+       "text": "The coarse grass was still worn away where the assembly used to sit",
+       "short": "The coarse grass was still"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph pushed the conch into Piggy’s hands.",
+       "short": "Ralph pushed the conch into"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy was helped to his food and found some by touch.",
+       "short": "Piggy was helped to his"
+      },
+      {
+       "type": "moment",
+       "text": "Roger took up a small stone and flung it between the twins, aiming to miss.",
+       "short": "Roger took up a small"
+      },
+      {
+       "type": "moment",
+       "text": "Piggy handed Ralph his glasses and waited to receive back his sight.",
+       "short": "Piggy handed Ralph his glasses"
+      }
+     ]
+    },
+    {
+     "name": "Twin Lines",
+     "cards": [
+      {
+       "type": "moment",
+       "text": "not in the dark",
+       "short": "not in the dark"
+      },
+      {
+       "type": "moment",
+       "text": "Anyone can play at hunting,",
+       "short": "Anyone can play at hunting"
+      },
+      {
+       "type": "moment",
+       "text": "not because you’re strong,",
+       "short": "not because you’re strong"
+      },
+      {
+       "type": "moment",
+       "text": "law and rescue,",
+       "short": "law and rescue"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w6-lesson4-proving-a-point.html",
+   "title": "Proving a Point",
+   "week": 6,
+   "lesson": 4,
+   "activities": [
+    {
+     "name": "The Argument Bridge",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Claim"
+      },
+      {
+       "type": "sign",
+       "label": "Evidence"
+      },
+      {
+       "type": "sign",
+       "label": "Reasoning"
+      },
+      {
+       "type": "sign",
+       "label": "This bridge holds"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph refuses paint before Castle Rock.",
+       "short": "Ralph refuses paint before Castle"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph admits they were all at the dance.",
+       "short": "Ralph admits they were all"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph is afraid of what the boys are.",
+       "short": "Ralph is afraid of what"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph boasts about the fight in the shelter.",
+       "short": "Ralph boasts about the fight"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph says he would have shared.",
+       "short": "Ralph says he would have"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph’s last appeal is for law.",
+       "short": "Ralph’s last appeal is for"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph snaps at Piggy and denies forgetting.",
+       "short": "Ralph snaps at Piggy and"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph dreams of a safe town.",
+       "short": "Ralph dreams of a safe"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph lets the signal fire go out.",
+       "short": "Ralph lets the signal fire"
+      },
+      {
+       "type": "moment",
+       "text": "Ralph screams names at Jack and charges him.",
+       "short": "Ralph screams names at Jack"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w7-lesson1-cry-of-the-hunters.html",
+   "title": "Cry of the Hunters",
+   "week": 7,
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Officer’s Report",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "WHAT THE OFFICER REPORTS"
+      },
+      {
+       "type": "sign",
+       "label": "WHAT THE READER KNOWS"
+      },
+      {
+       "type": "moment",
+       "text": "“Fun and games,” said the officer.",
+       "short": "Fun and games said"
+      },
+      {
+       "type": "moment",
+       "text": "“We saw your smoke.”",
+       "short": "We saw your smoke"
+      },
+      {
+       "type": "moment",
+       "text": "“Having a war or something?”",
+       "short": "Having a war or"
+      },
+      {
+       "type": "moment",
+       "text": "“The officer inspected the little scarecrow in front of him.”",
+       "short": "The officer inspected the"
+      },
+      {
+       "type": "moment",
+       "text": "“The kid needed a bath, a haircut, a nose-wipe and a good deal of ointment.”",
+       "short": "The kid needed a"
+      },
+      {
+       "type": "moment",
+       "text": "“Who’s boss here?”",
+       "short": "Who’s boss here"
+      },
+      {
+       "type": "moment",
+       "text": "“I am,” said Ralph loudly.",
+       "short": "I am said Ralph"
+      },
+      {
+       "type": "moment",
+       "text": "“Jolly good show. Like the Coral Island.”",
+       "short": "Jolly good show Like"
+      }
+     ]
+    },
+    {
+     "name": "Poetry Corner",
+     "cards": [
+      {
+       "type": "picture",
+       "img": "hopkins",
+       "label": "Gerard Manley Hopkins",
+       "credit": "Photograph: before 1889, public domain"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w7-lesson2-island-seen-whole.html",
+   "title": "The Island Seen Whole",
+   "week": 7,
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "The Island Seen Whole",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Last-chapter cards"
+      },
+      {
+       "type": "sign",
+       "label": "First-day cards"
+      },
+      {
+       "type": "moment",
+       "text": "How many of you are there?",
+       "short": "How many of you"
+      },
+      {
+       "type": "moment",
+       "text": "Who's boss here?",
+       "short": "Who's boss here"
+      },
+      {
+       "type": "moment",
+       "text": "Jolly good show. Like the Coral Island.",
+       "short": "Jolly good show Like"
+      },
+      {
+       "type": "moment",
+       "text": "a pack of British boys—you're all British, aren't you?—would have been able to put up a better show than that",
+       "short": "a pack of British"
+      },
+      {
+       "type": "moment",
+       "text": "We saw your smoke.",
+       "short": "We saw your smoke"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w7-project1-build-your-case.html",
+   "title": "Build Your Case",
+   "heading": "Final Essay",
+   "folder": "Final Essay/Lesson 1 - Build Your Case",
+   "lesson": 1,
+   "activities": [
+    {
+     "name": "The Island as Evidence",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "Beach and platform"
+      },
+      {
+       "type": "sign",
+       "label": "Mountain top"
+      },
+      {
+       "type": "sign",
+       "label": "Castle Rock"
+      },
+      {
+       "type": "sign",
+       "label": "Simon’s clearing"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "page": "w7-project2-write-your-essay.html",
+   "title": "Write Your Essay",
+   "heading": "Final Essay",
+   "folder": "Final Essay/Lesson 2 - Write Your Essay",
+   "lesson": 2,
+   "activities": [
+    {
+     "name": "Answer the Objections",
+     "cards": [
+      {
+       "type": "sign",
+       "label": "It rests on a mistake"
+      },
+      {
+       "type": "sign",
+       "label": "My evidence outweighs it"
+      },
+      {
+       "type": "sign",
+       "label": "Grant it, hold my ground"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
